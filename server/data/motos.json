@@ -1,13 +1,19 @@
 {
-  "07f260f4-466c-4607-9a33-f7273b24f1b4": {
-    "_id": "07f260f4-466c-4607-9a33-f7273b24f1b4",
-    "brand": "Asen",
-    "model": "Asenov",
-    "year": "asen@gmail.com",
-    "price": "12000",
-    "createdAt": "2023-11-01T07:22:00.358Z",
-    "updatedAt": "2023-11-01T07:22:00.358Z",
-    "imageUrl": "https://images.unsplash.com/photo-1609630875171-b1321377ee65?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW90b3xlbnwwfHwwfHx8MA%3D%3D"
+    "07f260f4-466c-4607-9a33-f7273b24f1b4": {
+      "_id": "07f260f4-466c-4607-9a33-f7273b24f1b4",
+      "brand": "Honda",
+      "model": "CBR1000",
+      "cc": "1000",
+      "imageUrl": "https://cdn3.vectorstock.com/i/1000x1000/54/17/person-gray-photo-placeholder-man-vector-24005417.jpg",
+      "price": "12500"
+    },
+    "bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
+      "_id": "bdabf5e9-23be-40a1-9f14-9117b6702a9d",
+      "brand": "Yamaha",
+      "model": "R1",
+      "cc": "1000",
+      "imageUrl": "https://cdn3.vectorstock.com/i/1000x1000/54/17/person-gray-photo-placeholder-man-vector-24005417.jpg",
+      "price": "14500"
+    }
+    
   }
-
-}
