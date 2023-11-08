@@ -1,28 +1,23 @@
-import { useState } from "react";
 import { useParams } from "react-router-dom";
-import uniqid  from 'uniqid'
 
 const MotoDetails = ({
     motos,
 
 }) => {
     const { motoId } = useParams();
-    const [comment, setComment] = useState({
-        username: '',
-        comment: '',
-    });
 
     const moto = motos.find(x => x._id === motoId)
 
     return (
         <section id="game-details">
-            <h1>Game Details</h1>
+            <h1>Motorcycle Details</h1>
             <div className="info-section">
                 <div className="game-header">
                     <img className="game-img" src={moto?.imageUrl} alt="no-moto" />
-                    <h1>{moto?.title}</h1>
-                    <span className="levels">MaxLevel: {moto?.maxLevel}</span>
-                    <p className="type">Action, Crime, Fantasy</p>
+                    <h1>Brand: {moto.brand}</h1>
+                    <h2>Model: {moto.model}</h2>
+                    <span className="levels">Price: {moto.price}$$</span>
+                    <p className="type">Cubic-centimeters: {moto.cc} cc</p>
                 </div>
                 <p className="text">
                     {moto?.summary}
@@ -31,11 +26,6 @@ const MotoDetails = ({
                 <div className="details-comments">
                     <h2>Comments:</h2>
                     <ul>
-                        {moto?.comments?.map(x =>
-                            <li key={uniqid()} className="comment">
-                                <p>{x}</p>
-                            </li>
-                        )}
 
                     </ul>
                     {
@@ -62,13 +52,11 @@ const MotoDetails = ({
                         type="text"
                         name="username"
                         placeholder="Enter name..."
-                        value={comment.username}
                     />
 
                     <textarea 
                         name="comment"
                         placeholder="Comment..."
-                        value={comment.comment}
                     />
 
                     <input

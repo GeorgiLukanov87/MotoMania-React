@@ -1,7 +1,7 @@
 import AllMotos from "./AllMotos";
 
 const Home = (props) => {
-    console.log(props)
+    
     const { motos } = props
 
     return (
@@ -11,6 +11,7 @@ const Home = (props) => {
                 <h3>Only in MotoMania</h3>
             </div>
             <img src="./images/1-moto-png-image-motorcycle-png-picture-download.png" alt="hero" />
+            <video src="./video/video2.mp4" autoPlay loop muted />
             <div id="home-page">
 
                 {motos.length > 0
