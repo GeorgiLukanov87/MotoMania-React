@@ -8,16 +8,16 @@ const Header = () => {
     return (
         <header>
             <h1>
-                <Link to={'/'} >GamesPlay</Link>
+                <Link to={'/'} >Moto-Mania <i class="fa-solid fa-motorcycle fa-beat fa-sm"></i></Link>
             </h1>
 
             <nav>
-                {user.email && <span style={{color: "red",marginRight: "15px"}}>{user.email}</span>}
-                <Link to={'/catalog'} >All games</Link>
+                {user.email && <span style={{color: "red",marginRight: "10px"}}>{user.email}</span>}
+                <Link to={'/catalog'} >All Motos</Link>
 
                 {user.email
                     ? <div id="user">
-                        <Link to={'/create'} >Create Game</Link>
+                        <Link to={'/create'} >Add Moto</Link>
                         <Link to={'/logout'} >Logout</Link>
                     </div>
 
@@ -27,6 +27,7 @@ const Header = () => {
                     </div>
                 }
             </nav>
+
         </header>
     );
 };
