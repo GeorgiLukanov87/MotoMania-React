@@ -36,17 +36,13 @@ function App() {
         setAuth({});
     }
 
-    const addGameHandler = (motoData) => {
-        console.log(`last data${motoData}`)
+    const addMotoHandler = (motoData) => {
         setMotos(oldMotos => [
             ...oldMotos,
-            {
-                ...motoData,
-                _id: "12",
-            },
+            motoData
         ]);
 
-        navigate('/catalog')
+        navigate('/catalog');
     }
 
     return (
@@ -60,7 +56,7 @@ function App() {
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />
                             <Route path='/logout' element={<Logout />} />
-                            <Route path="/create" element={<CreateMoto addGameHandler={addGameHandler} />}  />
+                            <Route path="/create" element={<CreateMoto addMotoHandler={addMotoHandler} />}  />
                             <Route path="/catalog" element={<Catalog motos={motos}/>} />
                             <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} />} />
                         </Routes>
@@ -68,7 +64,7 @@ function App() {
                 </div>
             </AuthContext.Provider>
         </>
-    )
+    );
 }
 
 export default App;

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { addMoto } from "../services/MotoService"; 
+import { addMoto } from "../services/MotoService";
 
 const initialState = {
     brand: "",
@@ -14,7 +14,7 @@ const initialState = {
 
 
 export default function CreateMoto({
-    addGameHandler,
+    addMotoHandler,
 }) {
     const [formValues, setFormValues] = useState(initialState);
     const navigate = useNavigate();
@@ -26,17 +26,17 @@ export default function CreateMoto({
         }));
     }
 
-    const resetForm = () =>{
+    const resetForm = () => {
         setFormValues(initialState);
     }
 
     const onSubmit = (e) => {
         e.preventDefault();
-        
-        addMoto(formValues);
-        addGameHandler()
+        addMoto(formValues)
+        .then(result=>addMotoHandler(result))
+        .catch(err=>console.log(err))
         resetForm();
-        navigate('/')
+        navigate('/');
 
     }
 
