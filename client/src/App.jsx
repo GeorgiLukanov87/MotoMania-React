@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useEffect,useState } from 'react';
 
 import { useLocalStorage } from './hooks/useLocalStorage';
@@ -19,10 +19,11 @@ import MotoDetails from './components/MotoDetails';
 function App() {
     const [motos, setMotos] = useState([]);
     const [auth, setAuth] = useLocalStorage('auth', {});
+    const navigate = useNavigate();
 
     useEffect(() => {
         getAll().then(motoResult => {
-            console.log(Object.values(motoResult))
+
             setMotos(Object.values(motoResult))
         });
     }, []);
@@ -33,6 +34,19 @@ function App() {
 
     const userLogout = () => {
         setAuth({});
+    }
+
+    const addGameHandler = (motoData) => {
+        console.log(`last data${motoData}`)
+        setMotos(oldMotos => [
+            ...oldMotos,
+            {
+                ...motoData,
+                _id: "12",
+            },
+        ]);
+
+        navigate('/catalog')
     }
 
     return (
@@ -46,7 +60,7 @@ function App() {
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />
                             <Route path='/logout' element={<Logout />} />
-                            <Route path="/create" element={<CreateMoto />} />
+                            <Route path="/create" element={<CreateMoto addGameHandler={addGameHandler} />}  />
                             <Route path="/catalog" element={<Catalog motos={motos}/>} />
                             <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} />} />
                         </Routes>

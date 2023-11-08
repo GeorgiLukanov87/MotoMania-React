@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const AllMotos = (props) => {
 
         const { moto } = props
-        console.log(props)
+
     
     return (
         <div className="game">
