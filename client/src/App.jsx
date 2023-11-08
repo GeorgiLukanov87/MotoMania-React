@@ -7,12 +7,12 @@ import { AuthContext } from './contexts/AuthContext';
 import { getAll } from "./services/MotoService";
 import { Logout } from './components/Logout';
 
-import Header from "./components/Header";
 import Home from './components/Home';
+import Header from "./components/Header";
 import Login from './components/Login';
+import Catalog from './components/Catalog';
 import Register from './components/Register';
 import CreateMoto from './components/CreateMoto';
-import Catalog from './components/Catalog';
 import MotoDetails from './components/MotoDetails';
 
 
