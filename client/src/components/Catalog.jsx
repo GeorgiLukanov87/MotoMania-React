@@ -1,19 +1,19 @@
-// import CatalogItem from "./catalogItems/CatalogItem";
+import CatalogItem from "./CatalogItem";
 
 const Catalog = (props) => {
 
-    const { games } = props
+console.log(props)
 
     return (
         <section id="catalog-page">
             
-            {/* {games.length > 0
-                ? <h1>All Games</h1> 
+            {props.motos?.length > 0
+                ? <h1>All Motos</h1> 
                 : <h3 className="no-articles">No articles yet</h3>
             }
             
-            {games.map(x => <CatalogItem key={x._id} game={x} />)} */}
-        <h1>CATALOG</h1>
+            {props.motos.map(x => <CatalogItem key={x._id} moto={x} />)}
+
         </section>
     );
 }

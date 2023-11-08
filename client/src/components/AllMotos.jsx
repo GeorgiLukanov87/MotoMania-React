@@ -13,10 +13,9 @@ const AllMotos = (props) => {
             </div>
 
             <h3>{moto.brand}</h3>
-            <h2>Model: {moto.model}</h2>
-            <h4>CC: {moto.cc}</h4>
-            <h4>Price: {moto.price} $</h4>
-
+            <h2>{moto.model}</h2>
+            <h4>CC:{moto.cc}</h4>
+            <h4>Price:{moto.price} $</h4>
 
             <div className="data-buttons">
                 <Link to={`/catalog/${moto._id}`} className="btn details-btn">
