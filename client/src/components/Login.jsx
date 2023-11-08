@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { login } from "../services/authService";
 import { AuthContext } from "../contexts/AuthContext";
@@ -40,10 +41,10 @@ const Login = () => {
                     <input type="email" id="email" name="email" placeholder="Sokka@gmail.com" />
                     <label htmlFor="login-pass">Password:</label>
                     <input type="password" id="login-password" name="password" />
-                    <input type="submit" className="btn submit" defaultValue="Login" />
+                    <button className="btn submit" type="submit">Register</button>
                     <p className="field">
                         <span>
-                            If you don't have profile click <a href="#">here</a>
+                            If you don't have profile click <Link to={'/register'} >here</Link>
                         </span>
                     </p>
                 </div>

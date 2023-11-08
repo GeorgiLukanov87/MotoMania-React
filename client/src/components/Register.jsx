@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 import { useContext } from "react";
@@ -37,15 +37,16 @@ const Register = () => {
                     <div className="brand-logo" />
                     <h1>Register</h1>
                     <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="maria@email.com" />
+                    <input type="email" id="email" name="email" placeholder="example@email.com" />
                     <label htmlFor="pass">Password:</label>
                     <input type="password" name="password" id="register-password" />
                     <label htmlFor="con-pass">Confirm Password:</label>
                     <input type="password" name="confirm-password" id="confirm-password" />
-                    <input className="btn submit" type="submit" defaultValue="Register" />
+                    <button className="btn submit" type="submit">Register</button>
+
                     <p className="field">
                         <span>
-                            If you already have profile click <a href="#">here</a>
+                            If you already have profile click <Link to={'/login'} >here</Link>
                         </span>
                     </p>
                 </div>
