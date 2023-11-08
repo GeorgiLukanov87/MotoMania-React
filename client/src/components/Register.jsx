@@ -36,14 +36,19 @@ const Register = () => {
                 <div className="container">
                     <div className="brand-logo" />
                     <h1>Register</h1>
+
+
                     <label htmlFor="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="example@email.com" />
-                    <label htmlFor="pass">Password:</label>
-                    <input type="password" name="password" id="register-password" />
-                    <label htmlFor="con-pass">Confirm Password:</label>
-                    <input type="password" name="confirm-password" id="confirm-password" />
-                    <button className="btn submit" type="submit">Register</button>
 
+                    <label htmlFor="password">Password:</label>
+                    <input type="password" name="password" id="password" placeholder="Password..." />
+
+                    <label htmlFor="confirm-password">Confirm Password:</label>
+                    <input type="password" name="confirm-password" id="confirm-password" placeholder="Repeat password..."/>
+                    
+
+                    <button className="btn submit" type="submit">Register</button>
                     <p className="field">
                         <span>
                             If you already have profile click <Link to={'/login'} >here</Link>
