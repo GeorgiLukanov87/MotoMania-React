@@ -72,7 +72,7 @@ const MotoDetails = ({
                 <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
 
             </article>
-            
+
         </section>
     );
 };

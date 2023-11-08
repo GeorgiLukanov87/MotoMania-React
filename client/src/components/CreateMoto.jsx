@@ -21,11 +21,11 @@ function CreateMoto() {
                     <input type="text" id="imageUrl" name="imageUrl" placeholder="Enter Photo Url..." />
 
                     <label htmlFor="price">Price:</label>
-                    <input type="number" id="price" name="price"  placeholder="Enter price...$$" />
-                    
+                    <input type="number" id="price" name="price" placeholder="Enter price...$$" />
+
                     <button className="btn submit" type="submit">Create Motorcycle</button>
                 </div>
-                
+
                 <button className="btn submit"><Link to={'/'}>Back</Link></button>
             </form>
         </section>
@@ -33,7 +33,3 @@ function CreateMoto() {
 }
 
 export default CreateMoto;
-
-
-// "imageUrl": "https://www.bultraco-sofia.bg/sites/default/files/scaled-22ym_cbr1000rr-r_grand_prix_red_r-380_rfq_layered.jpg",
-// "price": "12500"
