@@ -37,10 +37,14 @@ const Login = () => {
                 <div className="container">
                     <div className="brand-logo" />
                     <h1>Login</h1>
+
                     <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Sokka@gmail.com" />
-                    <label htmlFor="login-pass">Password:</label>
-                    <input type="password" id="login-password" name="password" />
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" autoComplete="off" />
+
+                    <label htmlFor="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password..." />
+
+                    
                     <button className="btn submit" type="submit">Register</button>
                     <p className="field">
                         <span>
