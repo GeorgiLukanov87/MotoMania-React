@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 
-const AllMotos = ({
-    moto,
-}) => {
+const AllMotos = (props) => {
+
+        const { moto } = props
+        console.log(props)
+    
     return (
         <div className="game">
 
@@ -10,7 +12,8 @@ const AllMotos = ({
                 <img src={moto.imageUrl} alt="not-alt" />
             </div>
 
-            <h3>{moto.title}</h3>
+            <h3>{moto.brand}</h3>
+            <h2>{moto.model}</h2>
             <div className="rating">
                 <span>☆</span>
                 <span>☆</span>
