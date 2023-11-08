@@ -11,7 +11,7 @@ import Header from "./components/Header";
 import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
-import CreateGame from './components/CreateGame';
+import CreateMoto from './components/CreateMoto';
 import Catalog from './components/Catalog';
 import MotoDetails from './components/MotoDetails';
 
@@ -46,7 +46,7 @@ function App() {
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />
                             <Route path='/logout' element={<Logout />} />
-                            <Route path="/create" element={<CreateGame />} />
+                            <Route path="/create" element={<CreateMoto />} />
                             <Route path="/catalog" element={<Catalog motos={motos}/>} />
                             <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} />} />
                         </Routes>

@@ -70,7 +70,9 @@ label:nth-of-type(2) {
 
 input::placeholder {
     color: rgba(184, 179, 179, 0.678);
-};
+}
+
+;
 
 
 label[for="female"] {
@@ -95,6 +97,10 @@ label[for="terms"]>input {
     display: inline;
 }
 
+#catalog-page>button {
+    margin-left: 3.5%;
+}
+
 .btn.submit {
     margin-top: 30px;
     background: #778e9c;
@@ -113,7 +119,6 @@ label[for="terms"]>input {
 }
 
 .container {
-    text-align: left;
     margin-top: 0px;
 }
 

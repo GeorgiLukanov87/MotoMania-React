@@ -1,12 +1,14 @@
 import { useParams } from "react-router-dom";
 
+import { Link } from "react-router-dom";
+
 const MotoDetails = ({
     motos,
 
 }) => {
     const { motoId } = useParams();
 
-    const moto = motos.find(x => x._id === motoId)
+    const moto = motos.find(m => m._id === motoId)
 
     return (
         <section id="game-details">
@@ -48,13 +50,13 @@ const MotoDetails = ({
             <article className="create-comment">
                 <label>Add new comment:</label>
                 <form className="form" >
-                    <input 
+                    <input
                         type="text"
                         name="username"
                         placeholder="Enter name..."
                     />
 
-                    <textarea 
+                    <textarea
                         name="comment"
                         placeholder="Comment..."
                     />
@@ -65,8 +67,12 @@ const MotoDetails = ({
                         value="Add Comment"
                     />
 
+
                 </form>
+                <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
+
             </article>
+            
         </section>
     );
 };

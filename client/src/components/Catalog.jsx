@@ -1,4 +1,5 @@
 import CatalogItem from "./CatalogItem";
+import { Link } from "react-router-dom";
 
 const Catalog = (props) => {
 
@@ -13,7 +14,7 @@ console.log(props)
             }
             
             {props.motos.map(x => <CatalogItem key={x._id} moto={x} />)}
-
+            <button className="btn submit"><Link to={'/'}>Back</Link></button>
         </section>
     );
 }
