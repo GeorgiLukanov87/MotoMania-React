@@ -1,12 +1,19 @@
+// import CatalogItem from "./catalogItems/CatalogItem";
 
-const Catalog = () => {
+const Catalog = (props) => {
+
+    const { games } = props
 
     return (
         <section id="catalog-page">
-            <h1>All Games</h1>
-            <h3 className="no-articles">No articles yet</h3>
-            <h2>catalog list TODO</h2>
-
+            
+            {/* {games.length > 0
+                ? <h1>All Games</h1> 
+                : <h3 className="no-articles">No articles yet</h3>
+            }
+            
+            {games.map(x => <CatalogItem key={x._id} game={x} />)} */}
+        <h1>CATALOG</h1>
         </section>
     );
 }

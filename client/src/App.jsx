@@ -1,4 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
+import { useEffect,useState } from 'react';
+
+import { getAll } from "./services/MotoService";
 
 import Header from "./components/Header";
 import Home from './components/Home';
@@ -12,7 +15,15 @@ import { useLocalStorage } from './hooks/useLocalStorage';
 
 
 function App() {
+    const [motos, setMotos] = useState([]);
     const [auth, setAuth] = useLocalStorage('auth', {});
+
+    useEffect(() => {
+        getAll().then(motoResult => {
+            console.log(Object.values(motoResult))
+            setMotos(Object.values(motoResult))
+        });
+    }, []);
 
     const userLogin = (authData) => {
         setAuth(authData);
@@ -29,7 +40,7 @@ function App() {
                     <Header />
                     <main id="main-content">
                         <Routes>
-                            <Route path="/" element={<Home />} />
+                            <Route path="/" element={<Home motos={motos} />} />
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />
                             <Route path='/logout' element={<Logout />} />
