@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-
+import { getOne, editMoto } from "../services/MotoService";
 
 const initialState = {
+    _id: "",
     brand: "",
     model: "",
     cc: "",
@@ -13,7 +14,11 @@ const initialState = {
 export default function () {
     const [formValues, setFormValues] = useState(initialState);
     const { motoId } = useParams();
-    console.log(motoId)
+
+    useEffect(() => {
+        getOne(motoId)
+            .then(result => setFormValues(result))
+    }, [])
 
     console.log(initialState)
 
@@ -28,6 +33,11 @@ export default function () {
         setFormValues(initialState);
     }
 
+    const onEditMotoClickHandler = (e) => {
+        e.preventDefault();
+        editMoto(formValues,motoId)
+        .then(result=>console.log(result))
+    }
 
     return (
         <section id="create-page" className="auth" >
@@ -50,7 +60,7 @@ export default function () {
                     <label htmlFor="price">Price:</label>
                     <input type="number" id="price" name="price" placeholder="Enter price...$$" value={formValues.price} onChange={changeHandler} />
 
-                    <button className="btn submit" type="submit" >Edit Motorcycle</button>
+                    <button className="btn submit" type="submit" onClick={onEditMotoClickHandler}>Edit Motorcycle</button>
                 </div>
 
 
