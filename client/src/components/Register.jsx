@@ -22,7 +22,7 @@ const Register = () => {
         if (password !== confirmPassword) {
             return;
         }
-
+        
         register(email, password)
             .then(authData => {
                 userLogin(authData);

@@ -14,6 +14,7 @@ import Catalog from './components/Catalog';
 import Register from './components/Register';
 import CreateMoto from './components/CreateMoto';
 import MotoDetails from './components/MotoDetails';
+import SomethingWrong from './components/SomethingWrong';
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
                             <Route path="/create" element={<CreateMoto addMotoHandler={addMotoHandler} />}  />
                             <Route path="/catalog" element={<Catalog motos={motos}/>} />
                             <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} />} />
+                            <Route path="*" element={<SomethingWrong />} />
                         </Routes>
                     </main>
                 </div>
