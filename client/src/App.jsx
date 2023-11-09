@@ -49,9 +49,6 @@ function App() {
         setMotos(oldState => oldState.filter(moto => moto._id !== motoId));
     }
 
-    function patchOldMotoState(motoData){
-        console.log(`patch with -> ${motoData}`)
-    }
 
     return (
         <>
