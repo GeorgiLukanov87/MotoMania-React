@@ -16,7 +16,7 @@ const MotoDetails = ({
     function onClickDeleteHandler(){
         deleteMoto(motoId)
         .then(removeMotoFromState(motoId),
-        navigate('/')
+        navigate('/catalog')
         );
     }
 
@@ -80,6 +80,8 @@ const MotoDetails = ({
 
 
                 </form>
+                <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
+                <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
                 <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
 
             </article>

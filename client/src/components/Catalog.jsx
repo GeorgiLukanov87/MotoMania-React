@@ -12,7 +12,10 @@ const Catalog = (props) => {
             }
 
             {props.motos.map(x => <CatalogItem key={x._id} moto={x} />)}
+            
+            <button className="btn submit"><Link to={'/create'}>Add moto</Link></button>
             <button className="btn submit"><Link to={'/'}>Back</Link></button>
+
         </section>
     );
 }

@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 import { addMoto } from "../services/MotoService";
+
 
 const initialState = {
     brand: "",
@@ -40,8 +40,8 @@ export default function CreateMoto({
             .catch(err => console.log(err))
         resetForm();
         navigate('/');
-
     }
+
 
     return (
         <section id="create-page" className="auth" onSubmit={onSubmit}>
@@ -66,7 +66,7 @@ export default function CreateMoto({
 
                     <button className="btn submit" type="submit" disabled={Object.values(formValues).some(x => !x)}>Create Motorcycle</button>
                 </div>
-                {Object.values(formValues).some(x => !x) && <div style={{color: "red",fontSize: "18px"}}>Fill required fields!</div>}
+                {Object.values(formValues).some(x => !x) && <div style={{ color: "red", fontSize: "18px" }}>Fill required fields!</div>}
 
                 <button className="btn submit"><Link to={'/'}>Back</Link></button>
             </form>
