@@ -28,7 +28,6 @@ const Login = () => {
             .catch(() => {
                 navigate('/404')
             })
-
     }
 
     return (
@@ -45,10 +44,10 @@ const Login = () => {
                     <input type="password" id="password" name="password" placeholder="Enter password..." />
 
                     
-                    <button className="btn submit" type="submit">Register</button>
+                    <button className="btn submit" type="submit">Login</button>
                     <p className="field">
                         <span>
-                            If you don't have profile click <Link to={'/register'} >here</Link>
+                            If you don't have profile click<Link to={'/register'} >here</Link>
                         </span>
                     </p>
                 </div>

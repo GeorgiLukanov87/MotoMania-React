@@ -140,9 +140,10 @@
     background-color: #fd5454;
     font-size: 1.4rem;
     padding-top: 20px;
-    margin-top: 10px;
+    margin-top: 14px;
     color: white;
     padding: 0.9em 1.4em;
+    border-radius: 12px;
 }
 
 .data-buttons {

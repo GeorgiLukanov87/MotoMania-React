@@ -9,7 +9,6 @@ const Register = () => {
     const { userLogin } = useContext(AuthContext);
     const navigate = useNavigate();
 
-
     const onSubmit = (e) => {
         e.preventDefault();
 
@@ -22,7 +21,7 @@ const Register = () => {
         if (password !== confirmPassword) {
             return;
         }
-        
+
         register(email, password)
             .then(authData => {
                 userLogin(authData);
@@ -51,7 +50,7 @@ const Register = () => {
                     <button className="btn submit" type="submit">Register</button>
                     <p className="field">
                         <span>
-                            If you already have profile click <Link to={'/login'} >here</Link>
+                            If you already have profile click<Link to={'/login'} >here</Link>
                         </span>
                     </p>
                 </div>

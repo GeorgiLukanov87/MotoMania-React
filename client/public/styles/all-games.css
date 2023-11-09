@@ -71,7 +71,12 @@
     right: 6.5%;
     text-align: left;
     letter-spacing: 1px;
-    padding: 6px;
+    padding: 8px;
     margin-top: auto;
     margin-left: 20px;
+    border-radius: 12px;
+}
+
+.details-button:hover{
+    background-color: rgb(59, 2, 203);
 }

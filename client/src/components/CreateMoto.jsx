@@ -15,9 +15,12 @@ const initialState = {
 
 export default function CreateMoto({
     addMotoHandler,
+
 }) {
     const [formValues, setFormValues] = useState(initialState);
     const navigate = useNavigate();
+
+    console.log(initialState)
 
     const changeHandler = (e) => {
         setFormValues(state => ({
@@ -33,8 +36,8 @@ export default function CreateMoto({
     const onSubmit = (e) => {
         e.preventDefault();
         addMoto(formValues)
-        .then(result=>addMotoHandler(result))
-        .catch(err=>console.log(err))
+            .then(result => addMotoHandler(result))
+            .catch(err => console.log(err))
         resetForm();
         navigate('/');
 
@@ -55,13 +58,13 @@ export default function CreateMoto({
                     <label htmlFor="cc">Cubic-centimeters:</label>
                     <input type="number" id="cc" name="cc" placeholder="Enter cc..." value={formValues.cc} onChange={changeHandler} />
 
-                    <label htmlFor="imageUrl">ImageUrl:</label>
+                    <label htmlFor="imageUrl">Link to image:</label>
                     <input type="text" id="imageUrl" name="imageUrl" placeholder="Enter Photo Url..." value={formValues.imageUrl} onChange={changeHandler} />
 
                     <label htmlFor="price">Price:</label>
                     <input type="number" id="price" name="price" placeholder="Enter price...$$" value={formValues.price} onChange={changeHandler} />
 
-                    <button className="btn submit" type="submit">Create Motorcycle</button>
+                    <button className="btn submit" type="submit" disabled={Object.values(formValues).some(x => !x)}>Create Motorcycle</button>
                 </div>
 
                 <button className="btn submit"><Link to={'/'}>Back</Link></button>
