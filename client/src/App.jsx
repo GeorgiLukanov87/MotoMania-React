@@ -49,6 +49,9 @@ function App() {
         setMotos(oldState => oldState.filter(moto => moto._id !== motoId));
     }
 
+    function patchOldMotoState(motoData){
+        console.log(`patch with -> ${motoData}`)
+    }
 
     return (
         <>
@@ -65,7 +68,7 @@ function App() {
                             <Route path="/catalog" element={<Catalog motos={motos} />} />
                             <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} removeMotoFromState={removeMotoFromState} />} />
                             <Route path="/edit/:motoId" element={<EditMoto />} />
-                            {/* <Route path="*" element={<SomethingWrong />} /> */}
+                            <Route path="*" element={<SomethingWrong />} />
                         </Routes>
                     </main>
                 </div>

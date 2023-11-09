@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { getOne, editMoto } from "../services/MotoService";
 
 const initialState = {
@@ -14,13 +14,12 @@ const initialState = {
 export default function () {
     const [formValues, setFormValues] = useState(initialState);
     const { motoId } = useParams();
+    const navigate = useNavigate();
 
     useEffect(() => {
         getOne(motoId)
             .then(result => setFormValues(result))
     }, [])
-
-    console.log(initialState)
 
     const changeHandler = (e) => {
         setFormValues(state => ({
@@ -29,15 +28,13 @@ export default function () {
         }));
     }
 
-    const resetForm = () => {
-        setFormValues(initialState);
-    }
-
     const onEditMotoClickHandler = (e) => {
         e.preventDefault();
         editMoto(formValues,motoId)
-        .then(result=>console.log(result))
+        .then(navigate('/'))
     }
+
+
 
     return (
         <section id="create-page" className="auth" >
@@ -62,7 +59,6 @@ export default function () {
 
                     <button className="btn submit" type="submit" onClick={onEditMotoClickHandler}>Edit Motorcycle</button>
                 </div>
-
 
                 <button className="btn submit"><Link to={'/'}>Back</Link></button>
             </form>
