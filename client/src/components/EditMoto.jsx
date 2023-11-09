@@ -19,6 +19,7 @@ export default function () {
     useEffect(() => {
         getOne(motoId)
             .then(result => setFormValues(result))
+            .catch(err => console.log(err))
     }, [])
 
     const changeHandler = (e) => {
@@ -28,17 +29,18 @@ export default function () {
         }));
     }
 
-    const onEditMotoClickHandler = (e) => {
+    const onSubmitHandler = (e) => {
         e.preventDefault();
-        editMoto(formValues,motoId)
-        .then(navigate('/'))
+        editMoto(formValues, motoId)
+            .then(result => console.log(result))
+            .catch(err => console.log(err))
+
+        navigate('/');
     }
-
-
 
     return (
         <section id="create-page" className="auth" >
-            <form id="create">
+            <form id="create" onSubmit={onSubmitHandler}>
                 <div className="container">
                     <h1>Edit Motorcycle</h1>
 
@@ -57,7 +59,7 @@ export default function () {
                     <label htmlFor="price">Price:</label>
                     <input type="number" id="price" name="price" placeholder="Enter price...$$" value={formValues.price} onChange={changeHandler} />
 
-                    <button className="btn submit" type="submit" onClick={onEditMotoClickHandler}>Edit Motorcycle</button>
+                    <button className="btn submit" type="submit">Edit Motorcycle</button>
                 </div>
 
                 <button className="btn submit"><Link to={'/'}>Back</Link></button>
