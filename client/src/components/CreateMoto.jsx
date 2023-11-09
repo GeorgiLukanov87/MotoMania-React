@@ -66,6 +66,7 @@ export default function CreateMoto({
 
                     <button className="btn submit" type="submit" disabled={Object.values(formValues).some(x => !x)}>Create Motorcycle</button>
                 </div>
+                {Object.values(formValues).some(x => !x) && <div style={{color: "red",fontSize: "18px"}}>Fill required fields!</div>}
 
                 <button className="btn submit"><Link to={'/'}>Back</Link></button>
             </form>

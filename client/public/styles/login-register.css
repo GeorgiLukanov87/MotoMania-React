@@ -21,7 +21,7 @@
 }
 
 .container {
-    padding: 40px;
+    padding: 20px;
 }
 
 .brand-logo {
@@ -36,14 +36,14 @@
 }
 
 .container>h1 {
-    margin-top: 15px;
-    font-weight: 900;
-    font-size: 2.7rem;
+    margin-top: 12px;
+    font-weight: 700;
+    font-size: 2.4rem;
     text-align: center;
-    color: white;
+    color: rgb(207, 205, 205);
     letter-spacing: 1px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: 17px;
+    margin-bottom: 12px;
 }
 
 label,
@@ -102,24 +102,25 @@ label[for="terms"]>input {
 }
 
 .btn.submit {
-    margin-top: 30px;
+    margin-top: 20px;
     background: #778e9c;
-    height: 60px;
+    height: 50px;
     border-radius: 20px;
-    color: white;
-    font-size: 26px;
+    color: rgb(215, 212, 212);
+    font-size: 20px;
     cursor: pointer;
     font-weight: 900;
     transition: 0.5s;
+    padding: 10px;
 }
 
 .btn.submit:hover {
-    color: white;
-    background-color: #8fa9b9;
+    color: rgb(111, 108, 108);
+    background-color: #d7e3eb;
 }
 
 .container {
-    margin-top: 0px;
+    margin-top: 6px;
 }
 
 .field>span {

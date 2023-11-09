@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-
 import { Link } from "react-router-dom";
+import { deleteMoto } from "../services/MotoService";
 
 const MotoDetails = ({
     motos,
@@ -8,7 +8,12 @@ const MotoDetails = ({
 }) => {
     const { motoId } = useParams();
 
-    const moto = motos.find(m => m._id === motoId)
+    const moto = motos.find(m => m._id === motoId);
+
+    function deleteHandler(){
+        deleteMoto(motoId)
+        .then(result=>console.log(result))
+    }
 
     return (
         <section id="game-details">
@@ -41,7 +46,7 @@ const MotoDetails = ({
                     <a className="button">
                         Edit
                     </a>
-                    <a className="button">
+                    <a className="button" onClick={deleteHandler}>
                         Delete
                     </a>
                 </div>

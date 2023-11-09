@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <header>
             <h1>
-                <Link to={'/'} >Moto-Mania <i class="fa-solid fa-motorcycle fa-beat fa-sm"></i></Link>
+                <Link to={'/'} >Moto-Mania <i className="fa-solid fa-motorcycle fa-beat fa-sm"></i></Link>
             </h1>
 
             <nav>

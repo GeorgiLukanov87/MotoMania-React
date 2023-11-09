@@ -9,9 +9,9 @@ import { Logout } from './components/Logout';
 
 import Home from './components/Home';
 import Header from "./components/Header";
+import Register from './components/Register';
 import Login from './components/Login';
 import Catalog from './components/Catalog';
-import Register from './components/Register';
 import CreateMoto from './components/CreateMoto';
 import MotoDetails from './components/MotoDetails';
 import SomethingWrong from './components/SomethingWrong';
