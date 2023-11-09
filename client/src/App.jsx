@@ -15,6 +15,7 @@ import Catalog from './components/Catalog';
 import CreateMoto from './components/CreateMoto';
 import MotoDetails from './components/MotoDetails';
 import SomethingWrong from './components/SomethingWrong';
+import EditMoto from './components/EditMoto';
 
 
 function App() {
@@ -41,7 +42,6 @@ function App() {
             ...oldMotos,
             motoData
         ]);
-
         navigate('/catalog');
     }
 
@@ -64,7 +64,8 @@ function App() {
                             <Route path="/create" element={<CreateMoto addMotoHandler={addMotoHandler} />} />
                             <Route path="/catalog" element={<Catalog motos={motos} />} />
                             <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} removeMotoFromState={removeMotoFromState} />} />
-                            <Route path="*" element={<SomethingWrong />} />
+                            <Route path="/edit/:motoId" element={<EditMoto />} />
+                            {/* <Route path="*" element={<SomethingWrong />} /> */}
                         </Routes>
                     </main>
                 </div>

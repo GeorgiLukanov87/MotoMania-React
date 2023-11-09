@@ -1,5 +1,4 @@
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { deleteMoto } from "../services/MotoService";
 import { useNavigate } from "react-router-dom";
 
@@ -49,9 +48,9 @@ const MotoDetails = ({
                 </div>
 
                 <div className="buttons">
-                    <a className="button">
+                    <Link to={`/edit/${motoId}`} className="button">
                         Edit
-                    </a>
+                    </Link>
                     <a className="button" onClick={onClickDeleteHandler}>
                         Delete
                     </a>
@@ -66,26 +65,18 @@ const MotoDetails = ({
                         name="username"
                         placeholder="Enter name..."
                     />
-
                     <textarea
                         name="comment"
                         placeholder="Comment..."
                     />
-
                     <input
                         className="btn submit"
                         type="submit"
                         value="Add Comment"
                     />
-
-
                 </form>
                 <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
-                <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
-                <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
-
             </article>
-
         </section>
     );
 };

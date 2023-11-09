@@ -30,10 +30,10 @@
 
 .welcome-message h2 {
     color: #ffffff;
-    font-size: 300%;
-    font-size: 55px;
+    font-size: 200%;
+    font-size: 35px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: normal;
     word-spacing: normal;
     text-transform: uppercase;
@@ -100,7 +100,7 @@
 
 .game>h3 {
     font-family: "Agency FB";
-    font-size: 42px;
+    font-size: 30px;
     font-weight: 700;
     line-height: normal;
     width: 100%;
@@ -126,7 +126,7 @@
 }
 
 .rating span {
-    font-size: 40px;
+    font-size: 30px;
     padding: 4px;
 }
 
@@ -161,7 +161,7 @@
     color: rgb(252, 168, 151);
     text-align: center;
     font-weight: 700;
-    font-size: 84px;
+    font-size: 64px;
     font-family: "Agency FB";
 }
 
