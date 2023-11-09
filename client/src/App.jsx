@@ -1,5 +1,5 @@
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useLocalStorage } from './hooks/useLocalStorage';
 import { AuthContext } from './contexts/AuthContext';
@@ -24,7 +24,6 @@ function App() {
 
     useEffect(() => {
         getAll().then(motoResult => {
-
             setMotos(Object.values(motoResult))
         });
     }, []);
@@ -46,6 +45,11 @@ function App() {
         navigate('/catalog');
     }
 
+    function removeMotoFromState(motoId) {
+        setMotos(oldState => oldState.filter(moto => moto._id !== motoId));
+    }
+
+
     return (
         <>
             <AuthContext.Provider value={{ user: auth, userLogin, userLogout }}>
@@ -57,9 +61,9 @@ function App() {
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />
                             <Route path='/logout' element={<Logout />} />
-                            <Route path="/create" element={<CreateMoto addMotoHandler={addMotoHandler} />}  />
-                            <Route path="/catalog" element={<Catalog motos={motos}/>} />
-                            <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} />} />
+                            <Route path="/create" element={<CreateMoto addMotoHandler={addMotoHandler} />} />
+                            <Route path="/catalog" element={<Catalog motos={motos} />} />
+                            <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} removeMotoFromState={removeMotoFromState} />} />
                             <Route path="*" element={<SomethingWrong />} />
                         </Routes>
                     </main>

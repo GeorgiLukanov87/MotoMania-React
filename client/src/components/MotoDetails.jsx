@@ -1,18 +1,23 @@
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { deleteMoto } from "../services/MotoService";
+import { useNavigate } from "react-router-dom";
 
 const MotoDetails = ({
     motos,
+    removeMotoFromState,
 
 }) => {
     const { motoId } = useParams();
+    const navigate = useNavigate();
 
     const moto = motos.find(m => m._id === motoId);
 
-    function deleteHandler(){
+    function onClickDeleteHandler(){
         deleteMoto(motoId)
-        .then(result=>console.log(result))
+        .then(removeMotoFromState(motoId),
+        navigate('/')
+        );
     }
 
     return (
@@ -21,11 +26,12 @@ const MotoDetails = ({
             <div className="info-section">
                 <div className="game-header">
                     <img className="game-img" src={moto?.imageUrl} alt="no-moto" />
-                    <h1>Brand: {moto.brand}</h1>
-                    <h2>Model: {moto.model}</h2>
-                    <span className="levels">Price: {moto.price}$$</span>
-                    <p className="type">Cubic-centimeters: {moto.cc} cc</p>
+                    <h1>Brand: {moto?.brand}</h1>
+                    <h2>Model: {moto?.model}</h2>
+                    <span className="levels">Price: {moto?.price}$$</span>
+                    <p className="type">Cubic-centimeters: {moto?.cc} cc</p>
                 </div>
+
                 <p className="text">
                     {moto?.summary}
                 </p>
@@ -46,7 +52,7 @@ const MotoDetails = ({
                     <a className="button">
                         Edit
                     </a>
-                    <a className="button" onClick={deleteHandler}>
+                    <a className="button" onClick={onClickDeleteHandler}>
                         Delete
                     </a>
                 </div>
