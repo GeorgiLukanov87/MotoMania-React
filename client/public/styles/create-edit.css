@@ -36,3 +36,8 @@ textarea {
     color: black;
     box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
 }
+
+.error{
+    color: red;
+    margin-top: 2px;
+}
