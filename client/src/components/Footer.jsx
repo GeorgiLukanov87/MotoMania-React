@@ -13,7 +13,7 @@ export default function Footer() {
                 </section>
 
                 <section className={styles.f1}>
-                    <h3>USEFULLY LINKS</h3>
+                    <h3>Top3 Moto-Brands</h3>
                     <p><a href="https://www.yamaha.com/" target="_blank">Yamaha</a></p>
                     <p><a href="https://global.honda/en/business_and_innovation/motorcycles/" target="_blank">Honda</a></p>
                     <p><a href="https://suzukicycles.com/" target="_blank">Suzuki</a></p>
