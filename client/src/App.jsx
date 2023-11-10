@@ -16,7 +16,7 @@ import CreateMoto from './components/CreateMoto';
 import MotoDetails from './components/MotoDetails';
 import SomethingWrong from './components/SomethingWrong';
 import EditMoto from './components/EditMoto';
-
+import Footer from './components/Footer';
 
 function App() {
     const [motos, setMotos] = useState([]);
@@ -49,7 +49,6 @@ function App() {
         setMotos(oldState => oldState.filter(moto => moto._id !== motoId));
     }
 
-
     return (
         <>
             <AuthContext.Provider value={{ user: auth, userLogin, userLogout }}>
@@ -67,6 +66,7 @@ function App() {
                             <Route path="/edit/:motoId" element={<EditMoto updateAppState={() => getAll().then(motoResult => setMotos([...Object.values(motoResult)]))} />} />
                             <Route path="*" element={<SomethingWrong />} />
                         </Routes>
+                        <Footer />
                     </main>
                 </div>
             </AuthContext.Provider>

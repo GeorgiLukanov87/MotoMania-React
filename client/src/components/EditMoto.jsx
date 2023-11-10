@@ -31,20 +31,11 @@ export default function ({
         }));
     }
     
-    // const onSubmitHandler = (e) => {
-    //     e.preventDefault();
-    //     editMoto(formValues, motoId)
-    //         .then(result => console.log(result))
-    //         .catch(err => console.log(err))
-
-    //     navigate('/catalog');
-    // }
     const onSubmitHandler = (e) => {
         e.preventDefault();
         editMoto(formValues, motoId)
             .then(result => {
                 console.log(result);
-                // Call the callback function to update the state in App.jsx
                 updateAppState();
             })
             .catch(err => console.log(err));
@@ -52,7 +43,6 @@ export default function ({
         navigate('/catalog');
     }
     
-
     return (
         <section id="create-page" className="auth" >
             <form id="create" onSubmit={onSubmitHandler}>

@@ -3,7 +3,6 @@ import { useState } from "react";
 
 import { addMoto } from "../services/MotoService";
 
-
 const initialState = {
     brand: "",
     model: "",
@@ -11,7 +10,6 @@ const initialState = {
     imageUrl: "",
     price: "",
 }
-
 
 export default function CreateMoto({
     addMotoHandler,
