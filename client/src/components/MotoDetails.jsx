@@ -1,6 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { deleteMoto } from "../services/MotoService";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../contexts/AuthContext";
 
 const MotoDetails = ({
     motos,
@@ -9,14 +11,15 @@ const MotoDetails = ({
 }) => {
     const { motoId } = useParams();
     const navigate = useNavigate();
+    const { user } = useContext(AuthContext);
 
     const moto = motos.find(m => m._id === motoId);
 
-    function onClickDeleteHandler(){
+    function onClickDeleteHandler() {
         deleteMoto(motoId)
-        .then(removeMotoFromState(motoId),
-        navigate('/catalog')
-        );
+            .then(removeMotoFromState(motoId),
+                navigate('/catalog')
+            );
     }
 
     return (
@@ -48,12 +51,19 @@ const MotoDetails = ({
                 </div>
 
                 <div className="buttons">
-                    <Link to={`/edit/${motoId}`} className="button">
-                        Edit
-                    </Link>
-                    <a className="button" onClick={onClickDeleteHandler}>
-                        Delete
-                    </a>
+
+                    {moto?.auth?._id === user?._id
+
+                        ? <><Link to={`/edit/${motoId}`} className="button">
+                            Edit
+                        </Link>
+
+                            <a className="button" onClick={onClickDeleteHandler}>
+                                Delete
+                            </a></>
+                        : ""
+                    }
+
                 </div>
             </div>
 

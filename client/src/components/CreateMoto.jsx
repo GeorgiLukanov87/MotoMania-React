@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
-
+import { useState, useContext } from "react";
+import { AuthContext } from "../contexts/AuthContext";
 import { addMoto } from "../services/MotoService";
 
 const initialState = {
@@ -17,6 +17,7 @@ export default function CreateMoto({
 }) {
     const [formValues, setFormValues] = useState(initialState);
     const navigate = useNavigate();
+    const { user } = useContext(AuthContext);
 
     console.log(initialState)
 
@@ -33,7 +34,8 @@ export default function CreateMoto({
 
     const onSubmit = (e) => {
         e.preventDefault();
-        addMoto(formValues)
+        // addMoto(formValues) Before adding _id
+        addMoto(formValues,user._id)
             .then(result => addMotoHandler(result))
             .catch(err => console.log(err))
         resetForm();
