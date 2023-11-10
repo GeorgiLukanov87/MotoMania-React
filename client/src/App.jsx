@@ -54,7 +54,7 @@ function App() {
             <AuthContext.Provider value={{ user: auth, userLogin, userLogout }}>
                 <div id="box">
                     <Header />
-                    <main id="main-content">z
+                    <main id="main-content">
                         <Routes>
                             <Route path="/" element={<Home motos={motos} />} />
                             <Route path="/login" element={<Login />} />

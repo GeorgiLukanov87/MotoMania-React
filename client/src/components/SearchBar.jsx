@@ -1,4 +1,3 @@
-// SearchBar.jsx
 import React, { useState } from 'react';
 
 const SearchBar = ({ onSearch }) => {
@@ -16,7 +15,7 @@ const SearchBar = ({ onSearch }) => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button className='btn submit' onClick={handleSearch}>Search</button>
     </div>
   );
 };
