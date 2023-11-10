@@ -64,7 +64,7 @@ function App() {
                             <Route path="/create" element={<CreateMoto addMotoHandler={addMotoHandler} />} />
                             <Route path="/catalog" element={<Catalog motos={motos} />} />
                             <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} removeMotoFromState={removeMotoFromState} />} />
-                            <Route path="/edit/:motoId" element={<EditMoto addMotoHandler={addMotoHandler}/>} />
+                            <Route path="/edit/:motoId" element={<EditMoto updateAppState={() => getAll().then(motoResult => setMotos([...Object.values(motoResult)]))} />} />
                             <Route path="*" element={<SomethingWrong />} />
                         </Routes>
                     </main>

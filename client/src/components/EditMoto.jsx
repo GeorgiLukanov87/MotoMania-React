@@ -11,7 +11,9 @@ const initialState = {
     price: "",
 }
 
-export default function () {
+export default function ({
+    updateAppState,
+}) {
     const [formValues, setFormValues] = useState(initialState);
     const { motoId } = useParams();
     const navigate = useNavigate();
@@ -28,15 +30,28 @@ export default function () {
             [e.target.name]: e.target.value
         }));
     }
+    
+    // const onSubmitHandler = (e) => {
+    //     e.preventDefault();
+    //     editMoto(formValues, motoId)
+    //         .then(result => console.log(result))
+    //         .catch(err => console.log(err))
 
+    //     navigate('/catalog');
+    // }
     const onSubmitHandler = (e) => {
         e.preventDefault();
         editMoto(formValues, motoId)
-            .then(result => console.log(result))
-            .catch(err => console.log(err))
-
-        navigate('/');
+            .then(result => {
+                console.log(result);
+                // Call the callback function to update the state in App.jsx
+                updateAppState();
+            })
+            .catch(err => console.log(err));
+    
+        navigate('/catalog');
     }
+    
 
     return (
         <section id="create-page" className="auth" >
