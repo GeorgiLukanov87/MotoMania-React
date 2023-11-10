@@ -31,6 +31,7 @@ const MotoDetails = ({
                     <h2>Model: {moto?.model}</h2>
                     <span className="levels">Price: {moto?.price}$$</span>
                     <p className="type">Cubic-centimeters: {moto?.cc} cc</p>
+                    <p className="type">Available from:{moto?.createdAt}</p>
                 </div>
 
                 <p className="text">

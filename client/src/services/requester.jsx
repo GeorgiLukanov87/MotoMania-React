@@ -1,4 +1,6 @@
 export const request = async (method, url, data) => {
+    const date = new Date();
+    const createdAt = date.toLocaleString().slice(0, 10);
 
     try {
         const user = localStorage.getItem('auth');
@@ -22,7 +24,7 @@ export const request = async (method, url, data) => {
                     'content-type': 'application/json'
                 },
                 // body: JSON.stringify(data) Before adding _id
-                body: JSON.stringify({ ...data, auth })
+                body: JSON.stringify({ ...data, auth, createdAt })
             })
         }
 

@@ -35,7 +35,7 @@ export default function CreateMoto({
     const onSubmit = (e) => {
         e.preventDefault();
         // addMoto(formValues) Before adding _id
-        addMoto(formValues,user._id)
+        addMoto(formValues, user._id)
             .then(result => addMotoHandler(result))
             .catch(err => console.log(err))
         resetForm();
@@ -73,3 +73,15 @@ export default function CreateMoto({
         </section>
     );
 }
+
+// JSON owner format:
+
+// {
+//     auth:
+//     {
+//         email: 'admin@abv.bg',
+//             username: 'Admin',
+//                 _id: '60f0cf0b-34b0-4abd-9769-8c42f830dffc',
+//                     accessToken: 'fde320ebc724e94ccf421c1f36cb0217a5acca8575eecdc452b7868863128a73',
+// }
+// }

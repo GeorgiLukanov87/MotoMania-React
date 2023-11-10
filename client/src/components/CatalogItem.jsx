@@ -11,7 +11,10 @@ const CatalogItem = (props) => {
                 <h6>Model: {props.moto.model}</h6>
                 <h2>Brand: {props.moto.brand}</h2>
                 <h2>cc:{props.moto.cc}</h2>
-                <h2>Price:{props.moto.price} $</h2>
+                <h2>Price:{props.moto.price}$</h2>
+                <br />
+                <h5>Available from:{props.moto.createdAt}</h5>
+
                 <Link to={`/catalog/${props.moto._id}`} className="details-button">
                     Details
                 </Link>
