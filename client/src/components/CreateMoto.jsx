@@ -107,7 +107,7 @@ const CreateMoto = ({ addMotoHandler }) => {
         }
 
         if (!formValues.cc.trim() || Number(formValues.cc) < 49 || Number(formValues.cc) > 1300) {
-            newErrors.cc = 'Cubic-centimeters must be between 49 and 1300';
+            newErrors.cc = 'Cubic-centimeters must be between 49cc and 1300cc';
         }
 
         if (!formValues.price.trim() || Number(formValues.price) < 1) {
