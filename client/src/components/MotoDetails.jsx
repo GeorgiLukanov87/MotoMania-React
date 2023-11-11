@@ -2,7 +2,9 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { deleteMoto } from "../services/MotoService";
 import { useContext, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
+
 import uniqid from 'uniqid'
+import { toast } from 'react-toastify';
 
 const MotoDetails = ({
     motos,
@@ -22,12 +24,25 @@ const MotoDetails = ({
 
     const moto = motos.find(m => m._id === motoId);
 
-    function onClickDeleteHandler() {
+    // function onClickDeleteHandler() {
+    //     deleteMoto(motoId)
+    //         .then(removeMotoFromState(motoId),
+    //             navigate('/catalog')
+    //         );
+    // }
+
+    const onClickDeleteHandler = () => {
         deleteMoto(motoId)
-            .then(removeMotoFromState(motoId),
-                navigate('/catalog')
-            );
-    }
+          .then(() => {
+            removeMotoFromState(motoId);
+            navigate('/catalog');
+            toast.success('Moto deleted successfully.');
+          })
+          .catch((error) => {
+            console.error('Error deleting moto:', error);
+            toast.error('Error deleting moto.');
+          });
+      };
 
     const onChange = (e) => {
         setComment(state => ({
@@ -39,9 +54,9 @@ const MotoDetails = ({
     const addCommentHandler = (e) => {
         e.preventDefault();
         const finalCommentResult = `${comment.username} : ${comment.comment}`;
-        debugger
+
         if (finalCommentResult == ' : '){
-            alert("Fill inputs!")
+            toast.error("Fill inputs!");
             return;
         }
 
