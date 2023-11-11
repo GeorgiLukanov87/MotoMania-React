@@ -4,7 +4,8 @@ export const request = async (method, url, data) => {
 
     try {
         const user = localStorage.getItem('auth');
-        const auth = JSON.parse(user || {});
+        // const auth = JSON.parse(user || {});
+        const auth = user ? JSON.parse(user) : {};
 
         let headers = {}
 
@@ -29,8 +30,8 @@ export const request = async (method, url, data) => {
         }
 
         const response = await buildRequest;
-
         const result = await response.json();
+        
         console.log(result);
         return result;
 

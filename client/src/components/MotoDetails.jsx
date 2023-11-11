@@ -25,16 +25,16 @@ const MotoDetails = ({
 
     const onClickDeleteHandler = () => {
         deleteMoto(motoId)
-          .then(() => {
-            removeMotoFromState(motoId);
-            navigate('/catalog');
-            toast.success('Moto deleted successfully.');
-          })
-          .catch((error) => {
-            console.error('Error deleting moto:', error);
-            toast.error('Error deleting moto.');
-          });
-      };
+            .then(() => {
+                removeMotoFromState(motoId);
+                navigate('/catalog');
+                toast.success('Moto deleted successfully.');
+            })
+            .catch((error) => {
+                console.error('Error deleting moto:', error);
+                toast.error('Error deleting moto.');
+            });
+    };
 
     const onChange = (e) => {
         setComment(state => ({
@@ -47,7 +47,7 @@ const MotoDetails = ({
         e.preventDefault();
         const finalCommentResult = `${comment.username} : ${comment.comment}`;
 
-        if (finalCommentResult == ' : '){
+        if (finalCommentResult == ' : ') {
             toast.error("Fill inputs!");
             return;
         }
@@ -81,9 +81,9 @@ const MotoDetails = ({
                         {moto?.comments?.map(x =>
                             <li key={uniqid()} className="comment">
                                 <p>
-                                    {!x.split(' : ')[0] ? "Anonymous : " : `${x.split(' : ')[0]} : `} 
+                                    {!x.split(' : ')[0] ? "Anonymous : " : `${x.split(' : ')[0]} : `}
                                     {!x.split(' : ')[1] ? "Empty" : `${x.split(' : ')[1]}`}
-                                    </p>
+                                </p>
                             </li>
                         )}
 
@@ -99,13 +99,15 @@ const MotoDetails = ({
 
                     {moto?.auth?._id === user?._id
 
-                        ? <><Link to={`/edit/${motoId}`} className="button">
-                            Edit
-                        </Link>
+                        ? <>
+                            <Link to={`/edit/${motoId}`} className="button">
+                                Edit
+                            </Link>
 
                             <a className="button" onClick={onClickDeleteHandler}>
                                 Delete
-                            </a></>
+                            </a>
+                        </>
                         : ""
                     }
 

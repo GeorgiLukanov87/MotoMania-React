@@ -1,6 +1,5 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { login } from "../services/authService";
 import { AuthContext } from "../contexts/AuthContext";
@@ -23,11 +22,9 @@ const Login = () => {
             .then(authData => {
                 userLogin(authData);
                 navigate('/')
-                
+
             })
-            .catch(() => {
-                navigate('/404')
-            })
+            .catch(err => console.log(err))
     }
 
     return (
@@ -43,7 +40,7 @@ const Login = () => {
                     <label htmlFor="password">Password:</label>
                     <input type="password" id="password" name="password" placeholder="Enter password..." />
 
-                    
+
                     <button className="btn submit" type="submit">Login</button>
                     <p className="field">
                         <span>
