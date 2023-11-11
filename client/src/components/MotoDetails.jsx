@@ -1,16 +1,24 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { deleteMoto } from "../services/MotoService";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
+import uniqid from 'uniqid'
 
 const MotoDetails = ({
     motos,
     removeMotoFromState,
+    addComment,
 
 }) => {
-    const { motoId } = useParams();
     const navigate = useNavigate();
+    const { motoId } = useParams();
     const { user } = useContext(AuthContext);
+
+    const [comment, setComment] = useState({
+        username: "",
+        comment: "",
+    });
+
 
     const moto = motos.find(m => m._id === motoId);
 
@@ -19,6 +27,22 @@ const MotoDetails = ({
             .then(removeMotoFromState(motoId),
                 navigate('/catalog')
             );
+    }
+
+    const onChange = (e) => {
+        setComment(state => ({
+            ...state,
+            [e.target.name]: e.target.value,
+        }))
+    }
+
+    const addCommentHandler = (e) => {
+        e.preventDefault();
+        const finalCommentResult = `${comment.username} : ${comment.comment}`;
+
+        addComment(motoId, finalCommentResult);
+        comment.username = ""
+        comment.comment = ""
     }
 
     return (
@@ -41,6 +65,14 @@ const MotoDetails = ({
                 <div className="details-comments">
                     <h2>Comments:</h2>
                     <ul>
+                        {moto?.comments?.map(x =>
+                            <li key={uniqid()} className="comment">
+                                <p>
+                                    {!x.split(' : ')[0] ? "Anonymous : " : `${x.split(' : ')[0]} : `} 
+                                    {x.split(' : ')[1]}
+                                    </p>
+                            </li>
+                        )}
 
                     </ul>
                     {
@@ -69,15 +101,18 @@ const MotoDetails = ({
 
             <article className="create-comment">
                 <label>Add new comment:</label>
-                <form className="form" >
-                    <input
+                <form className="form" onSubmit={addCommentHandler}>
+                    <input onChange={onChange}
                         type="text"
                         name="username"
                         placeholder="Enter name..."
+                        value={comment.username}
                     />
-                    <textarea
+                    <textarea onChange={onChange}
                         name="comment"
                         placeholder="Comment..."
+                        value={comment.comment}
+
                     />
                     <input
                         className="btn submit"
@@ -85,6 +120,7 @@ const MotoDetails = ({
                         value="Add Comment"
                     />
                 </form>
+
                 <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
             </article>
         </section>

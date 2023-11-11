@@ -49,6 +49,21 @@ function App() {
         setMotos(oldState => oldState.filter(moto => moto._id !== motoId));
     }
 
+    const addComment = (motoId, comment) => {
+        setMotos(state => {
+            const moto = state.find(x => x._id === motoId);
+
+            const comments = moto.comments || [];
+            comments.push(comment);
+
+            return [
+                ...state.filter(x => x._id !== motoId),
+                { ...moto, comments },
+            ]
+        });
+
+    }
+
     return (
         <>
             <AuthContext.Provider value={{ user: auth, userLogin, userLogout }}>
@@ -62,7 +77,7 @@ function App() {
                             <Route path='/logout' element={<Logout />} />
                             <Route path="/create" element={<CreateMoto addMotoHandler={addMotoHandler} />} />
                             <Route path="/catalog" element={<Catalog motos={motos} />} />
-                            <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} removeMotoFromState={removeMotoFromState} />} />
+                            <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} removeMotoFromState={removeMotoFromState} addComment={addComment}/>} />
                             <Route path="/edit/:motoId" element={<EditMoto updateAppState={() => getAll().then(motoResult => setMotos([...Object.values(motoResult)]))} />} />
                             <Route path="*" element={<SomethingWrong />} />
                         </Routes>
