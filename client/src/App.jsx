@@ -49,19 +49,34 @@ function App() {
         setMotos(oldState => oldState.filter(moto => moto._id !== motoId));
     }
 
+    // const addComment = (motoId, comment) => {
+    //     setMotos(state => {
+    //         const moto = state.find(x => x._id === motoId);
+
+    //         const comments = moto.comments || [];
+    //         comments.push(comment);
+
+    //         return [
+    //             ...state.filter(x => x._id !== motoId),
+    //             { ...moto, comments },
+    //         ]
+    //     });
+    // }
+
     const addComment = (motoId, comment) => {
-        setMotos(state => {
-            const moto = state.find(x => x._id === motoId);
+        setMotos((state) => {
+            const updatedMotos = state.map((moto) => {
+                if (moto._id === motoId) {
+                    const updatedComments = [...(moto.comments || []), comment];
+                    return { ...moto, comments: updatedComments };
+                }
+                return moto;
+            });
 
-            const comments = moto.comments || [];
-            comments.push(comment);
-
-            return [
-                ...state.filter(x => x._id !== motoId),
-                { ...moto, comments },
-            ]
+            return updatedMotos.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
         });
-    }
+    };
+
 
     return (
         <>
@@ -77,7 +92,14 @@ function App() {
                             <Route path="/create" element={<CreateMoto addMotoHandler={addMotoHandler} />} />
                             <Route path="/catalog" element={<Catalog motos={motos} />} />
                             <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} removeMotoFromState={removeMotoFromState} addComment={addComment} />} />
-                            <Route path="/edit/:motoId" element={<EditMoto updateAppState={() => getAll().then(motoResult => setMotos([...Object.values(motoResult)]))} />} />
+                            {/* <Route path="/edit/:motoId" element={<EditMoto updateAppState={() => getAll().then(motoResult => setMotos([...Object.values(motoResult)]))} />} /> */}
+
+                            <Route
+                                path="/edit/:motoId"
+                                element={<EditMoto updateAppState={() => getAll().then((motoResult) => setMotos([...Object.values(motoResult)].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))))} />}
+                            />
+
+
                             <Route path="*" element={<SomethingWrong />} />
                         </Routes>
                         <Footer />
