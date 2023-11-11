@@ -21,15 +21,7 @@ const MotoDetails = ({
         comment: "",
     });
 
-
     const moto = motos.find(m => m._id === motoId);
-
-    // function onClickDeleteHandler() {
-    //     deleteMoto(motoId)
-    //         .then(removeMotoFromState(motoId),
-    //             navigate('/catalog')
-    //         );
-    // }
 
     const onClickDeleteHandler = () => {
         deleteMoto(motoId)
