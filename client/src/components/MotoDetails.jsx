@@ -39,8 +39,14 @@ const MotoDetails = ({
     const addCommentHandler = (e) => {
         e.preventDefault();
         const finalCommentResult = `${comment.username} : ${comment.comment}`;
+        debugger
+        if (finalCommentResult == ' : '){
+            alert("Fill inputs!")
+            return;
+        }
 
         addComment(motoId, finalCommentResult);
+        console.log(finalCommentResult)
         comment.username = ""
         comment.comment = ""
     }
@@ -69,7 +75,7 @@ const MotoDetails = ({
                             <li key={uniqid()} className="comment">
                                 <p>
                                     {!x.split(' : ')[0] ? "Anonymous : " : `${x.split(' : ')[0]} : `} 
-                                    {x.split(' : ')[1]}
+                                    {!x.split(' : ')[1] ? "Empty" : `${x.split(' : ')[1]}`}
                                     </p>
                             </li>
                         )}
