@@ -9,7 +9,10 @@ const AllMotos = (props) => {
         <div className="game">
 
             <div className="image-wrap">
-                <img src={moto.imageUrl} alt="not-alt" />
+                {moto.imageUrl 
+                ? <img src={moto.imageUrl} alt="not-alt" /> 
+                : <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-15.png" alt="not-alt" />}
+                
             </div>
 
             <h3>{moto.brand}</h3>
