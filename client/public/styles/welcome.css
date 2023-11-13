@@ -139,24 +139,24 @@
 }
 
 .details-btn {
-    background-color: #fd5454;
+    background-color: #e81d1d;
     font-size: 1.5rem;
     padding-top: 20px;
     margin-top: 14px;
     color: white;
     padding: 0.9em 1.4em;
-    border-radius: 12px;
+    border-radius: 10px;
 }
 
 .data-buttons {
     font-size: 1.4rem;
     padding-top: 20px;
-    text-align: center;
 }
 
 .btn.details-btn:hover {
-    background-color: rgb(192, 129, 117);
+    background-color: rgb(249, 127, 127);
     color: white;
+    scale: 1.1;
 }
 
 #home-page>h1 {

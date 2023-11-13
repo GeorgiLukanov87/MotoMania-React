@@ -1,6 +1,6 @@
-#catalogPagination{
+.catalogPagination{
     display: flex;
-    flex-direction: column;
+    flex-direction: col;
 }
 
 .paginationButton{

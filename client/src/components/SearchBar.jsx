@@ -15,7 +15,7 @@ const SearchBar = ({ onSearch }) => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button className='btn submit' onClick={handleSearch}>Search</button>
+      <button className='btn submit' onClick={handleSearch}>Search <i className="fa-solid fa-magnifying-glass"></i></button>
     </div>
   );
 };
