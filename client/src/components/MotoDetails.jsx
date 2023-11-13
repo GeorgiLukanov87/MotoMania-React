@@ -62,23 +62,34 @@ const MotoDetails = ({
         <section id="moto-details">
             <div className="info-section">
                 <div className="game-header">
-                    <h2>Motorcycle Details:</h2>
-                    <div className="image-wrap">
-                {moto.imageUrl 
-                ? <img src={moto.imageUrl} alt="not-alt" /> 
-                : <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-15.png" alt="not-alt" />}
-                
-            </div>
-                    <h1>Brand: {moto?.brand}</h1>
-                    <h2>Model: {moto?.model}</h2>
-                    <span className="levels">Price: {moto?.price}$$</span>
-                    <p className="type">Cubic-centimeters: {moto?.cc} cc</p>
-                    <p className="type">Available from:{moto?.createdAt}</p>
+
+                    <div className="image-wrap1">
+                        {moto?.imageUrl
+                            ? <img src={moto?.imageUrl} alt="not-alt" />
+                            : <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-15.png" alt="not-alt" />}
+
+                    </div>
+                    <div>
+                        <span className="levels">Price: {moto?.price}$$</span>
+                    </div>
+
+                    <div className="moto-details-wrapper1">
+                        <h1>Brand: {moto?.brand}</h1>
+                        <h2>Model: {moto?.model}</h2>
+
+                        <div>
+                            <p className="type">Cubic-centimeters: {moto?.cc} cc</p>
+                        </div>
+                        <div>
+                            <p className="type">Available from:{moto?.createdAt}</p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <p className="text">
+                {/* <p className="text">
                     {moto?.summary}
-                </p>
+                </p> */}
 
                 <div className="details-comments">
                     <h2>Comments:</h2>

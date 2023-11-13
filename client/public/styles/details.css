@@ -30,9 +30,12 @@
 
 .game-header {
     position: relative;
-    padding: 25px;
+    padding: 16px;
     height: 40%;
+    display: flex;
+    flex-wrap: wrap;
 }
+
 
 .game_header>h1 {
     color: black;

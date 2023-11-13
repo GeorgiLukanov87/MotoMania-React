@@ -87,6 +87,11 @@
     color: rgb(204, 144, 131);
 }
 
+.moto-details-wrapper1{
+    display: flex;
+align-items: baseline;
+}
+
 .image-wrap {
     width: 250px;
     height: 250px;
@@ -97,6 +102,19 @@
 }
 
 .image-wrap>img {
+    max-width: 100%;
+}
+
+.image-wrap1 {
+    width: 500px;
+    height: 350px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.image-wrap1>img {
     max-width: 100%;
 }
 

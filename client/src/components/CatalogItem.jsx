@@ -7,12 +7,12 @@ const CatalogItem = (props) => {
     return (
         <div className="allGames">
             <div className="allGames-info">
-            <div className="image-wrap">
-                {props.moto.imageUrl 
-                ? <img src={props.moto.imageUrl} alt="not-alt" /> 
-                : <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-15.png" alt="not-alt" />}
-                
-            </div>
+
+                {props.moto.imageUrl
+                    ? <img src={props.moto.imageUrl} alt="not-alt" />
+                    : <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-15.png" alt="not-alt" />
+                }
+
                 <h6>Model: {props.moto.model}</h6>
                 <h2>Brand: {props.moto.brand}</h2>
                 <h2>cc:{props.moto.cc}</h2>
