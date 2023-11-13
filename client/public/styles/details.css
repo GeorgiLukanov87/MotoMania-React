@@ -28,6 +28,13 @@
     background-color: whitesmoke;
 }
 
+video {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    margin: 10px;
+  }
+
 .game-header {
     position: relative;
     padding: 16px;

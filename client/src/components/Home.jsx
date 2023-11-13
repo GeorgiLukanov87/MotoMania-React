@@ -1,7 +1,7 @@
 import AllMotos from "./AllMotos";
 
 const Home = (props) => {
-    
+
     const { motos } = props
 
     return (
@@ -9,6 +9,11 @@ const Home = (props) => {
             <div className="welcome-message">
                 <h2>ALL new motos are</h2>
                 <h3>Only in MotoMania</h3>
+
+                <video controls autoPlay loop>
+                    <source src="../public/videos/The King is back - Introducing the GSX-R1000 Concept.mp4" type="video/mp4" />
+                </video>
+
             </div>
             <img src="./images/1-moto-png-image-motorcycle-png-picture-download.png" alt="hero" />
             <div id="home-page">

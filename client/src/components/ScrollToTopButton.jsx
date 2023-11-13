@@ -10,7 +10,7 @@ const ScrollToTopButton = () => {
 
   return (
     <div className={styles.scrollToTopButton} onClick={scrollToTop}>
-      <span><i class="fa-solid fa-up-long fa-xl"></i></span>
+      <span><i className="fa-solid fa-up-long fa-xl"></i></span>
     </div>
   );
 };
