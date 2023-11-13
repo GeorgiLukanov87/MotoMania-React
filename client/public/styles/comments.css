@@ -12,16 +12,16 @@
 }
 
 .create-comment {
-    margin-top: 60px;
+    margin-top: 30px;
     position: relative;
     text-align: center;
-    width: 700px;
+    width: 500px;
     height: auto;
-    border-radius: 20px;
-    padding: 40px;
+    border-radius: 12px;
+    padding: 30px;
     box-sizing: border-box;
-    background: #6f5d9c;
-    box-shadow: 0px 0px 32px 0px #32485e, -14px -14px 20px #191c21;
+    background:#6c7583;
+    box-shadow: 0px 2px 15px 1px #257685;
 }
 
 .create-comment>label {
@@ -33,7 +33,7 @@
 }
 
 .info-section>.details-comments li {
-    width: 400px;
+    width: 300px;
     display: inline-block;
     position: static;
     margin: 20px auto 25px auto;
@@ -45,7 +45,7 @@
 }
 
 .comment p {
-    padding: 16px;
+    padding: 12px;
 }
 
 
