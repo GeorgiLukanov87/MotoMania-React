@@ -1,6 +1,9 @@
+import styles from '../components/Catalog.module.css';
+
 import React, { useContext, useState } from 'react';
 import SearchBar from './SearchBar';
 import CatalogItem from './CatalogItem';
+
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthContext';
 
@@ -51,18 +54,18 @@ const Catalog = ({ motos }) => {
         )}
 
         {totalPages > 1 && (
-          <div className="pagination">
+          <div className="catalogPagination">
 
-            <button
+            <button className={styles.paginationButton}
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}
             >
               Previous
             </button>
 
-            <span>{`Page ${currentPage} of ${totalPages}`}</span>
+            <span className={styles.pagesPagination}>{`Page ${currentPage} of ${totalPages}`}</span>
 
-            <button
+            <button className={styles.paginationButton}
               onClick={() => handlePageChange(currentPage + 1)}
               disabled={currentPage === totalPages}
             >

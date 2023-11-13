@@ -1,0 +1,21 @@
+#catalogPagination{
+    display: flex;
+    flex-direction: column;
+}
+
+.paginationButton{
+    color: rgb(211, 207, 207);
+    padding: 10px;
+    font-size: 18px;
+}
+
+.paginationButton:hover{
+    color: rgb(118, 118, 117);
+    cursor: pointer;
+}
+
+.pagesPagination{
+    color: white;
+    margin: 6px;
+    font-size: 16px;
+}
