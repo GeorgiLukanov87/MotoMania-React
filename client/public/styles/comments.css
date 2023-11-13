@@ -33,7 +33,7 @@
 }
 
 .info-section>.details-comments li {
-    width: auto;
+    width: 500px;
     display: inline-block;
     display: flex;
     flex-direction: column;

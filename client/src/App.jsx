@@ -17,6 +17,7 @@ import MotoDetails from './components/MotoDetails';
 import SomethingWrong from './components/SomethingWrong';
 import EditMoto from './components/EditMoto';
 import Footer from './components/Footer';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
     const [motos, setMotos] = useState([]);
@@ -102,6 +103,7 @@ function App() {
 
                             <Route path="*" element={<SomethingWrong />} />
                         </Routes>
+                        <ScrollToTopButton />
                         <Footer />
                     </main>
                 </div>

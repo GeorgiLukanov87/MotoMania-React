@@ -70,7 +70,7 @@ const MotoDetails = ({
 
                     </div>
                     <div>
-                        <span className="levels">Price: {moto?.price}$$</span>
+                        <span className="levels">Price: {moto?.price}$</span>
                     </div>
 
                     <div className="moto-details-wrapper1">
