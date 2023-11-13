@@ -59,11 +59,16 @@ const MotoDetails = ({
     }
 
     return (
-        <section id="game-details">
-            <h1>Motorcycle Details</h1>
+        <section id="moto-details">
             <div className="info-section">
                 <div className="game-header">
-                    <img className="game-img" src={moto?.imageUrl} alt="no-moto" />
+                    <h2>Motorcycle Details:</h2>
+                    <div className="image-wrap">
+                {moto.imageUrl 
+                ? <img src={moto.imageUrl} alt="not-alt" /> 
+                : <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-15.png" alt="not-alt" />}
+                
+            </div>
                     <h1>Brand: {moto?.brand}</h1>
                     <h2>Model: {moto?.model}</h2>
                     <span className="levels">Price: {moto?.price}$$</span>

@@ -33,8 +33,10 @@
 }
 
 .info-section>.details-comments li {
-    width: 300px;
+    width: auto;
     display: inline-block;
+    display: flex;
+    flex-direction: column;
     position: static;
     margin: 20px auto 25px auto;
     box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), 12px 12px 20px 0 rgba(0, 0, 0, 0.19);
