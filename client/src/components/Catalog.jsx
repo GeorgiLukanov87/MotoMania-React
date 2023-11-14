@@ -38,14 +38,16 @@ const Catalog = ({ motos }) => {
 
   return (
     <div>
+
       <section id="catalog-page">
+        <video controls autoPlay muted loop>
+          <source src="videos/THE RED WOODS _ Ducati Panigale V4s (feat. MOTORBIKEMEDIA).mp4" type="video/mp4" />
+        </video>
         <SearchBar onSearch={handleSearch} />
 
         <h1>All Motos</h1>
-        
-        <video controls autoPlay loop>
-          <source src="../public/videos/THE RED WOODS _ Ducati Panigale V4s (feat. MOTORBIKEMEDIA).mp4" type="video/mp4" />
-        </video>
+
+
 
         {paginatedMotos().length > 0 ? (
           <div>

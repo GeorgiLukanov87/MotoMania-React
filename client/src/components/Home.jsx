@@ -10,8 +10,8 @@ const Home = (props) => {
                 <h2>ALL new motos are</h2>
                 <h3>Only in MotoMania</h3>
 
-                <video controls autoPlay loop>
-                    <source src="../public/videos/The King is back - Introducing the GSX-R1000 Concept.mp4" type="video/mp4" />
+                <video controls autoPlay muted loop>
+                    <source src="videos/The King is back - Introducing the GSX-R1000 Concept.mp4" type="video/mp4" />
                 </video>
 
             </div>
