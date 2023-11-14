@@ -61,7 +61,7 @@ const MotoDetails = ({
     return (
         <section id="moto-details">
             <div className="info-section">
-                <div className="game-header">
+                <div className="moto-header">
 
                     <div className="image-wrap1">
                         {moto?.imageUrl

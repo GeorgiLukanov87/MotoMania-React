@@ -5,8 +5,8 @@ const CatalogItem = (props) => {
     console.log(props)
 
     return (
-        <div className="allGames">
-            <div className="allGames-info">
+        <div className="allMotos">
+            <div className="allMotos-info">
 
                 {props.moto.imageUrl
                     ? <img src={props.moto.imageUrl} alt="not-alt" />

@@ -37,7 +37,6 @@ const Catalog = ({ motos }) => {
   };
 
   return (
-    <div>
 
       <section id="catalog-page">
         <video controls autoPlay muted loop>
@@ -46,8 +45,6 @@ const Catalog = ({ motos }) => {
         <SearchBar onSearch={handleSearch} />
 
         <h1>All Motos</h1>
-
-
 
         {paginatedMotos().length > 0 ? (
           <div>
@@ -91,7 +88,6 @@ const Catalog = ({ motos }) => {
           <Link to={'/'}>Back</Link>
         </button>
       </section>
-    </div>
   );
 };
 

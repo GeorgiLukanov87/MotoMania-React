@@ -6,7 +6,7 @@ const AllMotos = (props) => {
 
     
     return (
-        <div className="game">
+        <div className="moto">
 
             <div className="image-wrap">
                 {moto.imageUrl 

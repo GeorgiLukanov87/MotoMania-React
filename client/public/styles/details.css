@@ -1,4 +1,4 @@
-#game-details {
+#moto-details {
     position: relative;
     display: block;
     width: 980px;
@@ -8,7 +8,7 @@
     transition: all 0.4s;
 }
 
-#game-details>h1 {
+#moto-details>h1 {
     color: #fff;
     font-family: "Agency FB";
     font-size: 45px;
@@ -35,7 +35,7 @@ video {
     margin: 10px;
   }
 
-.game-header {
+.moto-header {
     position: relative;
     padding: 16px;
     height: 40%;
@@ -44,14 +44,14 @@ video {
 }
 
 
-.game_header>h1 {
+.moto_header>h1 {
     color: black;
     margin-top: 5px;
     font-size: 30px;
     font-weight: 400;
 }
 
-.game_header>h4 {
+.moto_header>h4 {
     color: #555;
     font-size: 20px;
     font-weight: 400;
@@ -74,7 +74,7 @@ video {
     margin-left: 10px;
 }
 
-.game-img {
+.moto-img {
     position: relative;
     float: left;
     margin-left: 15px;
@@ -90,7 +90,7 @@ video {
     height: 50%;
 }
 
-.game-summary {
+.moto-summary {
     margin-top: 15px;
     padding: 60px;
     height: 50%;
