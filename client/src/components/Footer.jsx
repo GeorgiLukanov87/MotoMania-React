@@ -6,7 +6,7 @@ export default function Footer() {
             <div className={styles.footerWrapper}>
 
                 <section className={styles.f1}>
-                    <h3>CONTACTS</h3>
+                    <h3>Contacts</h3>
                     <p><i className="fa-solid fa-phone-volume"></i> +34/697243424</p>
                     <p><i className="fa-solid fa-envelope"></i> GeorgiStefanovLukanov@gmail.com</p>
                     <p><i className="fa-solid fa-location-dot"></i> c/Torrente-24 cp:47123, Valencia, Spain</p>
@@ -20,7 +20,7 @@ export default function Footer() {
                 </section>
 
                 <section className={styles.f1}>
-                    <h3>FOLLOW US</h3>
+                    <h3>Follow Us</h3>
                     <div className={styles.f1Wrapper}>
                         <a href="https://www.facebook.com/georgi.lukanov.16/" target="_blank">
                             <i className="fa-brands fa-facebook"></i></a>

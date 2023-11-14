@@ -16,7 +16,7 @@
   .scrollToTopButton:hover {
     background-color: #b0b1b2;
     cursor: pointer;
-    color: rgb(255, 255, 255);
+    color: #e81d1d;
     scale: 1.05;
   }
   
