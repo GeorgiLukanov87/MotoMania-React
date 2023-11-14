@@ -32,8 +32,13 @@ video {
     width: 100%; 
     height: auto; 
     object-fit: cover; 
-    margin: 10px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px 1px #8a8989;
   }
+
+.video2-wrapper{
+    width: 500px;
+}
 
 .moto-header {
     position: relative;
