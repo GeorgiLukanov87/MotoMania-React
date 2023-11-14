@@ -131,7 +131,6 @@ const MotoDetails = ({
             </div>
 
             <article className="create-comment">
-                <label>Add new comment:</label>
                 <form className="form" onSubmit={addCommentHandler}>
                     <input onChange={onChange}
                         type="text"
