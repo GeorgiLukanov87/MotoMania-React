@@ -61,11 +61,12 @@
 }
 
 .f1 h3{
-    color: #e81d1d;
+    color: #919090;
+    font-size: 22px;
 }
 
 .f1 h3:hover{
-   color: #ef7e7e;
+   color: #d5d5d5;
    scale: 1.1;
    transition: 200ms;
 }
