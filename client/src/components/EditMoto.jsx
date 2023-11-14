@@ -30,7 +30,7 @@ export default function ({
             [e.target.name]: e.target.value
         }));
     }
-    
+
     const onSubmitHandler = (e) => {
         e.preventDefault();
         editMoto(formValues, motoId)
@@ -39,10 +39,10 @@ export default function ({
                 updateAppState();
             })
             .catch(err => console.log(err));
-    
+
         navigate('/catalog');
     }
-    
+
     return (
         <section id="create-page" className="auth" >
             <form id="create" onSubmit={onSubmitHandler}>

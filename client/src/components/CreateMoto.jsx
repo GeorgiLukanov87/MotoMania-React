@@ -52,21 +52,21 @@ const CreateMoto = ({ addMotoHandler }) => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-      
+
         if (validateForm()) {
-          addMoto(formValues)
-            .then((result) => {
-              addMotoHandler(result);
-              navigate('/');
-              toast.success(`Moto: ${formValues.brand}-added successfully.`);
-            })
-            .catch((error) => {
-              console.error('Error adding moto:', error);
-              setErrors({ general: 'An error occurred. Please try again later.' });
-              toast.error('Error adding moto.');
-            });
+            addMoto(formValues)
+                .then((result) => {
+                    addMotoHandler(result);
+                    navigate('/');
+                    toast.success(`Moto: ${formValues.brand}-added successfully.`);
+                })
+                .catch((error) => {
+                    console.error('Error adding moto:', error);
+                    setErrors({ general: 'An error occurred. Please try again later.' });
+                    toast.error('Error adding moto.');
+                });
         }
-      };
+    };
 
     return (
         <section id="create-page" className="auth">

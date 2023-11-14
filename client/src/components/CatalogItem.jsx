@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const CatalogItem = ({moto}) => {
+const CatalogItem = ({ moto }) => {
 
     return (
         <div className="allMotos">

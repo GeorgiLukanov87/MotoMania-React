@@ -37,57 +37,58 @@ const Catalog = ({ motos }) => {
   };
 
   return (
+    <section id="catalog-page">
 
-      <section id="catalog-page">
-        <video controls autoPlay muted loop>
-          <source src="videos/THE RED WOODS _ Ducati Panigale V4s (feat. MOTORBIKEMEDIA).mp4" type="video/mp4" />
-        </video>
-        <SearchBar onSearch={handleSearch} />
+      <video controls autoPlay muted loop>
+        <source src="videos/THE RED WOODS _ Ducati Panigale V4s (feat. MOTORBIKEMEDIA).mp4" type="video/mp4" />
+      </video>
 
-        <h1>All Motos</h1>
+      <SearchBar onSearch={handleSearch} />
+      <h1>All Motos</h1>
 
-        {paginatedMotos().length > 0 ? (
-          <div>
-            {paginatedMotos().map((moto) => (
-              <CatalogItem key={moto._id} moto={moto} />
-            ))}
-          </div>
-        ) : (
-          <h3 className="no-articles">No matching articles</h3>
-        )}
+      {paginatedMotos().length > 0 ? (
+        <div>
+          {paginatedMotos().map((moto) => (
+            <CatalogItem key={moto._id} moto={moto} />
+          ))}
+        </div>
+      ) : (
+        <h3 className="no-articles">No matching articles</h3>
+      )}
 
-        {totalPages > 1 && (
-          <div className="catalogPagination">
+      {totalPages > 1 && (
+        <div className="catalogPagination">
 
-            <button className={styles.paginationButton}
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
-            >
-              Previous
-            </button>
-
-            <span className={styles.pagesPagination}>{`Page ${currentPage} of ${totalPages}`}</span>
-
-            <button className={styles.paginationButton}
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
-            >
-              Next
-            </button>
-
-          </div>
-        )}
-
-        {user.email && (
-          <button className="btn submit">
-            <Link to={'/create'}>Add moto</Link>
+          <button className={styles.paginationButton}
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+          >
+            Previous
           </button>
-        )}
 
+          <span className={styles.pagesPagination}>{`Page ${currentPage} of ${totalPages}`}</span>
+
+          <button className={styles.paginationButton}
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+          >
+            Next
+          </button>
+
+        </div>
+      )}
+
+      {user.email && (
         <button className="btn submit">
-          <Link to={'/'}>Back</Link>
+          <Link to={'/create'}>Add moto</Link>
         </button>
-      </section>
+      )}
+
+      <button className="btn submit">
+        <Link to={'/'}>Back</Link>
+      </button>
+
+    </section>
   );
 };
 

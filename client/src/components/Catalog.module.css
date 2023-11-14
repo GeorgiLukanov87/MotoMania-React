@@ -1,12 +1,13 @@
 .catalogPagination{
     display: flex;
-    flex-direction: col;
+    flex-direction: column;
 }
 
 .paginationButton{
     color: rgb(211, 207, 207);
     padding: 10px;
     font-size: 18px;
+    margin-left: 14px;
 }
 
 .paginationButton:hover{

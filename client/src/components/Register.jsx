@@ -46,8 +46,8 @@ const Register = () => {
                     <input type="password" name="password" id="password" placeholder="Password..." />
 
                     <label htmlFor="confirm-password">Confirm Password:</label>
-                    <input type="password" name="confirm-password" id="confirm-password" placeholder="Repeat password..."/>
-                    
+                    <input type="password" name="confirm-password" id="confirm-password" placeholder="Repeat password..." />
+
 
                     <button className="btn submit" type="submit">Register</button>
                     <p className="field">

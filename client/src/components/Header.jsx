@@ -12,7 +12,7 @@ const Header = () => {
             </h1>
 
             <nav>
-                {user.email && <span style={{color: "red",marginRight: "10px"}}>{user.email}</span>}
+                {user.email && <span style={{ color: "red", marginRight: "10px" }}>{user.email}</span>}
                 <Link to={'/catalog'} >All Motos</Link>
 
                 {user.email
