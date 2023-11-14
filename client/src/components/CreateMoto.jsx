@@ -16,6 +16,8 @@ const CreateMoto = ({ addMotoHandler }) => {
     const [errors, setErrors] = useState({});
     const navigate = useNavigate();
 
+    console.log(formValues)
+
     const validateForm = () => {
         const newErrors = {};
 
