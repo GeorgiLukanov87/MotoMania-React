@@ -32,6 +32,10 @@
     padding-top: 8px;
 }
 
+.f1 i{
+    font-size: 20px;
+    padding: 4px;
+}
 
 .f1 i:hover {
     color: rgb(82, 133, 139);
@@ -59,6 +63,13 @@
 .f1 h3{
     color: #e81d1d;
 }
+
+.f1 h3:hover{
+   color: #ef7e7e;
+   scale: 1.1;
+   transition: 200ms;
+}
+
 
 @media only screen and (max-width: 1100px) {
     .footerWrapper {
