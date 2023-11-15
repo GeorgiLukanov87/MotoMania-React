@@ -14,7 +14,7 @@ const AllMotos = (props) => {
                     : <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-15.png" alt="not-alt" />}
 
             </div>
-
+            
             <h3>{moto.brand}</h3>
             <h2>{moto.model}</h2>
             <h4>CC:{moto.cc}</h4>

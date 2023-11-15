@@ -3,6 +3,7 @@ import { deleteMoto } from "../services/MotoService";
 import { useContext, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 
+
 import uniqid from 'uniqid'
 import { toast } from 'react-toastify';
 
@@ -15,6 +16,7 @@ const MotoDetails = ({
     const navigate = useNavigate();
     const { motoId } = useParams();
     const { user } = useContext(AuthContext);
+    const [toggle, setToggle] = useState(false)
 
     const [comment, setComment] = useState({
         username: "",
@@ -58,6 +60,11 @@ const MotoDetails = ({
         comment.comment = ""
     }
 
+    function toggleOwnerContact(e) {
+        console.log(e.target);
+        setToggle(true)
+    }
+
     return (
         <section id="moto-details">
             <div className="info-section">
@@ -66,9 +73,10 @@ const MotoDetails = ({
                     <div className="image-wrap1">
                         {moto?.imageUrl
                             ? <img src={moto?.imageUrl} alt="not-alt" />
-                            : <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-15.png" alt="not-alt" />}
-
+                            : <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-15.png" alt="not-alt" />
+                        }
                     </div>
+
                     <div>
                         <span className="levels">Price: {moto?.price}$</span>
                     </div>
@@ -77,19 +85,23 @@ const MotoDetails = ({
                         <h1>Brand: {moto?.brand}</h1>
                         <h2>Model: {moto?.model}</h2>
 
-                        <div>
-                            <p className="type">Cubic-centimeters: {moto?.cc} cc</p>
-                        </div>
-                        <div>
-                            <p className="type">Available from:{moto?.createdAt}</p>
-                        </div>
-                    </div>
+                        <p className="type">Cubic-centimeters: {moto?.cc} cc</p>
+                        <p className="type">Available from:{moto?.createdAt}</p>
 
+                    </div>
                 </div>
 
                 {/* <p className="text">
                     {moto?.summary}
                 </p> */}
+
+                <button className="ownerContactWrapper" onClick={toggleOwnerContact}>Connect to Owner
+                    <div>
+                        <div>
+                        {toggle && <a href={`mailto: ${moto?.auth.email} `}><span>{moto?.auth.email}</span></a>}
+                        </div>
+                    </div>
+                </button>
 
                 <div className="details-comments">
                     <h2>Comments:</h2>
