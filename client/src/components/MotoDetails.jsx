@@ -98,7 +98,9 @@ const MotoDetails = ({
                 <button className="ownerContactWrapper" onClick={toggleOwnerContact}>Connect to Owner
                     <div>
                         <div>
-                        {toggle && <a href={`mailto: ${moto?.auth.email} `}><span>{moto?.auth.email}</span></a>}
+                            {toggle && <a href={`mailto: ${moto?.auth.email}`}>
+                                <br />
+                                <i class="fa-solid fa-envelope fa-beat-fade"></i><span className="ownerSpan"> {moto?.auth.email}</span></a>}
                         </div>
                     </div>
                 </button>

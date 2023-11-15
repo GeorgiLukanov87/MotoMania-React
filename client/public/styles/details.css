@@ -29,14 +29,14 @@
 }
 
 video {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     border-radius: 12px;
     box-shadow: 0px 2px 10px 1px #8a8989;
-  }
+}
 
-.video2-wrapper{
+.video2-wrapper {
     width: 500px;
 }
 
@@ -137,6 +137,28 @@ video {
 .button:hover {
     background-color: #6f5d9c;
     color: white;
-    cursor:pointer;
+    cursor: pointer;
 }
 
+.ownerContactWrapper {
+    background-color: rgb(173, 172, 172);
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 20px;
+    font-size: 16px;
+}
+
+.ownerContactWrapper:hover {
+    cursor: pointer;
+}
+
+.ownerSpan {
+    color: rgb(211, 9, 9);
+    font-size: 20px;
+}
+
+.ownerSpan:hover {
+    color: #fff;
+}
