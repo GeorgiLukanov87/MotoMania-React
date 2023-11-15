@@ -9,7 +9,7 @@ const SearchBar = ({ onSearch }) => {
 
   return (
     <div>
-      <input
+      <input style={{fontSize:'24px'}}
         type="text"
         placeholder="Search motorcycles..."
         value={searchTerm}
