@@ -20,7 +20,7 @@ const Home = (props) => {
 
                 {motos.length > 0
                     ? <h1>Available Motorcycles</h1>
-                    : <p className="no-articles">No motos yet</p>
+                    : <p className="no-articles">No motorcycles yet!</p>
                 }
 
                 {motos.map(m => <AllMotos key={m._id} moto={m} />)}

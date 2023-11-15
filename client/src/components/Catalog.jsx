@@ -44,7 +44,7 @@ const Catalog = ({ motos }) => {
         </video>
 
       <SearchBar onSearch={handleSearch} />
-      <h1>All Motos</h1>
+      <h1>Available Motorcycles</h1>
 
       {paginatedMotos().length > 0 ? (
         <div>

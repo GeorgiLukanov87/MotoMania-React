@@ -1,7 +1,7 @@
 {
   "07f260f4-466c-4607-9a33-f7273b24f1b4": {
     "auth": {
-      "email": "'admin@abv.bg'",
+      "email": "admin@abv.bg",
       "username": "Admin",
       "_id": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
       "accessToken": "fde320ebc724e94ccf421c1f36cb0217a5acca8575eecdc452b7868863128a73"
@@ -19,7 +19,7 @@
   },
   "bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
     "auth": {
-      "email": "'admin@abv.bg'",
+      "email": "admin@abv.bg",
       "username": "Admin",
       "_id": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
       "accessToken": "fde320ebc724e94ccf421c1f36cb0217a5acca8575eecdc452b7868863128a73"
@@ -36,7 +36,7 @@
   },
   "7b3143e1-d6df-4e67-bd7e-5f8b03f2fd3f": {
     "auth": {
-      "email": "'admin@abv.bg'",
+      "email": "admin@abv.bg",
       "username": "Admin",
       "_id": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
       "accessToken": "fde320ebc724e94ccf421c1f36cb0217a5acca8575eecdc452b7868863128a73"

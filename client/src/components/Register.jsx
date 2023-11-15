@@ -31,6 +31,7 @@ const Register = () => {
             });
 
     }
+    
     return (
         <section id="register-page" className="content auth">
             <form id="register" onSubmit={onSubmit}>
