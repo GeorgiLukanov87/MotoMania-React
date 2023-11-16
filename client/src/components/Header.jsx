@@ -21,7 +21,7 @@ const Header = () => {
                     ? <div id="user">
                         <NavLink to={'/create'} style={({ isActive }) => ({
                             color: isActive ? 'greenyellow' : 'white'
-                        })}>Add Moto</NavLink>
+                        })}>Create Offer</NavLink>
                         <NavLink to={'/logout'} style={({ isActive }) => ({
                             color: isActive ? 'greenyellow' : 'white'
                         })}>Logout</NavLink>

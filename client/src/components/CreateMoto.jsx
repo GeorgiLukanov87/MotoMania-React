@@ -72,7 +72,7 @@ const CreateMoto = ({ addMotoHandler }) => {
         <section id="create-page" className="auth">
             <form id="create" onSubmit={onSubmitHandler}>
                 <div className="container">
-                    <h1>Create Motorcycle</h1>
+                    <h1>Create Motorcycle Offer</h1>
 
                     <label htmlFor="brand">Brand:</label>
                     <input
@@ -131,7 +131,7 @@ const CreateMoto = ({ addMotoHandler }) => {
                     {errors.general && <p className="error">{errors.general}</p>}
 
                     <button className="btn submit" type="submit">
-                        Create Motorcycle
+                        Create Offer
                     </button>
                 </div>
 
