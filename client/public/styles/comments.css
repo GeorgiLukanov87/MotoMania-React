@@ -33,21 +33,28 @@
 }
 
 .info-section>.details-comments li {
-    width: 500px;
+    width: auto;
     display: inline-block;
     display: flex;
     flex-direction: column;
     position: static;
     margin: 20px auto 25px auto;
     box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.2), 12px 12px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 16px;
+    border-radius: 10px;
     margin-left: 60px;
-    background: #6f5d9c;
+    background: #4947ab;
     color: white;
 }
 
 .comment p {
     padding: 12px;
+    padding-top: 18px;
+}
+
+.usernameCommentSpan{
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 

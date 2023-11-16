@@ -108,17 +108,20 @@ const MotoDetails = ({
 
                 <div className="details-comments">
                     <h2>Comments:</h2>
+
                     <ul>
                         {moto?.comments?.map(x =>
                             <li key={uniqid()} className="comment">
                                 <p>
-                                    {!x.split(' : ')[0] ? "Anonymous : " : `${x.split(' : ')[0]} : `}
+                                    <span className="usernameCommentSpan">
+                                        {!x.split(' : ')[0] ? "Anonymous : " : `${x.split(' : ')[0]} : `}
+                                    </span>
                                     {!x.split(' : ')[1] ? "Empty" : `${x.split(' : ')[1]}`}
                                 </p>
                             </li>
                         )}
-
                     </ul>
+
                     {
                         !moto?.comments &&
                         <p className="no-comment">No comments.</p>
