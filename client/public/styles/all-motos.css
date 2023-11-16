@@ -79,4 +79,6 @@
 
 .details-button:hover{
     background-color: rgb(59, 2, 203);
+    transition: 250ms;
+    scale: 1.05;
 }
