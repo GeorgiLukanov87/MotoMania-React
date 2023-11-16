@@ -109,7 +109,7 @@ label[for="terms"]>input {
     color: rgb(215, 212, 212);
     font-size: 20px;
     cursor: pointer;
-    font-weight: 900;
+    font-weight: 500;
     transition: 0.5s;
     padding: 10px;
 }
