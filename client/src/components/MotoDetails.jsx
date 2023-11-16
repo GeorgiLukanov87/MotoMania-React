@@ -61,8 +61,7 @@ const MotoDetails = ({
     }
 
     function toggleOwnerContact(e) {
-        console.log(e.target);
-        setToggle(true)
+        setToggle(true);
     }
 
     return (
@@ -100,7 +99,9 @@ const MotoDetails = ({
                         <div>
                             {toggle && <a href={`mailto: ${moto?.auth.email}`}>
                                 <br />
-                                <i class="fa-solid fa-envelope fa-beat-fade"></i><span className="ownerSpan"> {moto?.auth.email}</span></a>}
+                                <i className="fa-solid fa-envelope fa-beat-fade"></i>
+                                <span className="ownerSpan"> {moto?.auth.email}</span></a>
+                            }
                         </div>
                     </div>
                 </button>

@@ -1,7 +1,7 @@
 #welcome-world {
     width: auto;
     padding-right: 15px;
-    padding-top: 5em;
+    padding-top: 4em;
     justify-content: right;
     padding-left: 15px;
     position: relative;
@@ -106,7 +106,7 @@
 
 .image-wrap1 {
     width: 500px;
-    height: 350px;
+    height: auto;
     display: inline-block;
     overflow: hidden;
     position: relative;
