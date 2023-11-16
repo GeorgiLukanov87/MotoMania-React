@@ -22,6 +22,7 @@ const Header = () => {
                         <NavLink to={'/create'} style={({ isActive }) => ({
                             color: isActive ? 'greenyellow' : 'white'
                         })}>Create Offer</NavLink>
+
                         <NavLink to={'/logout'} style={({ isActive }) => ({
                             color: isActive ? 'greenyellow' : 'white'
                         })}>Logout</NavLink>
@@ -31,6 +32,7 @@ const Header = () => {
                         <NavLink to={'/login'} style={({ isActive }) => ({
                             color: isActive ? 'greenyellow' : 'white'
                         })}>Login</NavLink>
+                        
                         <NavLink to={'/register'} style={({ isActive }) => ({
                             color: isActive ? 'greenyellow' : 'white'
                         })}>Register</NavLink>
