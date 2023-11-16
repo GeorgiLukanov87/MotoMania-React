@@ -90,9 +90,12 @@ const MotoDetails = ({
                     </div>
                 </div>
 
-                {/* <p className="text">
-                    {moto?.summary}
-                </p> */}
+                <p className="text"><span>Summary:</span>
+                    <div className="motoSummaryText">
+                        {moto?.summary ? moto?.summary : "No summary added!"}
+
+                    </div>
+                </p>
 
                 <button className="ownerContactWrapper" onClick={toggleOwnerContact}>Connect to Owner
                     <div>

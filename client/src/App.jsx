@@ -79,11 +79,11 @@ function App() {
                             <Route path="/create" element={<CreateMoto addMotoHandler={addMotoHandler} />} />
                             <Route path="/catalog" element={<Catalog motos={motos} />} />
                             <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} removeMotoFromState={removeMotoFromState} addComment={addComment} />} />
+
                             <Route
                                 path="/edit/:motoId"
-                                element={<EditMoto updateAppState={() => getAll().then((motoResult) => setMotos([...Object.values(motoResult)].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))))} />}
-                            />
-
+                                element={<EditMoto updateAppState={() => getAll().then((motoResult) =>
+                                    setMotos([...Object.values(motoResult)].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))))} />} />
 
                             <Route path="*" element={<SomethingWrong />} />
                         </Routes>

@@ -9,6 +9,7 @@ const initialState = {
     cc: '',
     imageUrl: '',
     price: '',
+    summary: '',
 };
 
 const CreateMoto = ({ addMotoHandler }) => {
@@ -126,6 +127,16 @@ const CreateMoto = ({ addMotoHandler }) => {
                         value={formValues.price}
                         onChange={changeHandler}
                     />
+
+                    <label htmlFor="summary">Summary:</label>
+                    <textarea
+                        id="summary"
+                        name="summary"
+                        placeholder="Enter details..."
+                        value={formValues.summary}
+                        onChange={changeHandler}
+                    />
+
                     {errors.price && <p className="error">{errors.price}</p>}
 
                     {errors.general && <p className="error">{errors.general}</p>}

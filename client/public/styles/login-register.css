@@ -37,19 +37,20 @@
 
 .container>h1 {
     margin-top: 12px;
-    font-weight: 700;
-    font-size: 2.4rem;
+    font-weight: 600;
+    font-size: 2.3rem;
     text-align: center;
-    color: rgb(207, 205, 205);
+    color: rgb(255, 255, 255);
     letter-spacing: 1px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 12px;
+    text-shadow: 2px 1px 2px rgb(102, 73, 73);
 }
 
 label,
 input {
     display: block;
-    width: 100%;
+    width: 75%;
     padding: 0;
     border: none;
     outline: none;
@@ -58,9 +59,9 @@ input {
 
 label {
     margin-bottom: 8px;
-    font-size: 27px;
+    font-size: 22px;
     color: white;
-    margin-top: 13px;
+    margin-top: 12px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
