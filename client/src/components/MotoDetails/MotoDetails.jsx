@@ -3,7 +3,6 @@ import { deleteMoto } from "../../services/MotoService";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 
-
 import uniqid from 'uniqid'
 import { toast } from 'react-toastify';
 
@@ -72,7 +71,7 @@ const MotoDetails = ({
                     <div className="image-wrap1">
                         {moto?.imageUrl
                             ? <img src={moto?.imageUrl} alt="not-alt" />
-                            : <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-15.png" alt="not-alt" />
+                            : <img src="MotoDetails/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg" alt="not-alt" />
                         }
                     </div>
 
@@ -88,17 +87,16 @@ const MotoDetails = ({
                     </div>
 
                 </div>
-                <div>
 
-                    <p className="levels">Available from: {moto?.createdAt}</p>
-                </div>
+                <p className="levels">Available from: {moto?.createdAt}</p>
 
-                <p className="text"><span>Summary:</span>
-                    <div className="motoSummaryText">
+                <div className="text">
+                    <span>Summary:</span>
+                    <p className="motoSummaryText">
                         {moto?.summary ? moto?.summary : "No summary added!"}
 
-                    </div>
-                </p>
+                    </p>
+                </div>
 
                 <button className="ownerContactWrapper" onClick={toggleOwnerContact}>Connect to Owner
                     <div>

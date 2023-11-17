@@ -8,7 +8,7 @@ const CatalogItem = ({ moto }) => {
 
                 {moto.imageUrl
                     ? <img src={moto.imageUrl} alt="not-alt" />
-                    : <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-15.png" alt="not-alt" />
+                    : <img src="../CatalogItem/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg" alt="not-alt" />
                 }
 
                 <h6>Model: {moto.model}</h6>

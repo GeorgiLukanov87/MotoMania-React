@@ -12,7 +12,7 @@ const AllMotos = (props) => {
 
                 {moto.imageUrl
                     ? <img src={moto.imageUrl} alt="not-alt" />
-                    : <img src="../../../imagesdepositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg" alt="not-alt" />
+                    : <img src="../AllMotos/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg" alt="not-alt" />
                 }
 
             </div>
