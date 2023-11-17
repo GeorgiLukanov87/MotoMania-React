@@ -73,7 +73,7 @@ nav a {
 
 nav a:hover {
     cursor: pointer;
-    color: rgb(1, 181, 10);
+    color: rgb(167, 167, 167);
     font-weight: bolder;
 
 }
