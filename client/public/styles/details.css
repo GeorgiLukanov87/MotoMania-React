@@ -108,9 +108,9 @@ video {
     color: rgb(0, 0, 0);
     padding: 16px;
     background-color: #d2d1d1;
-    border-radius: 12px;
+    border-radius: 8px;
     margin-top: 10px;
-    width: auto;
+    width: 70%;
 }
 
 

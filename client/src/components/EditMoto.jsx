@@ -79,6 +79,16 @@ export default function ({
                         onChange={changeHandler}
                     />
 
+                    <label htmlFor="hp">Horse power:</label>
+                    <input
+                        type="number"
+                        id="hp"
+                        name="hp"
+                        placeholder="Enter hp..."
+                        value={formValues.hp}
+                        onChange={changeHandler}
+                    />
+
                     <label htmlFor="imageUrl">Link to image:</label>
                     <input
                         type="text"

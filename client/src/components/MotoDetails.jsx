@@ -76,19 +76,19 @@ const MotoDetails = ({
                         }
                     </div>
 
-                    <div>
-                        <span className="levels">Price: {moto?.price}$</span>
+                    <div>Price:
+                        <span className="levels"> <h2>{moto?.price}$</h2></span>
                     </div>
 
                     <div className="moto-details-wrapper1">
-                        <h1>Brand: {moto?.brand}</h1>
-                        <h2>Model: {moto?.model}</h2>
-
-                        <p className="type">Cubic-centimeters: {moto?.cc} cc</p>
-                        <p className="type">Available from:{moto?.createdAt}</p>
-
+                        <h5>Brand: {moto?.brand}</h5>
+                        <h5>Model: {moto?.model}</h5>
+                        <h5 className="type">Cubic-centimeters: {moto?.cc}</h5>
+                        {moto?.hp && <h5 className="type">Horse Power: {moto?.hp}</h5>}
                     </div>
+                    
                 </div>
+                <p className="type">Available from:{moto?.createdAt}</p>
 
                 <p className="text"><span>Summary:</span>
                     <div className="motoSummaryText">

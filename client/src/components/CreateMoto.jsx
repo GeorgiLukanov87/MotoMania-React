@@ -9,6 +9,7 @@ const initialState = {
     cc: '',
     imageUrl: '',
     price: '',
+    hp: '',
     summary: '',
 };
 
@@ -107,6 +108,16 @@ const CreateMoto = ({ addMotoHandler }) => {
                         onChange={changeHandler}
                     />
                     {errors.cc && <p className="error">{errors.cc}</p>}
+
+                    <label htmlFor="hp">Horse Powers:</label>
+                    <input
+                        type="number"
+                        id="hp"
+                        name="hp"
+                        placeholder="Enter horse powers..."
+                        value={formValues.hp}
+                        onChange={changeHandler}
+                    />
 
                     <label htmlFor="imageUrl">Link to image:</label>
                     <input
