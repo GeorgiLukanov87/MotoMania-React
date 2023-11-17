@@ -86,11 +86,11 @@ const MotoDetails = ({
                         <h5 className="type">Cubic-centimeters: {moto?.cc}</h5>
                         {moto?.hp && <h5 className="type">Horse Power: {moto?.hp}</h5>}
                     </div>
-                    
+
                 </div>
                 <div>
 
-                <p className="levels">Available from: {moto?.createdAt}</p>
+                    <p className="levels">Available from: {moto?.createdAt}</p>
                 </div>
 
                 <p className="text"><span>Summary:</span>
@@ -127,12 +127,12 @@ const MotoDetails = ({
                             </li>
                         )}
                     </ul>
-                        <div>
-                    {
-                        !moto?.comments &&
-                        <p className="no-comment">No comments</p>
-                    }
-                    </div>            
+                    <div>
+                        {
+                            !moto?.comments &&
+                            <p className="no-comment">No comments</p>
+                        }
+                    </div>
 
                 </div>
 

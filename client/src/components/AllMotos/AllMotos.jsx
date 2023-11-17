@@ -1,3 +1,5 @@
+import styles from "../AllMotos/AllMotos.module.css";
+
 import { Link } from "react-router-dom";
 
 const AllMotos = (props) => {
@@ -5,7 +7,7 @@ const AllMotos = (props) => {
     const { moto } = props
 
     return (
-        <div className="moto">
+        <div className={styles.moto}>
             <div className="image-wrap">
 
                 {moto.imageUrl

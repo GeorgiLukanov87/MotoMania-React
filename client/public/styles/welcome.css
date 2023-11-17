@@ -73,7 +73,7 @@
     width: auto;
 }
 
-.moto {
+/* .moto {
     box-shadow: 0px 0px 30px 0px;
     margin-top: 20px;
     padding: 50px;
@@ -84,7 +84,7 @@
     float: left;
     height: auto;
     color: rgb(184, 179, 178);
-}
+} */
 
 .moto-details-wrapper1 {
     display: flex;
@@ -120,7 +120,7 @@
     max-width: 100%;
 }
 
-.moto>h3 {
+/* .moto>h3 {
     font-family: "Agency FB";
     font-size: 30px;
     font-weight: 700;
@@ -131,7 +131,7 @@
     transition: all 0.5s ease-out;
     text-align: center;
     text-transform: uppercase;
-}
+} */
 
 .moto-content>h4 {
     color: #c2d4f8;
