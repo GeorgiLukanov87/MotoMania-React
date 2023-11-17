@@ -1,3 +1,4 @@
+import styles from './SearchBar.module.css';
 import React, { useState } from 'react';
 
 const SearchBar = ({ onSearch }) => {
@@ -9,13 +10,13 @@ const SearchBar = ({ onSearch }) => {
 
   return (
     <div>
-      <input style={{fontSize:'24px'}}
+      <input className={styles.searchbarInput}
         type="text"
         placeholder="Search motorcycles..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button className='btn submit' onClick={handleSearch}>Search <i className="fa-solid fa-magnifying-glass"></i></button>
+      <button className={styles.searchBarButton} onClick={handleSearch}>Search <i className="fa-solid fa-magnifying-glass"></i></button>
     </div>
   );
 };

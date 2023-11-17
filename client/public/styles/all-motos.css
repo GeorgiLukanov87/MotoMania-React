@@ -82,3 +82,7 @@
     transition: 250ms;
     scale: 1.05;
 }
+
+.searchBarWrapperDiv{
+    text-align: center;
+}

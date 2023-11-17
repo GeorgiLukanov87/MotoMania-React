@@ -99,7 +99,11 @@ label[for="terms"]>input {
 }
 
 #catalog-page>button {
-    margin-left: 3.5%;
+    margin-left:10px;
+}
+
+#catalog-page>button:nth-child(5){
+    margin-left: 30px;
 }
 
 .btn.submit {
@@ -113,6 +117,8 @@ label[for="terms"]>input {
     font-weight: 500;
     transition: 0.5s;
     padding: 10px;
+    border: none;
+    font-weight: bold;
 }
 
 .btn.submit:hover {

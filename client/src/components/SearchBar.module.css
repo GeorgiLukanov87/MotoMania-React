@@ -1,0 +1,20 @@
+
+.searchBarButton {
+    margin-top: 20px;
+    background: #778e9c;
+    height: 50px;
+    border-radius: 20px;
+    color: rgb(215, 212, 212);
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.5s;
+    padding: 6px 22px;
+    font-weight: bold;
+    border: none;
+}
+
+.searchBarButton:hover{
+    background-color: #2eb0b0;
+    color: white;
+}
