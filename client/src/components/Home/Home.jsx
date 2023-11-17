@@ -16,12 +16,16 @@ const Home = (props) => {
 
             </div>
             <img src="./images/1-moto-png-image-motorcycle-png-picture-download.png" alt="hero" />
-            <div id="home-page">
+
+            <div className="home-page">
 
                 {motos.length > 0
                     ? <h1>Available Motorcycles</h1>
                     : <p className="no-articles">No motorcycles yet!</p>
                 }
+            </div>
+
+            <div id="home-page">
 
                 {motos.map(m => <AllMotos key={m._id} moto={m} />)}
 

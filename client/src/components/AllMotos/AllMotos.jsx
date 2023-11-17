@@ -12,14 +12,14 @@ const AllMotos = (props) => {
 
                 {moto.imageUrl
                     ? <img src={moto.imageUrl} alt="not-alt" />
-                    : <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-15.png" alt="not-alt" />
+                    : <img src="../../../imagesdepositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg" alt="not-alt" />
                 }
 
             </div>
 
             <h3>{moto.brand}</h3>
-            <h2>{moto.model}</h2>
-            <h4>CC:{moto.cc}</h4>
+            <h4>{moto.model}</h4>
+            <h4>{moto.cc}cc</h4>
             <h4>Price:{moto.price} $</h4>
             <h5>Available from: {props.moto.createdAt}</h5>
 

@@ -44,7 +44,7 @@ const Catalog = ({ motos }) => {
       </video>
 
       <div className='searchBarWrapperDiv'>
-      <SearchBar onSearch={handleSearch} />
+        <SearchBar onSearch={handleSearch} />
       </div>
 
       <h1>Available Motorcycles</h1>
