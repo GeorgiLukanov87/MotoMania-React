@@ -4,14 +4,14 @@ const AllMotos = (props) => {
 
     const { moto } = props
 
-
     return (
         <div className="moto">
-
             <div className="image-wrap">
+
                 {moto.imageUrl
                     ? <img src={moto.imageUrl} alt="not-alt" />
-                    : <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-15.png" alt="not-alt" />}
+                    : <img src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-15.png" alt="not-alt" />
+                }
 
             </div>
 
@@ -25,7 +25,6 @@ const AllMotos = (props) => {
                 <Link to={`/catalog/${moto._id}`} className="btn details-btn">
                     Details
                 </Link>
-
             </div>
         </div>
     );
