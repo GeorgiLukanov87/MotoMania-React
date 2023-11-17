@@ -1,6 +1,6 @@
 import styles from "../AllMotos/AllMotos.module.css";
-
 import { Link } from "react-router-dom";
+import noImageAvailable from "C:/Users/User/Desktop/react-project-def/client/src/no-image-available/no-image.png";
 
 const AllMotos = (props) => {
 
@@ -12,7 +12,7 @@ const AllMotos = (props) => {
 
                 {moto.imageUrl
                     ? <img src={moto.imageUrl} alt="not-alt" />
-                    : <img src="../AllMotos/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg" alt="not-alt" />
+                    : <img src={noImageAvailable} alt="not-alt" />
                 }
 
             </div>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import noImageAvailable from "C:/Users/User/Desktop/react-project-def/client/src/no-image-available/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg";
 const CatalogItem = ({ moto }) => {
 
     return (
@@ -8,7 +8,7 @@ const CatalogItem = ({ moto }) => {
 
                 {moto.imageUrl
                     ? <img src={moto.imageUrl} alt="not-alt" />
-                    : <img src="../CatalogItem/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg" alt="not-alt" />
+                    : <img src={noImageAvailable} alt="not-alt" />
                 }
 
                 <h6>Model: {moto.model}</h6>

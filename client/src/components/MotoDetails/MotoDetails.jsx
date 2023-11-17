@@ -1,3 +1,6 @@
+import noImageAvailable from "C:/Users/User/Desktop/react-project-def/client/src/no-image-available/NoPhotoAvailable1.png";
+
+
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { deleteMoto } from "../../services/MotoService";
 import { useContext, useState } from "react";
@@ -71,7 +74,7 @@ const MotoDetails = ({
                     <div className="image-wrap1">
                         {moto?.imageUrl
                             ? <img src={moto?.imageUrl} alt="not-alt" />
-                            : <img src="MotoDetails/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg" alt="not-alt" />
+                            : <img src={noImageAvailable} alt="not-alt" />
                         }
                     </div>
 
