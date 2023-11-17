@@ -5,19 +5,19 @@ import { useLocalStorage } from './hooks/useLocalStorage';
 import { AuthContext } from './contexts/AuthContext';
 
 import { getAll } from "./services/MotoService";
-import { Logout } from './components/Logout';
+import { Logout } from './components/Logout/Logout';
 
-import Home from './components/Home';
-import Header from "./components/Header";
-import Register from './components/Register';
-import Login from './components/Login';
-import Catalog from './components/Catalog';
-import CreateMoto from './components/CreateMoto';
-import MotoDetails from './components/MotoDetails';
-import SomethingWrong from './components/SomethingWrong';
-import EditMoto from './components/EditMoto';
-import Footer from './components/Footer';
-import ScrollToTopButton from './components/ScrollToTopButton';
+import Home from './components/Home/Home';
+import Header from "./components/Header/Header";
+import Register from './components/Register/Register';
+import Login from './components/Login/Login';
+import Catalog from './components/Catalog/Catalog';
+import CreateMoto from './components/CreateMoto/CreateMoto';
+import MotoDetails from './components/MotoDetails/MotoDetails';
+import SomethingWrong from './components/SomethingWrong/SomethingWrong';
+import EditMoto from './components/EditMoto/EditMoto';
+import Footer from './components/Footer/Footer';
+import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton';
 
 function App() {
     const [motos, setMotos] = useState([]);

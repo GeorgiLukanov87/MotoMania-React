@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { getOne, editMoto } from "../services/MotoService";
+import { getOne, editMoto } from "../../services/MotoService";
 
 const initialState = {
     _id: "",

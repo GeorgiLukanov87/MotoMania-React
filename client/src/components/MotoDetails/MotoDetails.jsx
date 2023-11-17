@@ -1,7 +1,7 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { deleteMoto } from "../services/MotoService";
+import { deleteMoto } from "../../services/MotoService";
 import { useContext, useState } from "react";
-import { AuthContext } from "../contexts/AuthContext";
+import { AuthContext } from "../../contexts/AuthContext";
 
 
 import uniqid from 'uniqid'

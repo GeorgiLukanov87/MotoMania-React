@@ -1,4 +1,4 @@
-import AllMotos from "./AllMotos";
+import AllMotos from "../AllMotos/AllMotos";
 
 const Home = (props) => {
 

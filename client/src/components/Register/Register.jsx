@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 
 import { useContext } from "react";
-import { register } from "../services/authService";
-import { AuthContext } from "../contexts/AuthContext";
+import { register } from "../../services/authService";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const Register = () => {
     const { userLogin } = useContext(AuthContext);

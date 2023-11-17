@@ -1,11 +1,11 @@
-import styles from '../components/Catalog.module.css';
+import styles from '../Catalog/Catalog.module.css';
 
 import React, { useContext, useState } from 'react';
-import SearchBar from './SearchBar';
-import CatalogItem from './CatalogItem';
+import SearchBar from '../SearchBar/SearchBar';
+import CatalogItem from '../CatalogItem/CatalogItem';
 
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../contexts/AuthContext';
+import { AuthContext } from '../../contexts/AuthContext';
 
 const Catalog = ({ motos }) => {
   const itemsPerPage = 3;

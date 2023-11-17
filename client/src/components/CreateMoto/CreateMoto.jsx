@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { addMoto } from '../services/MotoService';
+import { addMoto } from '../../services/MotoService';
 
 const initialState = {
     brand: '',
