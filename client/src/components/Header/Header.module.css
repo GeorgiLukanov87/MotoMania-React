@@ -1,0 +1,8 @@
+.headerModule{
+    justify-content: space-between;
+}
+
+.emailSpan{
+    color: red;
+    margin-right: 10px;
+}
