@@ -76,8 +76,8 @@ const MotoDetails = ({
                         }
                     </div>
 
-                    <div>Price:
-                        <span className="levels"> <h2>{moto?.price}$</h2></span>
+                    <div>
+                        <span className="levels">Price: <h2>{moto?.price}$</h2></span>
                     </div>
 
                     <div className="moto-details-wrapper1">
@@ -88,7 +88,10 @@ const MotoDetails = ({
                     </div>
                     
                 </div>
-                <p className="type">Available from:{moto?.createdAt}</p>
+                <div>
+
+                <p className="levels">Available from: {moto?.createdAt}</p>
+                </div>
 
                 <p className="text"><span>Summary:</span>
                     <div className="motoSummaryText">
@@ -124,11 +127,12 @@ const MotoDetails = ({
                             </li>
                         )}
                     </ul>
-
+                        <div>
                     {
                         !moto?.comments &&
-                        <p className="no-comment">No comments.</p>
+                        <p className="no-comment">No comments</p>
                     }
+                    </div>            
 
                 </div>
 
