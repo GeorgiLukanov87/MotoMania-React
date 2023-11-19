@@ -166,7 +166,7 @@ const MotoDetails = ({
                     />
                     <textarea onChange={onChange}
                         name="comment"
-                        placeholder="Comment..."
+                        placeholder="Add Comment..."
                         value={comment.comment}
 
                     />

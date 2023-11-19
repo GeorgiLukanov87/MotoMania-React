@@ -20,6 +20,7 @@ const AllMotos = (props) => {
             <h4>{moto.cc}cc</h4>
             <h4>Price:{moto.price} $</h4>
             <h5>Available from: {props.moto.createdAt}</h5>
+            
             <div className="data-buttons">
                 <Link to={`/catalog/${moto._id}`} className="btn details-btn">
                     Details
