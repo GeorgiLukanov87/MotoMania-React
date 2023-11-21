@@ -138,6 +138,7 @@ const CreateMoto = ({ addMotoHandler }) => {
                         value={formValues.price}
                         onChange={changeHandler}
                     />
+                    {errors.price && <p className="error">{errors.price}</p>}
 
                     <label htmlFor="summary">Summary:</label>
                     <textarea
@@ -147,8 +148,6 @@ const CreateMoto = ({ addMotoHandler }) => {
                         value={formValues.summary}
                         onChange={changeHandler}
                     />
-
-                    {errors.price && <p className="error">{errors.price}</p>}
 
                     {errors.general && <p className="error">{errors.general}</p>}
 

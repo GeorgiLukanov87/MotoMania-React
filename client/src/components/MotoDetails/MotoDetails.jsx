@@ -1,13 +1,14 @@
 import noImageAvailable from "C:/Users/User/Desktop/react-project-def/client/src/no-image-available/NoPhotoAvailable1.png";
 
-
-import { useParams, Link, useNavigate } from "react-router-dom";
-import { deleteMoto } from "../../services/MotoService";
 import { useContext, useState } from "react";
-import { AuthContext } from "../../contexts/AuthContext";
+import { useParams, Link, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 import uniqid from 'uniqid'
-import { toast } from 'react-toastify';
+
+import { AuthContext } from "../../contexts/AuthContext";
+import { deleteMoto } from "../../services/MotoService";
+
 
 const MotoDetails = ({
     motos,

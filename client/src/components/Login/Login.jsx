@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 import { login } from "../../services/authService";
 import { AuthContext } from "../../contexts/AuthContext";
@@ -14,17 +15,25 @@ const Login = () => {
             email,
             password,
         } = Object.fromEntries(new FormData(e.target))
-
+        
         console.log(email)
         console.log(password)
 
         login(email, password)
             .then(authData => {
+                if (authData.code == 403){
+                    toast.error('Login or password don\'t match')
+                    return;
+                }
+
                 userLogin(authData);
+                console.log(authData)
                 navigate('/')
+                toast.success('Login succesfully')
 
             })
             .catch(err => console.log(err))
+
     }
 
     return (
