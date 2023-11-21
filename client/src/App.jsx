@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 import { useLocalStorage } from './hooks/useLocalStorage';
 import { AuthContext } from './contexts/AuthContext';
@@ -23,16 +23,11 @@ function App() {
     const [motos, setMotos] = useState([]);
     const [auth, setAuth] = useLocalStorage('auth', {});
     const navigate = useNavigate();
-    
+
     useEffect(() => {
-        debugger
         getAll().then(motoResult => {
-            if (motoResult.code= 404){
-                return;
-            }
             setMotos(Object.values(motoResult))
-        })
-        .catch(err=>console.log(err));
+        });
     }, []);
 
     const userLogin = (authData) => {
