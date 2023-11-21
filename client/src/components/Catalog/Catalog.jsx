@@ -47,10 +47,11 @@ const Catalog = ({ motos }) => {
         <SearchBar onSearch={handleSearch} />
       </div>
 
-      <h1>Available Motorcycles</h1>
 
       {paginatedMotos().length > 0 ? (
         <div>
+      <h1 className={styles.searchBarH1}>Available Motorcycles</h1>
+
           {paginatedMotos().map((moto) => (
             <CatalogItem key={moto._id} moto={moto} />
           ))}
