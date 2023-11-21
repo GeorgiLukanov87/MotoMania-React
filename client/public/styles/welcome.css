@@ -192,9 +192,9 @@
 }
 
 .btn.details-btn:hover {
-    background-color: rgb(249, 127, 127);
+    background-color: rgb(171, 18, 18);
     color: white;
-    scale: 1.1;
+    transition: 200ms linear;
 }
 
 .homePageH1 {
