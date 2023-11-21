@@ -26,8 +26,12 @@ function App() {
 
     useEffect(() => {
         getAll().then(motoResult => {
+            if(motoResult.code == 404){
+                setMotos([])
+                return
+            }
             setMotos(Object.values(motoResult))
-        });
+        })
     }, []);
 
     const userLogin = (authData) => {
@@ -51,6 +55,7 @@ function App() {
     }
 
     const addComment = (motoId, comment) => {
+        debugger
         setMotos((state) => {
             const updatedMotos = state.map((moto) => {
                 if (moto._id === motoId) {

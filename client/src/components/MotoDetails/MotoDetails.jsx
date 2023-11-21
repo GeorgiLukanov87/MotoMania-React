@@ -58,7 +58,6 @@ const MotoDetails = ({
         }
 
         addComment(motoId, finalCommentResult);
-        console.log(finalCommentResult)
         comment.username = ""
         comment.comment = ""
     }
