@@ -1,7 +1,7 @@
 export const request = async (method, url, data) => {
     const date = new Date();
     const createdAt = date.toLocaleString().slice(0, 10);
-
+    
     try {
         const user = localStorage.getItem('auth');
         // const auth = JSON.parse(user || {});

@@ -15,7 +15,7 @@ const Login = () => {
             email,
             password,
         } = Object.fromEntries(new FormData(e.target))
-        
+
         console.log(email)
         console.log(password)
 
@@ -33,7 +33,6 @@ const Login = () => {
 
             })
             .catch(err => console.log(err))
-
     }
 
     return (

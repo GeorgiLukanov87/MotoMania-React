@@ -3,7 +3,7 @@ import AllMotos from "../AllMotos/AllMotos";
 const Home = (props) => {
 
     const { motos } = props
-
+    
     return (
         <section id="welcome-world">
             <div className="welcome-message">
@@ -19,7 +19,7 @@ const Home = (props) => {
 
             <div className="home-page">
 
-                {motos.length > 0
+                {motos?.length > 0
                     ? <h1>Available Motorcycles</h1>
                     : <p className="no-articles">No motorcycles yet!</p>
                 }
@@ -27,7 +27,9 @@ const Home = (props) => {
 
             <div id="home-page">
 
-                {motos.map(m => <AllMotos key={m._id} moto={m} />)}
+                {motos?.length > 0 &&
+                    motos.map(m => <AllMotos key={m._id} moto={m} />)
+                }
 
             </div>
         </section>
