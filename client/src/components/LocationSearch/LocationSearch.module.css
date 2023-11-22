@@ -1,67 +1,86 @@
 body {
-    margin: 0;
-    font-size: 19px;
-  }
-  
-  .weatherContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .formContainer {
-    margin-bottom: 20px;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-  
-  }
-  
-  .formContainer button {
-    font-weight: bold;
-    border-radius: 10px;
-    border: none;
-    font-size: 17px;
-    background-color: rgb(103, 115, 217);
-    padding:12px;
-    
-  
-  }
-  
-  .formContainer button:hover {
-    cursor: pointer;
-    scale: 1.05;
-    transition: linear 200ms;
-    background-color: aqua;
-  }
-  
-  .formContainer input {
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 10px;
-  
-  }
-  
-  .weatherInfo {
-    text-align: center;
-  }
-  
-  .mapContainer {
-    position: relative;
-    width: 100%;
-    height: 400px;
-  }
-  
-  .marker {
-    width: 25px;
-    height: 41px;
-    background-image: url('https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png');
-    background-size: cover;
-  }
-  
-  .iframeWrapper {
-    border: 1px solid rgb(169, 168, 168);
-    border-radius: 12px;
-    box-shadow: 1px 1px 12px 4px rgb(160, 159, 159);
-  }
+  margin: 0;
+  font-size: 19px;
+}
+
+.weatherContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+
+}
+
+.formContainer button {
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  font-size: 17px;
+  background-color: rgb(103, 115, 217);
+  padding: 12px;
+
+
+}
+
+.formContainer button:hover {
+  cursor: pointer;
+  scale: 1.05;
+  transition: linear 200ms;
+  background-color: aqua;
+}
+
+.formContainer input {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+.weatherInfo {
+  text-align: center;
+}
+
+.mapContainer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.weatherDataWrapper p {
+  color: rgb(217, 210, 210);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.weatherDataWrapper h2 {
+  color: rgb(235, 164, 164);
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.weatherDataWrapper span {
+  color: rgb(213, 171, 34);
+  font-size: 26px;
+
+}
+
+.marker {
+  width: 25px;
+  height: 41px;
+  background-image: url('https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png');
+  background-size: cover;
+}
+
+.iframeWrapper {
+  border: 1px solid rgb(169, 168, 168);
+  border-radius: 12px;
+  box-shadow: 1px 1px 12px 4px rgb(160, 159, 159);
+}

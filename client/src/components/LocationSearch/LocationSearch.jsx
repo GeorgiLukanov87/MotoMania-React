@@ -85,20 +85,22 @@ const WeatherComponent = () => {
                             style={{
                                 position: 'absolute',
                                 top: '45%',
-                                left: '50%',
+                                left: '48.5%',
                                 transform: 'translate(-50%, -50%)',
                             }}
                         ></div>
                     </div>
 
-                    <h2>Weather Information for {weatherData.city} <img
-                        src={`http://openweathermap.org/img/w/${weatherData.icon}.png`}
-                        alt={weatherData.description}
-                    /></h2>
-                    <p>Temperature: {weatherData.temperature}°C</p>
-                    <p>Description: {weatherData.description}</p>
-                    <p>Wind Speed: {weatherData.wind} m/s</p>
-                    <p>Cloudiness: {weatherData.clouds}%</p>
+                    <div className={style.weatherDataWrapper}>
+                        <h2>Weather Information for {weatherData.city}
+                            <img src={`http://openweathermap.org/img/w/${weatherData.icon}.png`} alt={weatherData.description} />
+                        </h2>
+                        <p>Temperature:  <span>{weatherData.temperature}</span> °C</p>
+                        <p>Description:  <span>{weatherData.description}</span></p>
+                        <p>Wind Speed:  <span>{weatherData.wind}</span> m/s</p>
+                        <p>Cloudiness:  <span>{weatherData.clouds}</span> %</p>
+                    </div>
+
                 </div>
             )}
         </div>
