@@ -26,7 +26,6 @@ body {
   background-color: rgb(103, 115, 217);
   padding: 12px;
 
-
 }
 
 .formContainer button:hover {
@@ -51,6 +50,11 @@ body {
   position: relative;
   width: 100%;
   height: 400px;
+}
+
+.weatherDataWrapper{
+  display: flex;
+  flex-direction: column;
 }
 
 .weatherDataWrapper p {

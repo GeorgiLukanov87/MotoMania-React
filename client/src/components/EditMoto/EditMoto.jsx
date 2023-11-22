@@ -22,7 +22,7 @@ export default function ({
         getOne(motoId)
             .then(result => setFormValues(result))
             .catch(err => console.log(err))
-    }, [])
+    }, [motoId])
 
     const changeHandler = (e) => {
         setFormValues(state => ({

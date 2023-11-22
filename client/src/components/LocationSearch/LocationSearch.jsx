@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
 import style from '../LocationSearch/LocationSearch.module.css';
+
+import React, { useState } from 'react';
+
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+
 
 const WeatherComponent = () => {
     const { cityName } = useParams();
@@ -92,13 +95,14 @@ const WeatherComponent = () => {
                     </div>
 
                     <div className={style.weatherDataWrapper}>
-                        <h2>Weather Information for {weatherData.city}
-                            <img src={`http://openweathermap.org/img/w/${weatherData.icon}.png`} alt={weatherData.description} />
-                        </h2>
+
+                        <h2>Weather Information for {weatherData.city}</h2>
                         <p>Temperature:  <span>{weatherData.temperature}</span> °C</p>
                         <p>Description:  <span>{weatherData.description}</span></p>
                         <p>Wind Speed:  <span>{weatherData.wind}</span> m/s</p>
-                        <p>Cloudiness:  <span>{weatherData.clouds}</span> %</p>
+                        <p>Cloudiness:  <span>{weatherData.clouds}</span> % </p>
+                        <img src={`http://openweathermap.org/img/w/${weatherData.icon}.png`} alt={weatherData.description} />
+
                     </div>
 
                 </div>
