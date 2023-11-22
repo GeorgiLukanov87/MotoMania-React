@@ -9,6 +9,7 @@ const initialState = {
     cc: '',
     imageUrl: '',
     price: '',
+    cityLocation: '',
     hp: '',
     summary: '',
 };
@@ -27,6 +28,10 @@ const CreateMoto = ({ addMotoHandler }) => {
 
         if (!formValues.brand.trim() || formValues.brand.trim().length < 3 || formValues.brand.trim().length > 15) {
             newErrors.brand = 'Brand must be between 3 and 15 characters long!';
+        }
+
+        if (!formValues.cityLocation.trim() || formValues.cityLocation.trim().length < 2 || formValues.cityLocation.trim().length > 25) {
+            newErrors.cityLocation = 'City must be between 2 and 25 characters long!';
         }
 
         if (!formValues.model.trim()) {
@@ -139,6 +144,19 @@ const CreateMoto = ({ addMotoHandler }) => {
                         onChange={changeHandler}
                     />
                     {errors.price && <p className="error">{errors.price}</p>}
+
+
+                    <label htmlFor="model">Location(City):</label>
+                    <input
+                        type="text"
+                        id="cityLocation"
+                        name="cityLocation"
+                        placeholder="Enter City Location..."
+                        value={formValues.cityLocation}
+                        onChange={changeHandler}
+                    />
+                    {errors.cityLocation && <p className="error">{errors.cityLocation}</p>}
+
 
                     <label htmlFor="summary">Summary:</label>
                     <textarea
