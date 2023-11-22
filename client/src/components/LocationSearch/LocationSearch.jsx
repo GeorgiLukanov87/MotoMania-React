@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import style from '../LocationSearch/LocationSearch.module.css';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const WeatherComponent = () => {
     const { cityName } = useParams();
@@ -14,12 +15,12 @@ const WeatherComponent = () => {
     const fetchWeatherAndForecast = async () => {
 
         try {
-            const response = await fetch(`${weather_url}${cityName}&appid=${api_key}`);
+            const response = await fetch(`${weather_url}${city}&appid=${api_key}`);
             const data = await response.json();
             console.log(data)
 
             if (Object.keys(data).length <= 2) {
-                alert("City not found!");
+                toast.error("City not found!")
                 setCity('')
                 return;
             }
@@ -47,7 +48,7 @@ const WeatherComponent = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (city.trim() === '') {
-            alert('Enter city name!')
+            toast.error("Enter city name!")
             return;
         }
         fetchWeatherAndForecast();
@@ -62,7 +63,7 @@ const WeatherComponent = () => {
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
                 />
-                <button type="submit">Check Location</button>
+                <button type="submit">Find Location</button>
             </form>
 
             {weatherData && (

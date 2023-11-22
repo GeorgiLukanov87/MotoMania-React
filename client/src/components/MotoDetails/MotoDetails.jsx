@@ -105,15 +105,17 @@ const MotoDetails = ({
                         <div>
 
                             {toggle &&
-                                <a href={`mailto: ${moto?.auth.email}`}>
-                                    <br />
-                                    <i className="fa-solid fa-envelope fa-beat-fade"></i>
-                                    <span className="ownerSpan"> {moto?.auth.email}</span>
+                                <>
 
+                                    <a href={`mailto: ${moto?.auth.email}`}>
+                                        <br />
+                                        <i className="fa-solid fa-envelope fa-beat-fade"></i>
+                                        <span className="ownerSpan"> {moto?.auth.email}</span>
+                                    </a>
                                     <Link to={`/location/${moto?.cityLocation}`} className="button">
                                         Location
                                     </Link>
-                                </a>
+                                </>
                             }
 
                         </div>
