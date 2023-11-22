@@ -97,7 +97,6 @@ const MotoDetails = ({
                     <span>Summary:</span>
                     <p className="motoSummaryText">
                         {moto?.summary ? moto?.summary : "No summary added!"}
-
                     </p>
                 </div>
 
@@ -106,18 +105,15 @@ const MotoDetails = ({
                         <div>
 
                             {toggle &&
-                                <>
-                                    <a href={`mailto: ${moto?.auth.email}`}>
-                                        <br />
-                                        <i className="fa-solid fa-envelope fa-beat-fade"></i>
-                                        <span className="ownerSpan"> {moto?.auth.email}</span>
-                                    </a>
-                                    <div>
-                                        <br />
-                                    <Link to={'/'}>Location:{moto?.cityLocation}</Link>
-                                    </div>
+                                <a href={`mailto: ${moto?.auth.email}`}>
+                                    <br />
+                                    <i className="fa-solid fa-envelope fa-beat-fade"></i>
+                                    <span className="ownerSpan"> {moto?.auth.email}</span>
 
-                                </>
+                                    <Link to={`/location/${moto?.cityLocation}`} className="button">
+                                        Location
+                                    </Link>
+                                </a>
                             }
 
                         </div>

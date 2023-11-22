@@ -18,6 +18,7 @@ import SomethingWrong from './components/SomethingWrong/SomethingWrong';
 import EditMoto from './components/EditMoto/EditMoto';
 import Footer from './components/Footer/Footer';
 import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton';
+import LocationSearch from './components/LocationSearch/LocationSearch';
 
 function App() {
     const [motos, setMotos] = useState([]);
@@ -84,6 +85,8 @@ function App() {
                             <Route path="/create" element={<CreateMoto addMotoHandler={addMotoHandler} />} />
                             <Route path="/catalog" element={<Catalog motos={motos} />} />
                             <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} removeMotoFromState={removeMotoFromState} addComment={addComment} />} />
+
+                            <Route path="/location/:cityName" element={<LocationSearch />} />
 
                             <Route
                                 path="/edit/:motoId"
