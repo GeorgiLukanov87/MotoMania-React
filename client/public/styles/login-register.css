@@ -5,8 +5,8 @@
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
-    background: #3e4443;
-    box-shadow: 0px 0px 32px 0px #49535e, -14px -14px 20px #191c21;
+    background: #29303c;
+    box-shadow: 0px 0px 32px 0px #9f9f9f;
 }
 
 #register-page {
@@ -16,17 +16,17 @@
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
-    background: #3e4443;
-    box-shadow: 0px 0px 32px 0px #49535e, -14px -14px 20px #191c21;
+    background: #29303c;
+    box-shadow: 0px 0px 32px 0px #9f9f9f;
 }
 
 .container {
-    padding: 20px;
+    padding: 10px;
 }
 
 .brand-logo {
-    height: 150px;
-    width: 150px;
+    height: 220px;
+    width: 220px;
     background: url("../images/speedom.png");
     background-size: contain;
     margin: auto;
@@ -73,8 +73,6 @@ input::placeholder {
     color: rgba(184, 179, 179, 0.678);
 }
 
-;
-
 
 label[for="female"] {
     margin-top: 10px;
@@ -99,24 +97,24 @@ label[for="terms"]>input {
 }
 
 #catalog-page>button {
-    margin-left:10px;
+    margin-left: 10px;
 }
 
-#catalog-page>button:nth-child(5){
+#catalog-page>button:nth-child(5) {
     margin-left: 30px;
 }
 
 .btn.submit {
-    margin-top: 20px;
+    margin-top: 26px;
     background: #778e9c;
     height: 50px;
-    border-radius: 20px;
-    color: rgb(215, 212, 212);
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
     font-size: 20px;
     cursor: pointer;
     font-weight: 500;
     transition: 0.5s;
-    padding: 10px;
+    padding: 14px;
     border: none;
     font-weight: bold;
 }
@@ -128,6 +126,7 @@ label[for="terms"]>input {
 
 .container {
     margin-top: 6px;
+    text-align: center;
 }
 
 .field>span {

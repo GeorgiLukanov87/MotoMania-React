@@ -1,3 +1,5 @@
+import style from "../Register/Register.module.css";
+
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
@@ -33,12 +35,11 @@ const Register = () => {
     }
 
     return (
-        <section id="register-page" className="content auth">
+        <section id="register-page" className={style.auth}>
             <form id="register" onSubmit={onSubmit}>
                 <div className="container">
-                    <div className="brand-logo" />
                     <h1>Register</h1>
-
+                    <div className="brand-logo" />
 
                     <label htmlFor="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="example@email.com" />

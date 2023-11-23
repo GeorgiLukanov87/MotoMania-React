@@ -1,3 +1,5 @@
+import style from "../Login/login.module.css";
+
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -21,7 +23,7 @@ const Login = () => {
 
         login(email, password)
             .then(authData => {
-                if (authData.code == 403){
+                if (authData.code == 403) {
                     toast.error('Login or password don\'t match')
                     return;
                 }
@@ -36,11 +38,11 @@ const Login = () => {
     }
 
     return (
-        <section id="login-page" className="auth">
+        <section id="login-page" className={style.auth}>
             <form id="login" onSubmit={onSubmit}>
                 <div className="container">
-                    <div className="brand-logo" />
                     <h1>Login</h1>
+                    <div className="brand-logo" />
 
                     <label htmlFor="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="example@gmail.com" autoComplete="off" />

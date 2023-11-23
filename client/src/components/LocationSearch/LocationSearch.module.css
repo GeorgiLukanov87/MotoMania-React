@@ -15,7 +15,6 @@ body {
   display: flex;
   gap: 10px;
   flex-direction: column;
-
 }
 
 .formContainer button {
@@ -52,7 +51,7 @@ body {
   height: 400px;
 }
 
-.weatherDataWrapper{
+.weatherDataWrapper {
   display: flex;
   flex-direction: column;
 }
@@ -88,3 +87,5 @@ body {
   border-radius: 12px;
   box-shadow: 1px 1px 12px 4px rgb(160, 159, 159);
 }
+
+
