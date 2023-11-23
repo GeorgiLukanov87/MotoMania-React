@@ -8,11 +8,6 @@ body {
     height: auto;
 }
 
-.auth {
-    width: 100px;
-    margin: 8em auto;
-}
-
 header,
 footer {
     background-color: #29303c;

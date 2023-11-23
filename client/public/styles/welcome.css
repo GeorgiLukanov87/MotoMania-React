@@ -28,7 +28,7 @@
     padding-left: auto;
 }
 
-.welcome-message h2 {
+/* .welcome-message h2 {
     color: #ffffff;
     font-size: 200%;
     font-size: 35px;
@@ -55,7 +55,7 @@
     text-shadow: 0 2px 4.8px rgba(0, 0, 0, 0.3);
     font-family: "Agency FB";
     padding-bottom: 20px;
-}
+} */
 
 #welcome-world>#home-page {
     width: 50% fit-content;

@@ -1,3 +1,5 @@
+import style from "../EditMoto/EditMoto.module.css";
+
 import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { getOne, editMoto } from "../../services/MotoService";
@@ -45,7 +47,7 @@ export default function ({
     }
 
     return (
-        <section id="create-page" className="auth" >
+        <section id="create-page" className={style.auth} >
             <form id="create" onSubmit={onSubmitHandler}>
                 <div className="container">
                     <h1>Edit Motorcycle Offer</h1>

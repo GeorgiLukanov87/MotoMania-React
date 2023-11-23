@@ -1,6 +1,9 @@
+import style from '../CreateMoto/CreateMoto.module.css';
+
 import { toast } from 'react-toastify';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+
 import { addMoto } from '../../services/MotoService';
 
 const initialState = {
@@ -76,7 +79,7 @@ const CreateMoto = ({ addMotoHandler }) => {
     };
 
     return (
-        <section id="create-page" className="auth">
+        <section id="create-page" className={style.auth}>
             <form id="create" onSubmit={onSubmitHandler}>
                 <div className="container">
                     <h1>Create Motorcycle Offer</h1>

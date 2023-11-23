@@ -1,3 +1,5 @@
+import style from "../Home/Home.module.css";
+
 import AllMotos from "../AllMotos/AllMotos";
 
 const Home = (props) => {
@@ -6,8 +8,8 @@ const Home = (props) => {
     
     return (
         <section id="welcome-world">
-            <div className="welcome-message">
-                <h2>ALL available motos in</h2>
+            <div className={style.welcomeMessage}>
+                <h2>Sell your bike Here!</h2>
                 <h3>Moto-Mania</h3>
                 <br />
                 <video controls autoPlay muted loop>

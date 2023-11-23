@@ -1,5 +1,3 @@
-/* FOOTER  */
-
 .footer1 a {
     text-decoration: none;
 }
@@ -8,7 +6,6 @@
     text-align: center;
     margin-top: 50px;
     background: #29303c;
-    /* box-shadow: -1px -5px 15px 1px #257685; */
     box-shadow: 0px -1px 12px 0px #9f9f9f;
     font-size: 16px;
     padding-bottom: 6px;
@@ -33,7 +30,7 @@
     padding-top: 8px;
 }
 
-.f1 i{
+.f1 i {
     font-size: 20px;
     padding: 4px;
 }
@@ -61,16 +58,13 @@
     font-size: 16px;
 }
 
-.f1 h3{
+.f1 h3 {
     color: #c9c5c5;
     font-size: 22px;
+    margin-bottom: 10px;
 }
 
-.f1 h3:hover{
-   color: #d5d5d5;
-   scale: 1.1;
-   transition: 200ms;
-}
+
 
 
 @media only screen and (max-width: 1100px) {
