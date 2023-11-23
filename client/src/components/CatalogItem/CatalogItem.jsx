@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import noImageAvailable from "C:/Users/User/Desktop/react-project-def/client/src/no-image-available/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg";
+import style from "../CatalogItem/CatalogItem.module.css";
+
 const CatalogItem = ({ moto }) => {
 
     return (
-        <div className="allMotos">
-            <div className="allMotos-info">
+        <div className={style.allMotos}>
+            <div className={style.allMotosInfo}>
 
                 {moto.imageUrl
                     ? <img src={moto.imageUrl} alt="not-alt" />

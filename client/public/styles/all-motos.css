@@ -18,7 +18,7 @@
     text-align: center;
 }
 
-.allMotos {
+/* .allMotos {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
@@ -59,22 +59,22 @@
     font-size: 20px;
     font-weight: 750;
     color: #161618;
-}
+} */
 
 .details-button {
     background-color: #2A265F;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    font-size: 20px;
+    color: #fff;    
+    font-size: 26px;
     position: absolute;
-    bottom: -4px;
-    right: 6.5%;
+    bottom: 33%;
+    left: 52%;
     text-align: left;
     letter-spacing: 1px;
-    padding: 8px;
+    padding: 14px;
     margin-top: auto;
     margin-left: 20px;
-    border-radius: 12px;
+    border-radius: 6px;
 }
 
 .details-button:hover{
