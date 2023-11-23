@@ -9,6 +9,7 @@ const initialState = {
     cc: "",
     imageUrl: "",
     price: "",
+    cityLocation: "",
 }
 
 export default function ({
@@ -105,6 +106,16 @@ export default function ({
                         name="price"
                         placeholder="Enter price...$$"
                         value={formValues.price}
+                        onChange={changeHandler}
+                    />
+
+                    <label htmlFor="cityLocation">City:</label>
+                    <input
+                        type="text"
+                        id="cityLocation"
+                        name="cityLocation"
+                        placeholder="Enter city..."
+                        value={formValues.cityLocation}
                         onChange={changeHandler}
                     />
 

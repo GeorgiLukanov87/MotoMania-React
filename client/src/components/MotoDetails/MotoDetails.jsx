@@ -28,6 +28,9 @@ const MotoDetails = ({
 
     const moto = motos.find(m => m._id === motoId);
 
+    console.log(motos)
+    console.log(user)
+
     const onClickDeleteHandler = () => {
         deleteMoto(motoId)
             .then(() => {
@@ -65,6 +68,8 @@ const MotoDetails = ({
     function toggleOwnerContact(e) {
         setToggle(true);
     }
+
+
 
     return (
         <section id="moto-details">
@@ -106,12 +111,12 @@ const MotoDetails = ({
 
                             {toggle &&
                                 <>
-
                                     <a href={`mailto: ${moto?.auth.email}`}>
                                         <br />
                                         <i className="fa-solid fa-envelope fa-beat-fade"></i>
                                         <span className="ownerSpan"> {moto?.auth.email}</span>
                                     </a>
+
                                     <Link to={`/location/${moto?.cityLocation}`} className="button">
                                         Location
                                     </Link>
@@ -147,7 +152,7 @@ const MotoDetails = ({
                 </div>
 
                 <div className="buttons">
-
+                        
                     {moto?.auth?._id === user?._id
 
                         ? <>

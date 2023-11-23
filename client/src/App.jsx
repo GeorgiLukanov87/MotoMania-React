@@ -85,9 +85,7 @@ function App() {
                             <Route path="/create" element={<CreateMoto addMotoHandler={addMotoHandler} />} />
                             <Route path="/catalog" element={<Catalog motos={motos} />} />
                             <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} removeMotoFromState={removeMotoFromState} addComment={addComment} />} />
-
                             <Route path="/location/:cityName" element={<LocationSearch />} />
-
                             <Route
                                 path="/edit/:motoId"
                                 element={<EditMoto updateAppState={() => getAll().then((motoResult) =>
@@ -95,8 +93,10 @@ function App() {
 
                             <Route path="*" element={<SomethingWrong />} />
                         </Routes>
+
                         <ScrollToTopButton />
                         <Footer />
+                        
                     </main>
                 </div>
             </AuthContext.Provider>
