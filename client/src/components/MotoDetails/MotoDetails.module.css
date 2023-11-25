@@ -1,8 +1,8 @@
-.locationButton{
+.locationButton {
     font-size: 20px;
 }
 
-.locationButton:hover{
+.locationButton:hover {
     color: red;
 }
 
@@ -17,21 +17,25 @@
 .ownerContactWrapper {
     background-color: #e6e6e6;
     border: 1px solid black;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 20px;
-    font-size: 16px;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 16px;
+    padding-top: 26px;
+}
+
+.ownerContactWrapper:hover {
+    background-color: rgb(216, 214, 214);
+    transition: 200ms linear;
 }
 
 .ownerContactWrapper:hover {
     cursor: pointer;
 }
 
-.motoSummaryText{
+.motoSummaryText {
     color: rgb(0, 0, 0);
     padding: 16px;
-    background-color:#e6e6e6;
+    background-color: #e6e6e6;
     border-radius: 8px;
     margin-top: 10px;
     width: 70%;

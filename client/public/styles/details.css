@@ -100,8 +100,8 @@ video {
     height: 50%;
 }
 
-#summary { 
-    padding:10px 16px;
+#summary {
+    padding: 10px 16px;
 }
 
 .text {
@@ -109,7 +109,7 @@ video {
     color: #545454;
 }
 
-.text>span{
+.text>span {
     font-size: 30px;
     font-weight: bold;
     margin-left: 22px;
@@ -138,18 +138,17 @@ video {
 
 .button {
     height: 15%;
-    background-color: #54557b;
-    padding: 14px;
+    background-color: #7b7b7b;
+    padding: 16px;
     margin-top: auto;
     font-size: 16px;
     color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-weight: bold;
 }
 
 .button:hover {
-    background-color: #6f5d9c;
+    background-color: #535353;
     color: white;
     cursor: pointer;
 }
-
-
-
