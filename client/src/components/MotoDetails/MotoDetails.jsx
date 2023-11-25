@@ -1,3 +1,4 @@
+import style from "../MotoDetails/MotoDetails.module.css";
 import noImageAvailable from "C:/Users/User/Desktop/react-project-def/client/src/no-image-available/NoPhotoAvailable1.png";
 
 import { useContext, useState } from "react";
@@ -105,7 +106,7 @@ const MotoDetails = ({
                     </p>
                 </div>
 
-                <button className="ownerContactWrapper" onClick={toggleOwnerContact}>Connect to Owner
+                <button className={style.ownerContactWrapper} onClick={toggleOwnerContact}>Connect to Owner
                     <div>
                         <div>
 
@@ -114,11 +115,11 @@ const MotoDetails = ({
                                     <a href={`mailto: ${moto?.auth.email}`}>
                                         <br />
                                         <i className="fa-solid fa-envelope fa-beat-fade"></i>
-                                        <span className="ownerSpan"> {moto?.auth.email}</span>
+                                        <span className={style.ownerSpan}> {moto?.auth.email}</span>
                                     </a>
-
-                                    <Link to={`/location/${moto?.cityLocation}`} className="button">
-                                        Location
+                                     | 
+                                    <Link to={`/location/${moto?.cityLocation}`} className={style.locationButton}>
+                                         Location
                                     </Link>
                                 </>
                             }
