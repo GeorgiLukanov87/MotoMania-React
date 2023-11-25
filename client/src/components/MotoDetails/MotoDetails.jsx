@@ -101,7 +101,7 @@ const MotoDetails = ({
 
                 <div className="text">
                     <span>Summary:</span>
-                    <p className="motoSummaryText">
+                    <p className={style.motoSummaryText}>
                         {moto?.summary ? moto?.summary : "No summary added!"}
                     </p>
                 </div>
@@ -117,9 +117,9 @@ const MotoDetails = ({
                                         <i className="fa-solid fa-envelope fa-beat-fade"></i>
                                         <span className={style.ownerSpan}> {moto?.auth.email}</span>
                                     </a>
-                                     | 
+                                    |
                                     <Link to={`/location/${moto?.cityLocation}`} className={style.locationButton}>
-                                         Location
+                                        Location
                                     </Link>
                                 </>
                             }
@@ -153,7 +153,7 @@ const MotoDetails = ({
                 </div>
 
                 <div className="buttons">
-                        
+
                     {moto?.auth?._id === user?._id
 
                         ? <>

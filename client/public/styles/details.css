@@ -104,16 +104,6 @@ video {
     padding:10px 16px;
 }
 
-.motoSummaryText{
-    color: rgb(0, 0, 0);
-    padding: 16px;
-    background-color:#e6e6e6;
-    border-radius: 8px;
-    margin-top: 10px;
-    width: 70%;
-}
-
-
 .text {
     font-size: 22px;
     color: #545454;
