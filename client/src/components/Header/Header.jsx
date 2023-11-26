@@ -34,7 +34,7 @@ const Header = () => {
                         <NavLink to={'/login'} style={({ isActive }) => ({
                             borderBottom: isActive ? '3px solid red' : ''
                         })}>Login</NavLink>
-                        
+
                         <NavLink to={'/register'} style={({ isActive }) => ({
                             borderBottom: isActive ? '3px solid red' : ''
                         })}>Register</NavLink>
