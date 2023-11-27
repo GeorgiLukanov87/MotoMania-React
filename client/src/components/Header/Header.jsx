@@ -16,16 +16,24 @@ const Header = () => {
             <nav>
                 {user.email && <span className={styles.emailSpan}> {user.email}</span>}
 
+                <NavLink to={'/about'}
+                    style={({ isActive }) => ({
+                        borderBottom: isActive ? '3px solid red' : ''
+                    })}>About
+                </NavLink>
+
                 <NavLink to={'/catalog'}
                     style={({ isActive }) => ({
                         borderBottom: isActive ? '3px solid red' : ''
                     })}>All Motos
                 </NavLink>
 
-                <NavLink to={'/about'}
+
+
+                <NavLink to={'/location'}
                     style={({ isActive }) => ({
                         borderBottom: isActive ? '3px solid red' : ''
-                    })}>About
+                    })}>Locations
                 </NavLink>
 
                 {user.email

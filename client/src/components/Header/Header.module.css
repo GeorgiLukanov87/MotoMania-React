@@ -8,3 +8,8 @@
     color: red;
     margin-right: 10px;
 }
+
+.headerModule{
+    display: flex;
+    flex-wrap: wrap;
+}

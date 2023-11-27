@@ -64,7 +64,7 @@ const WeatherComponent = () => {
                     type="text"
                     placeholder="Enter city name"
                     value={city}
-                    disabled
+                    disabled={cityName}
                     onChange={(e) => setCity(e.target.value)}
                 />
                 <button type="submit">Find Location</button>

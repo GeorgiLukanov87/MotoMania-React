@@ -87,6 +87,7 @@ function App() {
                             <Route path="/catalog" element={<Catalog motos={motos} />} />
                             <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} removeMotoFromState={removeMotoFromState} addComment={addComment} />} />
                             <Route path="/location/:cityName" element={<LocationSearch />} />
+                            <Route path="/location" element={<LocationSearch />} />
                             <Route
                                 path="/edit/:motoId"
                                 element={<EditMoto updateAppState={() => getAll().then((motoResult) =>

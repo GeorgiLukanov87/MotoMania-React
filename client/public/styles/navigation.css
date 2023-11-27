@@ -46,9 +46,10 @@ header nav {
     display: flex;
     font-size: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    position: absolute;
+    align-items: center;
+    /* position: absolute;
     right: 20px;
-    bottom: 22px;
+    bottom: 22px; */
     font-size: 18px;
 }
 
