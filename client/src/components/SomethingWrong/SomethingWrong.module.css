@@ -1,19 +1,12 @@
-.missing{
+.missing {
     color: red;
     font-size: 46px;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.missingWrapper{
+.notFoundImg img {
+    width: 45%;
+    border-radius: 10px;
     display: flex;
-    border: 1px solid black;
-    background-color: rgb(215, 218, 220);
-    height: 400px;
-    margin-bottom: 250px;
-    align-items: center;
-    width: 500px;
-    margin: auto;
-    border-radius: 12px;
-
 }
