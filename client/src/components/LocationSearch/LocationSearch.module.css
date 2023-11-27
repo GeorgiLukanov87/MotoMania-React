@@ -89,3 +89,7 @@ body {
 }
 
 
+.pngImgWrapper img{
+  width: 420px;
+  border-radius: 6px;
+}

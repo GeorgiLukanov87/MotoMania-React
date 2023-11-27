@@ -1,4 +1,5 @@
 import style from '../LocationSearch/LocationSearch.module.css';
+import pngImgPath from '../LocationSearch/map-local-search-ss-1920.jpg';
 
 import React, { useState } from 'react';
 
@@ -59,6 +60,8 @@ const WeatherComponent = () => {
 
     return (
         <div className={style.weatherContainer}>
+
+
             <form onSubmit={handleSubmit} className={style.formContainer}>
                 <input
                     type="text"
@@ -69,6 +72,8 @@ const WeatherComponent = () => {
                 />
                 <button type="submit">Find Location</button>
             </form>
+
+
 
             {weatherData && (
                 <div className={style.weatherInfo}>
@@ -108,6 +113,13 @@ const WeatherComponent = () => {
 
                 </div>
             )}
+
+            <div>
+                <div className={style.pngImgWrapper}>
+                    <img src={pngImgPath} alt="noimgpng" />
+                </div>
+            </div>
+            
         </div>
 
     );
