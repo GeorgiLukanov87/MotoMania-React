@@ -8,17 +8,18 @@ import { getAll } from "./services/MotoService";
 import { Logout } from './components/Logout/Logout';
 
 import Home from './components/Home/Home';
+import About from './components/About/About';
 import Header from "./components/Header/Header";
+import Catalog from './components/Catalog/Catalog';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
-import Catalog from './components/Catalog/Catalog';
 import CreateMoto from './components/CreateMoto/CreateMoto';
 import MotoDetails from './components/MotoDetails/MotoDetails';
-import SomethingWrong from './components/SomethingWrong/SomethingWrong';
 import EditMoto from './components/EditMoto/EditMoto';
-import Footer from './components/Footer/Footer';
+import SomethingWrong from './components/SomethingWrong/SomethingWrong';
 import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton';
 import LocationSearch from './components/LocationSearch/LocationSearch';
+import Footer from './components/Footer/Footer';
 
 function App() {
     const [motos, setMotos] = useState([]);
@@ -70,7 +71,6 @@ function App() {
         });
     };
 
-
     return (
         <>
             <AuthContext.Provider value={{ user: auth, userLogin, userLogout }}>
@@ -79,6 +79,7 @@ function App() {
                     <main id="main-content">
                         <Routes>
                             <Route path="/" element={<Home motos={motos} />} />
+                            <Route path="/about" element={<About />} />
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />
                             <Route path='/logout' element={<Logout />} />

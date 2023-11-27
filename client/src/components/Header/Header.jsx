@@ -15,29 +15,42 @@ const Header = () => {
 
             <nav>
                 {user.email && <span className={styles.emailSpan}> {user.email}</span>}
-                <NavLink to={'/catalog'} style={({ isActive }) => ({
-                    borderBottom: isActive ? '3px solid red' : ''
-                })}>All Motos</NavLink>
+
+                <NavLink to={'/catalog'}
+                    style={({ isActive }) => ({
+                        borderBottom: isActive ? '3px solid red' : ''
+                    })}>All Motos
+                </NavLink>
+
+                <NavLink to={'/about'}
+                    style={({ isActive }) => ({
+                        borderBottom: isActive ? '3px solid red' : ''
+                    })}>About
+                </NavLink>
 
                 {user.email
                     ? <div id="user">
                         <NavLink to={'/create'} style={({ isActive }) => ({
                             borderBottom: isActive ? '3px solid red' : ''
-                        })}>Create Offer</NavLink>
+                        })}>Create Offer
+                        </NavLink>
 
                         <NavLink to={'/logout'} style={({ isActive }) => ({
                             borderBottom: isActive ? '3px solid red' : ''
-                        })}>Logout</NavLink>
+                        })}>Logout
+                        </NavLink>
                     </div>
 
                     : <div id="guest">
                         <NavLink to={'/login'} style={({ isActive }) => ({
                             borderBottom: isActive ? '3px solid red' : ''
-                        })}>Login</NavLink>
+                        })}>Login
+                        </NavLink>
 
                         <NavLink to={'/register'} style={({ isActive }) => ({
                             borderBottom: isActive ? '3px solid red' : ''
-                        })}>Register</NavLink>
+                        })}>Register
+                        </NavLink>
                     </div>
                 }
             </nav>
