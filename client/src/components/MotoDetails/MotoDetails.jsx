@@ -29,9 +29,6 @@ const MotoDetails = ({
 
     const moto = motos.find(m => m._id === motoId);
 
-    console.log(motos)
-    console.log(user)
-
     const onClickDeleteHandler = () => {
         deleteMoto(motoId)
             .then(() => {

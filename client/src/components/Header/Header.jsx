@@ -28,16 +28,15 @@ const Header = () => {
                     })}>All Motos
                 </NavLink>
 
-
-
-                <NavLink to={'/location'}
-                    style={({ isActive }) => ({
-                        borderBottom: isActive ? '3px solid red' : ''
-                    })}>Locations
-                </NavLink>
-
                 {user.email
                     ? <div id="user">
+
+                        <NavLink to={'/location'}
+                            style={({ isActive }) => ({
+                                borderBottom: isActive ? '3px solid red' : ''
+                            })}>Locations
+                        </NavLink>
+
                         <NavLink to={'/create'} style={({ isActive }) => ({
                             borderBottom: isActive ? '3px solid red' : ''
                         })}>Create Offer
@@ -47,6 +46,7 @@ const Header = () => {
                             borderBottom: isActive ? '3px solid red' : ''
                         })}>Logout
                         </NavLink>
+
                     </div>
 
                     : <div id="guest">
