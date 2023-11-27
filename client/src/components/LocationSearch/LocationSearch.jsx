@@ -50,7 +50,7 @@ const WeatherComponent = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (city.trim() === '') {
+        if (city && city.trim() === '') {
             toast.error("Enter city name!")
             return;
         }
@@ -64,7 +64,6 @@ const WeatherComponent = () => {
                     type="text"
                     placeholder="Enter city name"
                     value={city}
-                    disabled={cityName}
                     onChange={(e) => setCity(e.target.value)}
                 />
                 <button type="submit">Find Location</button>
