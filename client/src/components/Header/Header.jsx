@@ -12,10 +12,7 @@ const Header = () => {
             <h1>
                 <NavLink to={'/'} >Moto-Mania <i className="fa-solid fa-motorcycle fa-beat fa-sm"></i></NavLink>
             </h1>
-
             <nav>
-                {user.email && <span className={styles.emailSpan}> {user.email}</span>}
-
                 <NavLink to={'/about'}
                     style={({ isActive }) => ({
                         borderBottom: isActive ? '3px solid red' : ''
@@ -61,6 +58,8 @@ const Header = () => {
                         </NavLink>
                     </div>
                 }
+                {user.email && <span>|</span>}
+                {user.email && <span className={styles.emailSpan}>{user.email}</span>}
             </nav>
 
         </header>
