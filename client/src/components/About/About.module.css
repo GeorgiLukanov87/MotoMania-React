@@ -5,7 +5,6 @@
     margin: 50px;
     gap: 20px;
     padding: 12px;
-
 }
 
 .titleSpan{
@@ -24,8 +23,6 @@
     box-shadow: 0px 2px 10px 1px #9f9f9f;
     border-radius: 12px;
     font-weight: bold;
-    
-
 }
 
 .mainAbout h2{
@@ -40,5 +37,4 @@
     border-radius: 22px;
     padding: 20px;
     box-shadow: 0px 2px 10px 1px #9f9f9f;
-
 }
