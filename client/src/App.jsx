@@ -14,8 +14,8 @@ import Catalog from './components/Catalog/Catalog';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import CreateMoto from './components/CreateMoto/CreateMoto';
-import MotoDetails from './components/MotoDetails/MotoDetails';
 import EditMoto from './components/EditMoto/EditMoto';
+import MotoDetails from './components/MotoDetails/MotoDetails';
 import SomethingWrong from './components/SomethingWrong/SomethingWrong';
 import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton';
 import LocationSearch from './components/LocationSearch/LocationSearch';
@@ -28,7 +28,7 @@ function App() {
 
     useEffect(() => {
         getAll().then(motoResult => {
-            if(motoResult.code == 404){
+            if (motoResult.code == 404) {
                 setMotos([])
                 return
             }
@@ -80,25 +80,26 @@ function App() {
                         <Routes>
                             <Route path="/" element={<Home motos={motos} />} />
                             <Route path="/about" element={<About />} />
-                            <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />
+                            <Route path="/login" element={<Login />} />
                             <Route path='/logout' element={<Logout />} />
-                            <Route path="/create" element={<CreateMoto addMotoHandler={addMotoHandler} />} />
                             <Route path="/catalog" element={<Catalog motos={motos} />} />
+                            <Route path="/create" element={<CreateMoto addMotoHandler={addMotoHandler} />} />
                             <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} removeMotoFromState={removeMotoFromState} addComment={addComment} />} />
                             <Route path="/location/:cityName" element={<LocationSearch />} />
                             <Route path="/location" element={<LocationSearch />} />
-                            <Route
-                                path="/edit/:motoId"
+
+                            <Route path="/edit/:motoId"
                                 element={<EditMoto updateAppState={() => getAll().then((motoResult) =>
-                                    setMotos([...Object.values(motoResult)].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))))} />} />
+                                    setMotos([...Object.values(motoResult)]
+                                        .sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))))} />} />
 
                             <Route path="*" element={<SomethingWrong />} />
                         </Routes>
 
                         <ScrollToTopButton />
                         <Footer />
-                        
+
                     </main>
                 </div>
             </AuthContext.Provider>

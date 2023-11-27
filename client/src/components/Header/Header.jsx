@@ -58,10 +58,11 @@ const Header = () => {
                         </NavLink>
                     </div>
                 }
+                
                 {user.email && <span>|</span>}
                 {user.email && <span className={styles.emailSpan}>{user.email}</span>}
-            </nav>
 
+            </nav>
         </header>
     );
 };
