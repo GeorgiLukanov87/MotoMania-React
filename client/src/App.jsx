@@ -22,6 +22,7 @@ import LocationSearch from './components/LocationSearch/LocationSearch';
 import PrivateRoutes from './utils/PrivateRoutes';
 import AuthRoutes from './utils/GuestRoutes';
 import Footer from './components/Footer/Footer';
+import Specs from './components/Specs/Specs';
 
 function App() {
     const [motos, setMotos] = useState([]);
@@ -104,6 +105,7 @@ function App() {
                                         
                                 <Route path="/location/:cityName" element={<LocationSearch />} />
                                 <Route path="/location" element={<LocationSearch />} />
+                                <Route path="/specs/:brandmodel" element={<Specs />} />
                             </Route>
 
                         </Routes>

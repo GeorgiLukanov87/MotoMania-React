@@ -5,7 +5,7 @@ import AllMotos from "../AllMotos/AllMotos";
 const Home = (props) => {
 
     const { motos } = props
-
+    
     return (
         <section id="welcome-world">
             <div className={style.welcomeMessage}>
@@ -26,7 +26,7 @@ const Home = (props) => {
                     : <p className="no-articles">No motorcycles yet!</p>
                 }
             </div>
-
+                
             <div id="home-page">
 
                 {motos?.length > 0 &&
