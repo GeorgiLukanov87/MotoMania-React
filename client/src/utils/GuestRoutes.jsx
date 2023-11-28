@@ -6,7 +6,9 @@ const AuthRoutes = () => {
     const { user } = useContext(AuthContext)
 
     return (
-        !user.accessToken ? <Outlet /> : <Navigate to="/" />
+        !user.accessToken
+            ? <Outlet />
+            : <Navigate to="/" />
     )
 }
 

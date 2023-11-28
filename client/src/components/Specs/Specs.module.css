@@ -1,0 +1,9 @@
+.h1NoData {
+    color: rgb(254, 0, 0);
+    text-align: center;
+    font-size: 55px;
+    font-weight: bold;
+    margin: 200px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 1px white;
+}
