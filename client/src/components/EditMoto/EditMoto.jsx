@@ -11,6 +11,8 @@ const initialState = {
     cc: "",
     imageUrl: "",
     price: "",
+    hp: "",
+    summary: "",
     cityLocation: "",
 }
 

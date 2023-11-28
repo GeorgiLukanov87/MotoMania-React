@@ -20,6 +20,7 @@ import SomethingWrong from './components/SomethingWrong/SomethingWrong';
 import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton';
 import LocationSearch from './components/LocationSearch/LocationSearch';
 import PrivateRoutes from './utils/PrivateRoutes';
+import AuthRoutes from './utils/GuestRoutes';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
         getAll().then(motoResult => {
             if (motoResult.code == 404) {
                 setMotos([])
-                return
+                return;
             }
             setMotos(Object.values(motoResult))
         })
@@ -79,23 +80,30 @@ function App() {
                     <Header />
                     <main id="main-content">
                         <Routes>
+
+                            {/* Authenticated routes */}
+                            <Route element={<AuthRoutes />}>
+                                <Route path="/register" element={<Register />} />
+                                <Route path="/login" element={<Login />} />
+                            </Route>
+
+                            {/* Guest routes */}
                             <Route path="/" element={<Home motos={motos} />} />
                             <Route path="/about" element={<About />} />
-                            <Route path="/register" element={<Register />} />
-                            <Route path="/login" element={<Login />} />
-                            <Route path='/logout' element={<Logout />} />
                             <Route path="/catalog" element={<Catalog motos={motos} />} />
-                            <Route path="/catalog/:motoId" element={<MotoDetails motos={motos} removeMotoFromState={removeMotoFromState} addComment={addComment} />} />
-                            <Route path="/location/:cityName" element={<LocationSearch />} />
-                            <Route path="/location" element={<LocationSearch />} />
+                            <Route path="/catalog/:motoId"
+                                element={<MotoDetails motos={motos} removeMotoFromState={removeMotoFromState} addComment={addComment} />} />
                             <Route path="*" element={<SomethingWrong />} />
 
                             {/* Private routes */}
                             <Route element={<PrivateRoutes />}>
+                                <Route path='/logout' element={<Logout />} />
                                 <Route path="/create" element={<CreateMoto addMotoHandler={addMotoHandler} />} />
                                 <Route path="/edit/:motoId"
                                     element={<EditMoto updateAppState={() => getAll().then((motoResult) => setMotos([...Object.values(motoResult)]
                                         .sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))))} />} />
+                                <Route path="/location/:cityName" element={<LocationSearch />} />
+                                <Route path="/location" element={<LocationSearch />} />
                             </Route>
 
                         </Routes>
