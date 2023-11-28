@@ -20,7 +20,6 @@ const Register = () => {
         const email = formData.get('email');
         const password = formData.get('password');
         const confirmPassword = formData.get('confirm-password');
-        const imageUrl = formData.get('imageUrl')
 
         if (password !== confirmPassword) {
             toast.error('Passwords do NOT match!');
