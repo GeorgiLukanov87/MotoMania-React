@@ -2,7 +2,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 110px;
+    bottom: 390px;
     right: 0;
     z-index: 5;
     display: flex;
@@ -17,7 +17,7 @@
 /* Loading pinner  */
 .spinner {
     position: absolute;
-    top: calc(50% - 60px);
+    top: calc(50% - 70px);
     left: calc(50% - 75px);
     z-index: 55;
   }

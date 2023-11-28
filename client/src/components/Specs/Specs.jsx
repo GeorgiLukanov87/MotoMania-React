@@ -11,6 +11,7 @@ export default function Specs() {
     const api_key = 'd03lKjwNUmC3aDNnh8bK9Q==crNTneiJ1KbCnonD';
 
     const [specs, setSpecs] = useState({});
+    const [loading, setLoading] = useState(false);
     const { brandmodel } = useParams();
 
     const make = brandmodel.split(':')[0]
@@ -27,11 +28,15 @@ export default function Specs() {
                     }
                 });
 
+
+
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
 
                 const result = await response.json();
+                setLoading(true);
+
                 setSpecs(Object.values(result))
 
             } catch (error) {
@@ -46,11 +51,13 @@ export default function Specs() {
     return (
         <div className={style.specsItemWrapper}>
             <ul>
+            {!loading && <Spinner /> }
 
                 {specs?.length > 0
                     ? <SpecItem key={`${specs.torque}+${specs.emission}`} spec={specs} />
-                    : <Spinner></Spinner>
+                    : <h1 className={style.h1NoData}>No available data to show!</h1>
                 }
+
 
             </ul>
         </div>
