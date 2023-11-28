@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import SpecItem from "../SpecItem/SpecItem";
+import Spinner from "../Spinner/Spinner";
 
 
 export default function Specs() {
     const api_key = 'd03lKjwNUmC3aDNnh8bK9Q==crNTneiJ1KbCnonD';
-    
+
     const [specs, setSpecs] = useState({});
     const { brandmodel } = useParams();
 
@@ -43,15 +44,16 @@ export default function Specs() {
 
 
     return (
-        <div>
+        <div className={style.specsItemWrapper}>
             <ul>
 
                 {specs?.length > 0
                     ? <SpecItem key={`${specs.torque}+${specs.emission}`} spec={specs} />
-                    : <h1 className={style.h1NoData}>No details to show!</h1>
+                    : <Spinner></Spinner>
                 }
 
             </ul>
         </div>
     );
 }
+

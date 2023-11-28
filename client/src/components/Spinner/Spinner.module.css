@@ -1,0 +1,42 @@
+.loadingShade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 110px;
+    right: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(234, 255, 0);
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 2px 1px 1px  rgb(247, 0, 0);
+  }
+
+/* Loading pinner  */
+.spinner {
+    position: absolute;
+    top: calc(50% - 60px);
+    left: calc(50% - 75px);
+    z-index: 55;
+  }
+  .spinner:after {
+    content: '';
+    display: block;
+    width: 115px;
+    height: 115px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid teal;
+    border-color: teal transparent teal transparent;
+    animation: spinner 1.2s linear infinite;
+  }
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
