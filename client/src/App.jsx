@@ -59,7 +59,6 @@ function App() {
     }
 
     const addComment = (motoId, comment) => {
-        debugger
         setMotos((state) => {
             const updatedMotos = state.map((moto) => {
                 if (moto._id === motoId) {

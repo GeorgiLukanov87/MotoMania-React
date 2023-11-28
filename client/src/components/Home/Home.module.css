@@ -26,6 +26,7 @@
     font-family: "Agency FB";
     padding-bottom: 20px;
 }
-.welcomeMessage video{
- width: 35%;
+
+.welcomeMessage video {
+    width: 45%;
 }

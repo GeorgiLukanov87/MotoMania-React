@@ -9,9 +9,9 @@ const Header = () => {
 
     return (
         <header className={styles.headerModule}>
-            <h1>
+            <h2>
                 <NavLink to={'/'} >Moto-Mania <i className="fa-solid fa-motorcycle fa-beat fa-sm"></i></NavLink>
-            </h1>
+            </h2>
             <nav>
                 <NavLink to={'/about'}
                     style={({ isActive }) => ({

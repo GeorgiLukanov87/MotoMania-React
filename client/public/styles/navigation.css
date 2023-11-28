@@ -20,10 +20,6 @@ footer {
 
 }
 
-header {
-    margin-bottom: 40px;
-}
-
 .home {
     font-size: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -32,6 +28,8 @@ header {
 header {
     position: relative;
     padding: 10px;
+    margin-bottom: 40px;
+
 }
 
 header h1 {
@@ -43,6 +41,7 @@ header h1 {
 
 header nav {
     display: flex;
+    flex-wrap: wrap;
     font-size: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
     align-items: center;
