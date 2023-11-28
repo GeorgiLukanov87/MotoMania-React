@@ -22,12 +22,12 @@ const CreateMoto = ({ addMotoHandler }) => {
     const [errors, setErrors] = useState({});
     const navigate = useNavigate();
 
-    console.log(formValues)
+    // console.log(formValues)
 
     const validateForm = () => {
         const newErrors = {};
 
-        console.log(errors)
+        // console.log(errors)
 
         if (!formValues.brand.trim() || formValues.brand.trim().length < 3 || formValues.brand.trim().length > 15) {
             newErrors.brand = 'Brand must be between 3 and 15 characters long!';
