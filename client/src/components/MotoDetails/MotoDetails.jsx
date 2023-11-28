@@ -103,26 +103,32 @@ const MotoDetails = ({
                     </p>
                 </div>
 
-                <button className={style.ownerContactWrapper} onClick={toggleOwnerContact}>Connect to Owner
-                    <div>
+                <div className={style.ownerContactContainerWrapper}>
+                    <button className={style.ownerContactWrapper} onClick={toggleOwnerContact}>Connect to Owner
                         <div>
+                            <div>
 
-                            {toggle &&
-                                <>
-                                    <a href={`mailto: ${moto?.auth.email}`}>
-                                        <br />
-                                        <span className={style.ownerSpan}> {moto?.auth.email}</span>
-                                    </a>
-                                    |
-                                    <Link to={`/location/${moto?.cityLocation}`} className={style.locationButton}>
-                                        Location
-                                    </Link>
-                                </>
-                            }
+                                {toggle &&
+                                    <>
+                                        <a href={`mailto: ${moto?.auth.email}`}>
+                                            <br />
+                                            <span className={style.ownerSpan}> {moto?.auth.email}</span>
+                                        </a>
+                                        |
+                                        <Link to={`/location/${moto?.cityLocation}`} className={style.locationButton}>
+                                            Location
+                                        </Link>
+                                    </>
+                                }
 
+                            </div>
                         </div>
-                    </div>
-                </button>
+                    </button>
+
+                    <Link to={`/specs/${moto?.brand}:${moto?.model}`} className={style.ownerContactWrapper}>Highly-detailed technical data</Link>
+
+                </div>
+
 
                 <div className="details-comments">
                     <h2>Comments:</h2>

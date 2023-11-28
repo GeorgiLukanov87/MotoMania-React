@@ -16,7 +16,6 @@
 
 .ownerContactWrapper {
     background-color: #e6e6e6;
-    border: 1px solid black;
     font-size: 26px;
     font-weight: bold;
     padding: 16px;
@@ -36,7 +35,12 @@
     color: rgb(0, 0, 0);
     padding: 16px;
     background-color: #e6e6e6;
-    border-radius: 8px;
     margin-top: 10px;
     width: 70%;
+}
+
+.ownerContactContainerWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
