@@ -2,7 +2,7 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.aboutWrapper h2{
+.aboutWrapper h2 {
     font-size: 28px;
     font-weight: bold;
 }
@@ -57,4 +57,19 @@
 .aboutSections p {
     color: black;
     font-size: 18px;
+}
+
+.aboutImgWrapper img {
+    display: flex;
+    width: 50.5%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.aboutImgWrapper img:hover,
+.aboutHeader:hover,
+.aboutSections:hover {
+    cursor: pointer;
+    scale: 1.01;
+    transition: linear 200ms;
 }

@@ -1,3 +1,4 @@
+import aboutPicPath from "../About/sellamotorcycle.jpg.webp";
 import style from "../About/About.module.css";
 
 export default function About() {
@@ -15,6 +16,10 @@ export default function About() {
                         we prioritize your satisfaction and offer reliable guidance throughout your purchase journey.
                         Explore our inventory today and embark on your next thrilling adventure with confidence.
                     </p>
+                </div>
+
+                <div className={style.aboutImgWrapper}>
+                    <img src={aboutPicPath} alt="noimg" />
                 </div>
 
                 <div className={style.mainAbout}>
