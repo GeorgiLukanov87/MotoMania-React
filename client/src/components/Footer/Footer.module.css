@@ -61,12 +61,11 @@
 .f1 h3 {
     color: #c9c5c5;
     font-size: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
+    margin-top: 12px;
 }
 
-
-
-
+/* Responsive Footer */
 @media only screen and (max-width: 1100px) {
     .footerWrapper {
         display: flex;

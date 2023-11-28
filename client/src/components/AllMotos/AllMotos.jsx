@@ -15,9 +15,7 @@ const AllMotos = (props) => {
                 }
             </div>
 
-            <h3>{moto.brand}</h3>
-            <h4>{moto.model}</h4>
-            <h4>{moto.cc}cc</h4>
+            <h3>{moto.brand}</h3>   
             <h4>Price:{moto.price} $</h4>
             <h5>Available from: {moto.createdAt}</h5>
             
