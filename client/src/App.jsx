@@ -16,13 +16,13 @@ import Login from './components/Login/Login';
 import CreateMoto from './components/CreateMoto/CreateMoto';
 import EditMoto from './components/EditMoto/EditMoto';
 import MotoDetails from './components/MotoDetails/MotoDetails';
+import Specs from './components/Specs/Specs';
 import SomethingWrong from './components/SomethingWrong/SomethingWrong';
 import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton';
 import LocationSearch from './components/LocationSearch/LocationSearch';
 import PrivateRoutes from './utils/PrivateRoutes';
 import AuthRoutes from './utils/GuestRoutes';
 import Footer from './components/Footer/Footer';
-import Specs from './components/Specs/Specs';
 
 function App() {
     const [motos, setMotos] = useState([]);
@@ -102,7 +102,7 @@ function App() {
                                 <Route path="/edit/:motoId"
                                     element={<EditMoto updateAppState={() => getAll().then((motoResult) => setMotos([...Object.values(motoResult)]
                                         .sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))))} />} />
-                                        
+
                                 <Route path="/location/:cityName" element={<LocationSearch />} />
                                 <Route path="/location" element={<LocationSearch />} />
                                 <Route path="/specs/:brandmodel" element={<Specs />} />
