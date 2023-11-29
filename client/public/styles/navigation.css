@@ -29,7 +29,6 @@ header {
     position: relative;
     padding: 10px;
     margin-bottom: 40px;
-
 }
 
 header h1 {
@@ -45,10 +44,7 @@ header nav {
     font-size: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
     align-items: center;
-    /* position: absolute;
-    right: 20px;
-    bottom: 22px; */
-    font-size: 16px;
+    font-size: 18px;
 }
 
 header nav>* {

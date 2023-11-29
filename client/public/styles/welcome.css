@@ -50,7 +50,6 @@
 }
 
 #welcome-world > div.home-page > h1{
-
         color: #fff;
         font-family: "Agency FB";
         font-size: 48px;
@@ -58,20 +57,7 @@
         margin-top: 10px;
         text-transform: uppercase;
         text-align: center;
-    
 }
-/* .moto {
-    box-shadow: 0px 0px 30px 0px;
-    margin-top: 20px;
-    padding: 50px;
-    margin-left: 50px;
-    background-position: right 35% bottom 45%;
-    box-sizing: border-box;
-    border-radius: 15px;
-    float: left;
-    height: auto;
-    color: rgb(184, 179, 178);
-} */
 
 .moto-details-wrapper1 {
     display: flex;
@@ -106,19 +92,6 @@
 .image-wrap1>img {
     max-width: 100%;
 }
-
-/* .moto>h3 {
-    font-family: "Agency FB";
-    font-size: 30px;
-    font-weight: 700;
-    line-height: normal;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: all 0.5s ease-out;
-    text-align: center;
-    text-transform: uppercase;
-} */
 
 .moto-content>h4 {
     color: #c2d4f8;
