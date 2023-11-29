@@ -9,7 +9,6 @@ import uniqid from 'uniqid'
 
 import { AuthContext } from "../../contexts/AuthContext";
 import { deleteMoto } from "../../services/MotoService";
-import Share from "../Share/ShareArticleLink";
 import ShareArticleLink from "../Share/ShareArticleLink";
 
 
@@ -40,14 +39,14 @@ const MotoDetails = ({
                 toast.success('Moto deleted successfully.', {
                     position: "top-center",
                     autoClose: 3000,
-                    });
+                });
             })
             .catch((error) => {
                 console.error('Error deleting moto:', error);
                 toast.error('Error deleting moto.', {
                     position: "top-center",
                     autoClose: 3000,
-                    });
+                });
             });
     };
 
@@ -66,7 +65,7 @@ const MotoDetails = ({
             toast.error("Fill inputs!", {
                 position: "top-center",
                 autoClose: 3000,
-                });
+            });
             return;
         }
 
@@ -78,7 +77,6 @@ const MotoDetails = ({
     function toggleOwnerContact(e) {
         setToggle(true);
     }
-
 
 
     return (
@@ -116,6 +114,11 @@ const MotoDetails = ({
                 </div>
 
                 <div className={style.ownerContactContainerWrapper}>
+
+                    <div className={style.shareLinkDiv}>
+                        <ShareArticleLink moto={moto} />
+                    </div>
+
                     <button className={style.ownerContactWrapper} onClick={toggleOwnerContact}>Connect to Owner
                         <div>
                             <div>
@@ -138,9 +141,7 @@ const MotoDetails = ({
                     </button>
 
                     <Link to={`/specs/${moto?.brand}:${moto?.model}`} className={style.ownerContactWrapper}>Highly-detailed technical data</Link>
-
                 </div>
-
 
                 <div className="details-comments">
                     <h2>Comments:</h2>
@@ -165,7 +166,6 @@ const MotoDetails = ({
                     </div>
 
                 </div>
-
                 <div className="buttons">
 
                     {moto?.auth?._id === user?._id
@@ -178,6 +178,7 @@ const MotoDetails = ({
                             <a className="button" onClick={onClickDeleteHandler}>
                                 Delete
                             </a>
+
                         </>
                         : ""
                     }
@@ -205,9 +206,7 @@ const MotoDetails = ({
                         value="Add Comment"
                     />
                 </form>
-
                 <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
-                <ShareArticleLink moto={moto}/>
             </article>
         </section>
     );

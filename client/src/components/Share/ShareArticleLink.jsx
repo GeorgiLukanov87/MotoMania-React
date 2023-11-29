@@ -1,5 +1,5 @@
 import React from 'react';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ShareArticleLink = (props) => {
@@ -14,20 +14,20 @@ const ShareArticleLink = (props) => {
         toast('🦄 Copy to clipboard success!', {
           position: "top-center",
           autoClose: 3000,
-          });
+        });
       })
 
       .catch((error) => {
         toast.error('Failed to copy', {
           position: "top-center",
           autoClose: 3000,
-          })
+        })
       });
   };
 
   return (
     <div>
-      <button onClick={generateShareableLink}>Share Link</button>
+      <button onClick={generateShareableLink}>Share This Offer</button>
     </div>
   );
 };

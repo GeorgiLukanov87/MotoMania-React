@@ -44,3 +44,16 @@
     flex-direction: column;
     text-align: center;
 }
+
+.shareLinkDiv button {
+    background-color: #e6e6e6;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 22px;
+    padding-top: 26px;
+}
+
+.shareLinkDiv button:hover {
+    background-color: rgb(216, 214, 214);
+    cursor: pointer;
+}
