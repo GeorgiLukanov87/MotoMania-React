@@ -52,17 +52,25 @@ export default function Specs() {
     return (
         <div className={style.specsItemWrapper}>
             <ul>
-
                 {!loading && <Spinner />}
 
                 {specs?.length > 0
-                    ? <SpecItem key={`${specs.torque}+${specs.emission}`} spec={specs} />
-                    : <h1 className={style.h1NoData}>No available data to show!</h1>
+                    ? <SpecItem
+                        key={`${specs.torque}+${specs.emission}`}
+                        spec={specs}
+                    />
+
+
+                    : <h1
+                        className={style.h1NoData}>
+                        No available data to show!
+                    </h1>
                 }
 
             </ul>
+
             <div className={style.buttonWrapper}>
-                <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
+                <button className="btn submit"><Link to={'/catalog'}>Back to catalog</Link></button>
             </div>
 
         </div>

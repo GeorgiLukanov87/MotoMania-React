@@ -1,4 +1,5 @@
 import aboutPicPath from "../About/sellamotorcycle.jpg.webp";
+import { Link } from "react-router-dom";
 import style from "../About/About.module.css";
 
 export default function About() {
@@ -51,8 +52,11 @@ export default function About() {
                     </div>
 
                 </div>
-            </div>
 
+            </div>
+            <div className={style.buttonWrapper}>
+                <button className="btn submit"><Link to={'/'}>Back to Home page</Link></button>
+            </div>
         </>
     );
 }

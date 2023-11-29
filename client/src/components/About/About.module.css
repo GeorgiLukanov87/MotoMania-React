@@ -73,3 +73,8 @@
     transition: linear 200ms;
     background-color: rgb(227, 227, 227);
 }
+
+.buttonWrapper{
+    display: flex;
+    justify-content: center;
+}
