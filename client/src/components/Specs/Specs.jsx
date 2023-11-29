@@ -1,8 +1,7 @@
 import style from "../Specs/Specs.module.css";
 
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 import SpecItem from "../SpecItem/SpecItem";
 import Spinner from "../Spinner/Spinner";
@@ -13,6 +12,7 @@ export default function Specs() {
 
     const [specs, setSpecs] = useState({});
     const [loading, setLoading] = useState(false);
+    
     const { brandmodel } = useParams();
 
     const make = brandmodel.split(':')[0]
@@ -29,15 +29,12 @@ export default function Specs() {
                     }
                 });
 
-
-
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
 
                 const result = await response.json();
                 setLoading(true);
-
                 setSpecs(Object.values(result))
 
             } catch (error) {
@@ -60,21 +57,17 @@ export default function Specs() {
                         spec={specs}
                     />
 
-
                     : <h1
                         className={style.h1NoData}>
                         No available data to show!
                     </h1>
                 }
-
             </ul>
 
             <div className={style.buttonWrapper}>
                 <button className="btn submit"><Link to={'/catalog'}>Back to catalog</Link></button>
             </div>
-
         </div>
-
     );
 }
 

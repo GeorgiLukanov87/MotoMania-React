@@ -14,10 +14,10 @@ export const Logout = () => {
                 userLogout();
                 navigate('/');
             })
+            
             .catch(() => {
                 navigate('/')
             })
-
     })
 
     return null;
