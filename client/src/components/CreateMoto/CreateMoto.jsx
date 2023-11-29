@@ -68,12 +68,18 @@ const CreateMoto = ({ addMotoHandler }) => {
                 .then((result) => {
                     addMotoHandler(result);
                     navigate('/');
-                    toast.success(`Moto: ${formValues.brand}-added successfully.`);
+                    toast.success(`Moto: ${formValues.brand}-added successfully.`, {
+                        position: "top-center",
+                        autoClose: 3000,
+                        });
                 })
                 .catch((error) => {
                     console.error('Error adding moto:', error);
                     setErrors({ general: 'An error occurred. Please try again later.' });
-                    toast.error('Error adding moto.');
+                    toast.error('Error adding moto.', {
+                        position: "top-center",
+                        autoClose: 3000,
+                        });
                 });
         }
     };

@@ -24,14 +24,20 @@ const Login = () => {
         login(email, password)
             .then(authData => {
                 if (authData.code == 403) {
-                    toast.error('Login or password don\'t match')
+                    toast.error('Login or password don\'t match', {
+                        position: "top-center",
+                        autoClose: 3000,
+                        })
                     return;
                 }
 
                 userLogin(authData);
                 console.log(authData)
                 navigate('/')
-                toast.success('Login succesfully')
+                toast.success('Login succesfully', {
+                    position: "top-center",
+                    autoClose: 3000,
+                    })
 
             })
             .catch(err => console.log(err))

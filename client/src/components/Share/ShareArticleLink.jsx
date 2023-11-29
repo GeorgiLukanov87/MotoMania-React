@@ -18,7 +18,10 @@ const ShareArticleLink = (props) => {
       })
 
       .catch((error) => {
-        toast.error('Failed to copy')
+        toast.error('Failed to copy', {
+          position: "top-center",
+          autoClose: 3000,
+          })
       });
   };
 

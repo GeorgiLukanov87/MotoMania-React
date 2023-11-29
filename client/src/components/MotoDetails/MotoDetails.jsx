@@ -37,11 +37,17 @@ const MotoDetails = ({
             .then(() => {
                 removeMotoFromState(motoId);
                 navigate('/catalog');
-                toast.success('Moto deleted successfully.');
+                toast.success('Moto deleted successfully.', {
+                    position: "top-center",
+                    autoClose: 3000,
+                    });
             })
             .catch((error) => {
                 console.error('Error deleting moto:', error);
-                toast.error('Error deleting moto.');
+                toast.error('Error deleting moto.', {
+                    position: "top-center",
+                    autoClose: 3000,
+                    });
             });
     };
 
@@ -57,7 +63,10 @@ const MotoDetails = ({
         const finalCommentResult = `${comment.username} : ${comment.comment}`;
 
         if (finalCommentResult == ' : ') {
-            toast.error("Fill inputs!");
+            toast.error("Fill inputs!", {
+                position: "top-center",
+                autoClose: 3000,
+                });
             return;
         }
 

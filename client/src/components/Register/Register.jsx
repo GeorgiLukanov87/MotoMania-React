@@ -22,7 +22,10 @@ const Register = () => {
         const confirmPassword = formData.get('confirm-password');
 
         if (password !== confirmPassword) {
-            toast.error('Passwords do NOT match!');
+            toast.error('Passwords do NOT match!', {
+                position: "top-center",
+                autoClose: 3000,
+                });
             return;
         }
 

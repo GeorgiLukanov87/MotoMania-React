@@ -24,7 +24,10 @@ const WeatherComponent = () => {
             console.log(data)
 
             if (Object.keys(data).length <= 2) {
-                toast.error("City not found!")
+                toast.error("City not found!", {
+                    position: "top-center",
+                    autoClose: 3000,
+                    })
                 setCity('')
                 return;
             }
@@ -52,7 +55,10 @@ const WeatherComponent = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (city && city.trim() === '') {
-            toast.error("Enter city name!")
+            toast.error("Enter city name!", {
+                position: "top-center",
+                autoClose: 3000,
+                })
             return;
         }
         fetchWeatherAndForecast();
