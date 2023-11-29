@@ -9,6 +9,8 @@ import uniqid from 'uniqid'
 
 import { AuthContext } from "../../contexts/AuthContext";
 import { deleteMoto } from "../../services/MotoService";
+import Share from "../Share/ShareArticleLink";
+import ShareArticleLink from "../Share/ShareArticleLink";
 
 
 const MotoDetails = ({
@@ -28,6 +30,7 @@ const MotoDetails = ({
     });
 
     const moto = motos.find(m => m._id === motoId);
+    console.log(moto)
 
     const onClickDeleteHandler = () => {
         deleteMoto(motoId)
@@ -195,6 +198,7 @@ const MotoDetails = ({
                 </form>
 
                 <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
+                <ShareArticleLink moto={moto}/>
             </article>
         </section>
     );
