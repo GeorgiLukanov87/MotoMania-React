@@ -8,11 +8,16 @@
     text-shadow: 1px 1px 1px white;
 }
 
-.specsItemWrapper{
+.specsItemWrapper {
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
-.spinnerToggle{
+.spinnerToggle {
     display: none;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
 }

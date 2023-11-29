@@ -2,6 +2,7 @@ import style from "../Specs/Specs.module.css";
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import SpecItem from "../SpecItem/SpecItem";
 import Spinner from "../Spinner/Spinner";
@@ -51,16 +52,21 @@ export default function Specs() {
     return (
         <div className={style.specsItemWrapper}>
             <ul>
-            {!loading && <Spinner /> }
+
+                {!loading && <Spinner />}
 
                 {specs?.length > 0
                     ? <SpecItem key={`${specs.torque}+${specs.emission}`} spec={specs} />
                     : <h1 className={style.h1NoData}>No available data to show!</h1>
                 }
 
-
             </ul>
+            <div className={style.buttonWrapper}>
+                <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
+            </div>
+
         </div>
+
     );
 }
 

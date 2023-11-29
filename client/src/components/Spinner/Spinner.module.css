@@ -14,7 +14,6 @@
     text-shadow: 2px 1px 1px  rgb(247, 0, 0);
   }
 
-/* Loading pinner  */
 .spinner {
     position: absolute;
     top: calc(50% - 70px);
