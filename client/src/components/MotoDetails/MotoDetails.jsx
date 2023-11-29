@@ -118,8 +118,8 @@ const MotoDetails = ({
                     <div className={style.shareLinkDiv}>
                         <ShareArticleLink moto={moto} />
                     </div>
-
-                    <button className={style.ownerContactWrapper} onClick={toggleOwnerContact}>Connect to Owner
+                    <div className={style.shareLinkDiv}>
+                    <button onClick={toggleOwnerContact}>Connect to Owner
                         <div>
                             <div>
 
@@ -139,6 +139,8 @@ const MotoDetails = ({
                             </div>
                         </div>
                     </button>
+                    </div>
+
 
                     <Link to={`/specs/${moto?.brand}:${moto?.model}`} className={style.ownerContactWrapper}>Highly-detailed technical data</Link>
                 </div>
