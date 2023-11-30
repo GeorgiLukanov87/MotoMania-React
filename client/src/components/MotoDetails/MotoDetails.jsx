@@ -183,30 +183,33 @@ const MotoDetails = ({
                 </div>
             </div>
 
-            <article className="create-comment">
+            {user?.email &&
+                <article className="create-comment">
 
-                <form className="form" onSubmit={addCommentHandler}>
-                    <input onChange={onChange}
-                        type="text"
-                        name="username"
-                        placeholder="Enter name..."
-                        value={comment.username}
-                    />
-                    <textarea onChange={onChange}
-                        name="comment"
-                        placeholder="Add Comment..."
-                        value={comment.comment}
+                    <form className="form" onSubmit={addCommentHandler}>
+                        <input onChange={onChange}
+                            type="text"
+                            name="username"
+                            placeholder="Enter name..."
+                            value={comment.username}
+                        />
+                        <textarea onChange={onChange}
+                            name="comment"
+                            placeholder="Add Comment..."
+                            value={comment.comment}
 
-                    />
-                    <input
-                        className="btn submit"
-                        type="submit"
-                        value="Add Comment"
-                    />
-                </form>
+                        />
+                        <input
+                            className="btn submit"
+                            type="submit"
+                            value="Add Comment"
+                        />
+                    </form>
 
-                <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
-            </article>
+                    <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
+                </article>
+            }
+
         </section>
     );
 };

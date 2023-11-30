@@ -1,3 +1,5 @@
+import PrivateRoutes from './utils/PrivateRoutes';
+import AuthRoutes from './utils/GuestRoutes';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
@@ -20,8 +22,6 @@ import Specs from './components/Specs/Specs';
 import SomethingWrong from './components/SomethingWrong/SomethingWrong';
 import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton';
 import LocationSearch from './components/LocationSearch/LocationSearch';
-import PrivateRoutes from './utils/PrivateRoutes';
-import AuthRoutes from './utils/GuestRoutes';
 import Footer from './components/Footer/Footer';
 
 function App() {
