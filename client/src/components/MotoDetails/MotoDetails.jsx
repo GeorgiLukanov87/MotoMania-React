@@ -169,10 +169,8 @@ const MotoDetails = ({
 
                 </div>
                 <div className="buttons">
-
-                    {moto?.auth?._id === user?._id
-
-                        ? <>
+                    {moto?.auth?._id === user?._id &&
+                         <>
                             <Link to={`/edit/${motoId}`} className="button">
                                 Edit
                             </Link>
@@ -180,15 +178,13 @@ const MotoDetails = ({
                             <a className="button" onClick={onClickDeleteHandler}>
                                 Delete
                             </a>
-
                         </>
-                        : ""
                     }
-
                 </div>
             </div>
 
             <article className="create-comment">
+
                 <form className="form" onSubmit={addCommentHandler}>
                     <input onChange={onChange}
                         type="text"
@@ -208,6 +204,7 @@ const MotoDetails = ({
                         value="Add Comment"
                     />
                 </form>
+
                 <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
             </article>
         </section>
