@@ -1,6 +1,7 @@
 import * as request from "./requester";
 
-const baseUrl = 'http://localhost:3030/users';
+// const baseUrl = 'http://localhost:3030/users';
+const baseUrl = 'https://moto-mania1.onrender.com/users';
 
 export const login = async (email, password) =>
     request.post(`${baseUrl}/login`, { email, password });
