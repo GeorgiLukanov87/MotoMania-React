@@ -43,7 +43,7 @@ const Login = () => {
     }
 
     return (
-        <section id="login-page" className={style.auth}>
+        <section id="login-page">
             <form id="login" onSubmit={onSubmit}>
                 <div className="container">
                     <h1>Login</h1>

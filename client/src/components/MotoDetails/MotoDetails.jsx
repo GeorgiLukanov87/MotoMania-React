@@ -1,5 +1,5 @@
 import style from "../MotoDetails/MotoDetails.module.css";
-import noImageAvailable from "C:/Users/User/Desktop/react-project-def/client/src/no-image-available/NoPhotoAvailable1.png";
+import noImageAvailable from "../../no-image-available/NoPhotoAvailable1.png";
 
 import { useContext, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
