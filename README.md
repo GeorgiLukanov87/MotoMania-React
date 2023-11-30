@@ -8,10 +8,6 @@ we prioritize your satisfaction and offer reliable guidance throughout your purc
 Explore our inventory today and embark on your next thrilling adventure with confidence.!"
 </h3>
 
-# Link to project:
-
-## https://moto-market.onrender.com/
-
 ## <code style="color : red">Features</code>
 <ul>
  <li>User authentication and registration</li>
