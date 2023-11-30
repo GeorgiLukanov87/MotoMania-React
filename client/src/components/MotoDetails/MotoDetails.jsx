@@ -169,7 +169,7 @@ const MotoDetails = ({
 
                 </div>
                 <div className="buttons">
-                    {moto?.auth?._id === user?._id &&
+                    {moto?._ownerId === user?._id &&
                          <>
                             <Link to={`/edit/${motoId}`} className="button">
                                 Edit
