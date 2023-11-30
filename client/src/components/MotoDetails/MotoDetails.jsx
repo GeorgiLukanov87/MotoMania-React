@@ -119,26 +119,26 @@ const MotoDetails = ({
                         <ShareArticleLink moto={moto} />
                     </div>
                     <div className={style.shareLinkDiv}>
-                    <button onClick={toggleOwnerContact}>Connect to Owner
-                        <div>
+                        <button onClick={toggleOwnerContact}>Connect to Owner
                             <div>
+                                <div>
 
-                                {toggle &&
-                                    <>
-                                        <a href={`mailto: ${moto?.auth.email}`}>
-                                            <br />
-                                            <span className={style.ownerSpan}> {moto?.auth.email}</span>
-                                        </a>
-                                        |
-                                        <Link to={`/location/${moto?.cityLocation}`} className={style.locationButton}>
-                                            Location
-                                        </Link>
-                                    </>
-                                }
+                                    {toggle &&
+                                        <>
+                                            <a href={`mailto: ${moto?.auth.email}`}>
+                                                <br />
+                                                <span className={style.ownerSpan}> {moto?.auth.email}</span>
+                                            </a>
+                                            |
+                                            <Link to={`/location/${moto?.cityLocation}`} className={style.locationButton}>
+                                                Location
+                                            </Link>
+                                        </>
+                                    }
 
+                                </div>
                             </div>
-                        </div>
-                    </button>
+                        </button>
                     </div>
 
 
