@@ -170,7 +170,7 @@ const MotoDetails = ({
                 </div>
                 <div className="buttons">
                     {moto?._ownerId === user?._id &&
-                         <>
+                        <>
                             <Link to={`/edit/${motoId}`} className="button">
                                 Edit
                             </Link>
