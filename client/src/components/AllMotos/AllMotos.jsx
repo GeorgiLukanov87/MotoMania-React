@@ -1,6 +1,6 @@
 import styles from "../AllMotos/AllMotos.module.css";
 import { Link } from "react-router-dom";
-import noImageAvailable from "C:/Users/User/Desktop/react-project-def/client/src/no-image-available/no-image.png";
+import noImageAvailable from "../../no-image-available/no-image.png";
 
 const AllMotos = (props) => {
 
