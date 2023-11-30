@@ -54,7 +54,7 @@ Explore our inventory today and embark on your next thrilling adventure with con
  </ul>
  </li>
   <br>
- <li>Start FE-server:
+ <li>Start FE-client:
   <ul>
   <li>npm run dev</li>
  </ul>
