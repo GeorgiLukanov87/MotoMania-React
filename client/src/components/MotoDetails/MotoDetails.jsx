@@ -197,7 +197,6 @@ const MotoDetails = ({
                             name="comment"
                             placeholder="Add Comment..."
                             value={comment.comment}
-
                         />
                         <input
                             className="btn submit"
