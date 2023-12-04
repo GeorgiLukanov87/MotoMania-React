@@ -10,7 +10,7 @@ Explore our inventory today and embark on your next thrilling adventure with con
 
 ## <code style="color : red">Deployed here:</code> 
 
-https://moto-mania-sell.netlify.app/
+https://sell-moto-mania.netlify.app/
 
 ## <code style="color : red">Features</code>
 <ul>
