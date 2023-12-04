@@ -61,6 +61,7 @@
 
 .moto-details-wrapper1 {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
     gap: 10px;
     align-items: center;

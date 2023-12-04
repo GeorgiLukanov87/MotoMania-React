@@ -99,8 +99,8 @@ const WeatherComponent = () => {
                             className={style.marker}
                             style={{
                                 position: 'absolute',
-                                top: '45%',
-                                left: '48.5%',
+                                top: '44.5%',
+                                left: '48%',
                                 transform: 'translate(-50%, -50%)',
                             }}
                         ></div>

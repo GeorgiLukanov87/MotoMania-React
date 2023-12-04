@@ -1,5 +1,5 @@
 .locationButton {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .locationButton:hover {
@@ -7,7 +7,7 @@
 }
 
 .ownerSpan {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .ownerSpan:hover {
@@ -16,7 +16,7 @@
 
 .ownerContactWrapper {
     background-color: #e6e6e6;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bold;
     padding: 16px;
     padding-top: 26px;
@@ -47,7 +47,7 @@
 
 .shareLinkDiv button {
     background-color: #e6e6e6;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bold;
     padding: 22px;
     padding-top: 26px;

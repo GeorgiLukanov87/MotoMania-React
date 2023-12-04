@@ -1,6 +1,6 @@
 #login-page {
     position: relative;
-    width: 650px;
+    width: 75%;
     height: auto;
     border-radius: 20px;
     padding: 40px;
@@ -11,7 +11,7 @@
 
 #register-page {
     position: relative;
-    width: 650px;
+    width: 75%;
     height: auto;
     border-radius: 20px;
     padding: 40px;
@@ -50,7 +50,7 @@
 label,
 input {
     display: block;
-    width: 75%;
+    width: 70%;
     padding: 0;
     border: none;
     outline: none;
@@ -59,7 +59,7 @@ input {
 
 label {
     margin-bottom: 8px;
-    font-size: 22px;
+    font-size: 18px;
     color: white;
     margin-top: 12px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -83,11 +83,11 @@ input[type="password"],
 input[type="number"],
 input[type="email"] {
     background: #ecf0f3;
-    padding: 30px;
+    padding: 20px;
     padding-left: 20px;
     height: 50px;
     margin-top: 10px;
-    font-size: 24px;
+    font-size: 18px;
     border-radius: 50px;
     box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
 }
