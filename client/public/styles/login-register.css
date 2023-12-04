@@ -141,8 +141,8 @@ label[for="terms"]>input {
 
 .field>span {
     position: absolute;
-    font-size: 18px;
-    bottom: 17px;
+    font-size: 12px;
+    bottom: 14px;
     right: 8px;
     text-decoration: none;
     color: black;

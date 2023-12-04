@@ -83,28 +83,31 @@ const MotoDetails = ({
         <section id="moto-details">
             <div className="info-section">
                 <div className="moto-header">
-
                     <div className="image-wrap1">
                         {moto?.imageUrl
                             ? <img src={moto?.imageUrl} alt="not-alt" />
                             : <img src={noImageAvailable} alt="not-alt" />
                         }
                     </div>
-
-                    <div>
-                        <span className="levels">Price: <h2>{moto?.price}$</h2></span>
-                    </div>
-
                     <div className="moto-details-wrapper1">
                         <h3>Brand: {moto?.brand}</h3>
                         <h3>Model: {moto?.model}</h3>
-                        <h3>Cubic-centimeters: {moto?.cc}</h3>
+                        <h3>cc: {moto?.cc}</h3>
                         {moto?.hp && <h3>Horse Power: {moto?.hp}</h3>}
                     </div>
-
                 </div>
 
-                <p className="levels">Available from: {moto?.createdAt}</p>
+                <div className={style.priceDateWrapper}>
+                    <div>
+                        <span className="levels"><h2>{moto?.price}$</h2></span>
+
+                    </div>
+                    <div>
+                        <p className="levels">Available from: {moto?.createdAt}</p>
+
+                    </div>
+                </div>
+
 
                 <div className="text">
                     <span>Summary:</span>
