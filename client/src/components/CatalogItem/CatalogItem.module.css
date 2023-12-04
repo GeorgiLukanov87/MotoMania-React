@@ -1,31 +1,35 @@
 .allMotos {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    max-width: 100%;
+    box-shadow: 0 10px 10px rgba(203, 202, 202, 0.2);
+    /* max-width: 100%; */
     margin: 15px;
-    overflow: hidden;
+    /* overflow: hidden;
     width: 600px auto;
     min-height: 210px;
-    height: auto;
+    height: auto; */
 }
 
 .allMotosInfo {
-    padding: 30px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    /* position: relative; */
     width: 100%;
 }
 
-.allMotosInfo>img {
-    margin-top: -22px;
+.allMotosInfo img {
+    /* margin-top: -22px; */
     border-radius: 12px;
-    height: 200px;
-    position: absolute;
-    top: 30px;
+    height: 70%;
+    /* position: absolute; */
+    /* top: 30px;
     right: 0px;
-    float: right;
-    width: 220px;
+    float: right; */
+    width: 80%;
 }
 
 .allMotosInfo>h6 {
@@ -38,4 +42,11 @@
     font-size: 20px;
     font-weight: 750;
     color: #161618;
+}
+
+.allMotosInfo h5{
+    color: #b4b6ee;
+    background-color: grey;
+    padding: 10px;
+    font-weight:bold;
 }
