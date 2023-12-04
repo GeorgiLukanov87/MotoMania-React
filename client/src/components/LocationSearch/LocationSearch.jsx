@@ -71,7 +71,7 @@ const WeatherComponent = () => {
             <form onSubmit={handleSubmit} className={style.formContainer}>
                 <input
                     type="text"
-                    placeholder="Enter city name"
+                    placeholder="City..."
                     value={city}
                     disabled={cityName}
                     onChange={(e) => setCity(e.target.value)}

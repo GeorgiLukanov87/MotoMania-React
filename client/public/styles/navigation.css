@@ -41,10 +41,9 @@ header h1 {
 header nav {
     display: flex;
     flex-wrap: wrap;
-    font-size: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    align-items: center;
     font-size: 18px;
+
 }
 
 header nav>* {
