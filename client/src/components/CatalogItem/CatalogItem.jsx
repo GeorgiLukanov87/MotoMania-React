@@ -8,7 +8,7 @@ const CatalogItem = ({ moto }) => {
         <div className={style.allMotos}>
             <div className={style.allMotosInfo}>
 
-            <div>
+                <div>
                     {moto.imageUrl
                         ? <img src={moto.imageUrl} alt="not-alt" />
                         : <img src={noImageAvailable} alt="not-alt" />
@@ -17,8 +17,8 @@ const CatalogItem = ({ moto }) => {
 
 
                 <div>
-                    <h2>Model: {moto.model}</h2>
                     <h2>Brand: {moto.brand}</h2>
+                    <h2>Model: {moto.model}</h2>
                     <h2>cc: {moto.cc}</h2>
                     <h2>Price: {moto.price}$</h2>
                     <h5>Available from: {moto.createdAt}</h5>

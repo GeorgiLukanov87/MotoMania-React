@@ -38,15 +38,13 @@
     color: #161618;
 }
 
-.allMotosInfo>h2 {
-    font-size: 20px;
-    font-weight: 750;
-    color: #161618;
+.allMotosInfo h2 {
+    font-size: 18px;
 }
 
 .allMotosInfo h5{
-    color: #b4b6ee;
-    background-color: grey;
-    padding: 10px;
+    color: #fb0000;
     font-weight:bold;
+    font-size: 16px;
+
 }

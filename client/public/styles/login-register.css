@@ -1,9 +1,9 @@
 #login-page {
     position: relative;
-    width: 75%;
+    width: 50%;
     height: auto;
     border-radius: 20px;
-    padding: 40px;
+    padding: 20px;
     box-sizing: border-box;
     background: #29303c;
     box-shadow: 0px 0px 32px 0px #9f9f9f;
@@ -11,10 +11,10 @@
 
 #register-page {
     position: relative;
-    width: 75%;
+    width: 50%;
     height: auto;
     border-radius: 20px;
-    padding: 40px;
+    padding: 20px;
     box-sizing: border-box;
     background: #29303c;
     box-shadow: 0px 0px 32px 0px #9f9f9f;
@@ -25,8 +25,8 @@
 }
 
 .brand-logo {
-    height: 220px;
-    width: 220px;
+    height: 150px;
+    width: 150px;
     background: url("../images/speedom.png");
     background-size: contain;
     margin: auto;
@@ -50,12 +50,22 @@
 label,
 input {
     display: block;
-    width: 70%;
+    width: 50%;
     padding: 0;
     border: none;
     outline: none;
     box-sizing: border-box;
 }
+
+@media only screen and (max-width: 800px) {
+
+    input,
+    label {
+        width: 90%;
+    }
+
+}
+
 
 label {
     margin-bottom: 8px;
@@ -97,7 +107,7 @@ label[for="terms"]>input {
 }
 
 #catalog-page>button {
-    margin-left: 10px;
+    margin-left: 25px;
 }
 
 #catalog-page>button:nth-child(5) {
