@@ -76,9 +76,9 @@ body {
 }
 
 .marker {
-  width: 25px;
-  height: 41px;
-  background-image: url('https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png');
+  width: 30px;
+  height: 42px;
+  background-image: url('https://static-00.iconduck.com/assets.00/map-marker-icon-1366x2048-7u371uwd.png');
   background-size: cover;
 }
 
