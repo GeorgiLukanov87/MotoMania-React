@@ -12,6 +12,10 @@ Explore our inventory today and embark on your next thrilling adventure with con
 
 https://sell-moto-mania.netlify.app/
 
+## <code style="color : red">Video-Demo in YouTube:</code>
+
+https://www.youtube.com/watch?v=e4k2uRcVSFA
+
 ## <code style="color : red">Features</code>
 <ul>
  <li>User authentication and registration</li>
@@ -67,6 +71,3 @@ https://sell-moto-mania.netlify.app/
  <li>MIT License</li>
 </ul>
 
-## <code style="color : red">Video-Demo in YouTube:</code>
-
-https://www.youtube.com/watch?v=e4k2uRcVSFA
