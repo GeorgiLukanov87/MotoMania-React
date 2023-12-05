@@ -2,9 +2,10 @@ import styles from "../AllMotos/AllMotos.module.css";
 import { Link } from "react-router-dom";
 import noImageAvailable from "../../no-image-available/no-image.png";
 
-const AllMotos = (props) => {
+const AllMotos = ({
+    moto,
+}) => {
 
-    const { moto } = props
 
     return (
         <div className={styles.moto}>
@@ -15,10 +16,10 @@ const AllMotos = (props) => {
                 }
             </div>
 
-            <h3>{moto.brand}</h3>   
+            <h3>{moto.brand}</h3>
             <h4>Price:{moto.price} $</h4>
             <h5>Available from: {moto.createdAt}</h5>
-            
+
             <div className="data-buttons">
                 <Link to={`/catalog/${moto._id}`} className="btn details-btn">
                     Details
