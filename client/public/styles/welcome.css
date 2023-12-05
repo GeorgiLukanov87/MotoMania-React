@@ -52,7 +52,7 @@
 #welcome-world > div.home-page > h1{
         color: #fff;
         font-family: "Agency FB";
-        font-size: 48px;
+        font-size: 38px;
         font-weight: 700;
         margin-top: 10px;
         text-transform: uppercase;
@@ -123,7 +123,7 @@
 
 .details-btn {
     background-color: #e81d1d;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding-top: 20px;
     margin-top: 14px;
     color: white;
@@ -133,7 +133,7 @@
 }
 
 .data-buttons {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding-top: 20px;
     margin-top: 20px;
 }
@@ -148,7 +148,7 @@
     color: rgb(215, 212, 212);
     text-align: center;
     font-weight: 700;
-    font-size: 64px;
+    font-size: 34px;
     font-family: "Agency FB";
 }
 
@@ -156,6 +156,6 @@
     color: white;
     text-align: center;
     font-weight: 700;
-    font-size: 60px;
+    font-size: 40px;
     font-family: "Agency FB";
 }

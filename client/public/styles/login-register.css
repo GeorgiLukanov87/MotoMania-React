@@ -120,7 +120,7 @@ label[for="terms"]>input {
     height: 50px;
     border-radius: 12px;
     color: rgb(255, 255, 255);
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
     font-weight: 500;
     transition: 0.5s;

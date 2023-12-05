@@ -147,6 +147,8 @@ video {
     color: rgb(255, 255, 255);
     border-radius: 10px;
     font-weight: bold;
+    margin: 0 4px;
+
 }
 
 .button:hover {
