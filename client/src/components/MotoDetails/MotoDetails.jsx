@@ -1,11 +1,11 @@
 import style from "../MotoDetails/MotoDetails.module.css";
 import noImageAvailable from "../../no-image-available/NoPhotoAvailable1.png";
 
+import uniqid from 'uniqid'
+
 import { useContext, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
-
-import uniqid from 'uniqid'
 
 import { AuthContext } from "../../contexts/AuthContext";
 import { deleteMoto } from "../../services/MotoService";
@@ -132,7 +132,7 @@ const MotoDetails = ({
                                                 <br />
                                                 <span className={style.ownerSpan}> {moto?.auth.email}</span>
                                             </a>
-                                            |
+                                             | 
                                             <Link to={`/location/${moto?.cityLocation}`} className={style.locationButton}>
                                                 Location
                                             </Link>

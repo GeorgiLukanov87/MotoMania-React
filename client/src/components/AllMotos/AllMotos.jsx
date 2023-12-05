@@ -1,6 +1,7 @@
 import styles from "../AllMotos/AllMotos.module.css";
-import { Link } from "react-router-dom";
 import noImageAvailable from "../../no-image-available/no-image.png";
+
+import { Link } from "react-router-dom";
 
 const AllMotos = ({
     moto,

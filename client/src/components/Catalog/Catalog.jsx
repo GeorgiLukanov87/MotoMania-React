@@ -1,10 +1,10 @@
 import styles from '../Catalog/Catalog.module.css';
 
 import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import SearchBar from '../SearchBar/SearchBar';
 import CatalogItem from '../CatalogItem/CatalogItem';
-
-import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
 
 const Catalog = ({ motos }) => {

@@ -1,6 +1,7 @@
 import aboutPicPath from "../About/sellamotorcycle.jpg.webp";
-import { Link } from "react-router-dom";
 import style from "../About/About.module.css";
+
+import { Link } from "react-router-dom";
 
 export default function About() {
     return (
