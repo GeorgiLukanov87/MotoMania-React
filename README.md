@@ -1,4 +1,8 @@
 <h1>Moto-Mania</h1>
+
+![motorcycle-logo-vector-26998920](https://github.com/GeorgiLukanov87/MotoMania-React/assets/102332504/f175ac35-13a9-43cf-ba58-761307e8fb61)
+
+
 <h3>
 "Welcome to Moto-Mania, your premier destination for quality motorcycles.
 With a passion for two-wheelers, we offer a diverse selection of new and used motorcycles,
@@ -33,7 +37,11 @@ https://www.youtube.com/watch?v=e4k2uRcVSFA
  <li>HTML, CSS</li>
  <li>JavaScript</li>
  <li>Toastify</li>
- <li>APIs</li>
+ <li>APIs:</li>
+ <ul>
+  <li>1. Weather API: https://openweathermap.org/api</li>
+  <li>2. Api Ninjas: https://api-ninjas.com/api</li>
+ </ul>
 </ul>
 
 ## <code style="color : red">Installation</code>
@@ -54,7 +62,7 @@ https://www.youtube.com/watch?v=e4k2uRcVSFA
   <br>
  <li>Install project dependencies:</li>
   <ul>
-  <li>cd client</li>
+  <li>cd /client</li>
   <li>npm install</li>
  </ul>
  </li>
@@ -70,4 +78,18 @@ https://www.youtube.com/watch?v=e4k2uRcVSFA
 <ul>
  <li>MIT License</li>
 </ul>
+
+## <code style="color : red">Screenshots:</code>
+
+## Home:
+ ![home](https://github.com/GeorgiLukanov87/MotoMania-React/assets/102332504/9d6527d5-b79f-404b-ab21-e9cc602afd13)
+## Search:
+![search](https://github.com/GeorgiLukanov87/MotoMania-React/assets/102332504/7ce593c6-ed9a-4504-a665-edbeac48b110)
+## Login:
+![login](https://github.com/GeorgiLukanov87/MotoMania-React/assets/102332504/213398ac-594f-4636-9fb1-704d5450e985)
+## Catalogue:
+![catalog](https://github.com/GeorgiLukanov87/MotoMania-React/assets/102332504/e72bce05-1b68-44e2-badb-e6a12de9ee85)
+## Create:
+![create](https://github.com/GeorgiLukanov87/MotoMania-React/assets/102332504/ab38b9f8-9341-4515-9e65-876a9e9c6130)
+
 
