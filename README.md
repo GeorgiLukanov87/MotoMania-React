@@ -10,7 +10,7 @@ Explore our inventory today and embark on your next thrilling adventure with con
 
 ## <code style="color : red">Deployed here:</code> 
 
-https://moto-mania-sell.netlify.app/
+https://sell-moto-mania.netlify.app/
 
 ## <code style="color : red">Features</code>
 <ul>
@@ -34,10 +34,9 @@ https://moto-mania-sell.netlify.app/
 
 ## <code style="color : red">Installation</code>
 <ol>
- <li>Clone the repository - HTTPS or SSH:
+ <li>Clone the repository:
  <ul>
   <li>git clone https://github.com/GeorgiLukanov87/MotoMania-React.git</li>
-  <li>git clone git@github.com:GeorgiLukanov87/MotoMania-React.git</li>
  </ul>
  </li>
  <br>
