@@ -64,7 +64,7 @@ body {
 
 .weatherDataWrapper h2 {
   color: rgb(188, 188, 188);
-  font-size: 32px;
+  font-size: 26px;
   font-weight: bold;
   margin-bottom: 16px;
 }
@@ -88,7 +88,7 @@ body {
   box-shadow: 1px 1px 12px 4px rgb(160, 159, 159);
 }
 
-.pngImgWrapper img{
+.pngImgWrapper img {
   display: flex;
   width: 40%;
   border-radius: 6px;
