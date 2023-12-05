@@ -2,14 +2,11 @@
 
 ![motorcycle-logo-vector-26998920](https://github.com/GeorgiLukanov87/MotoMania-React/assets/102332504/f175ac35-13a9-43cf-ba58-761307e8fb61)
 
-
 <h3>
-"Welcome to Moto-Mania, your premier destination for quality motorcycles.
-With a passion for two-wheelers, we offer a diverse selection of new and used motorcycles,
-catering to riders of all preferences and skill levels. Our knowledgeable team ensures you find the perfect ride,
-whether you seek adrenaline-pumping sports bikes or cruising classics. Committed to exceptional service,
-we prioritize your satisfaction and offer reliable guidance throughout your purchase journey.
-Explore our inventory today and embark on your next thrilling adventure with confidence."
+This Single Page Application (SPA) is a comprehensive platform designed for selling motorcycles. 
+Users can explore a diverse range of motorcycles, access detailed information about each model, and manage their collection effortlessly. 
+The application enables functionalities for adding, editing, and removing motorcycle listings. 
+With search and pagination features, error handling, and validation, this app ensures a seamless and efficient user experience for motorcycle enthusiasts and sellers alike.
 </h3>
 
 ## <code style="color : red">Deployed here:</code> 
