@@ -62,7 +62,7 @@ https://www.youtube.com/watch?v=e4k2uRcVSFA
   <br>
  <li>Install project dependencies:</li>
   <ul>
-  <li>cd client</li>
+  <li>cd /client</li>
   <li>npm install</li>
  </ul>
  </li>
