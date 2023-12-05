@@ -16,13 +16,13 @@ const Header = () => {
                 <div id="user">
                     <NavLink to={'/about'}
                         style={({ isActive }) => ({
-                            borderBottom: isActive ? '3px solid red' : ''
+                            borderBottom: isActive ? '2px solid red' : ''
                         })}>About
                     </NavLink>
 
                     <NavLink to={'/catalog'}
                         style={({ isActive }) => ({
-                            borderBottom: isActive ? '3px solid red' : ''
+                            borderBottom: isActive ? '2px solid red' : ''
                         })}>All Motos
                     </NavLink>
 
@@ -30,30 +30,30 @@ const Header = () => {
                         ?
                         <>
                             <NavLink to={'/create'} style={({ isActive }) => ({
-                                borderBottom: isActive ? '3px solid red' : ''
+                                borderBottom: isActive ? '2px solid red' : ''
                             })}>Create Offer
                             </NavLink>
 
                             <NavLink to={'/location'}
                                 style={({ isActive }) => ({
-                                    borderBottom: isActive ? '3px solid red' : ''
+                                    borderBottom: isActive ? '2px solid red' : ''
                                 })}>Locations
                             </NavLink>
 
                             <NavLink to={'/logout'} style={({ isActive }) => ({
-                                borderBottom: isActive ? '3px solid red' : ''
+                                borderBottom: isActive ? '2px solid red' : ''
                             })}>Logout
                             </NavLink>
                         </>
 
                         : <>
                             <NavLink to={'/login'} style={({ isActive }) => ({
-                                borderBottom: isActive ? '3px solid red' : ''
+                                borderBottom: isActive ? '2px solid red' : ''
                             })}>Login
                             </NavLink>
 
                             <NavLink to={'/register'} style={({ isActive }) => ({
-                                borderBottom: isActive ? '3px solid red' : ''
+                                borderBottom: isActive ? '2px solid red' : ''
                             })}>Register
                             </NavLink>
                         </>
