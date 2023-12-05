@@ -33,7 +33,11 @@ https://www.youtube.com/watch?v=e4k2uRcVSFA
  <li>HTML, CSS</li>
  <li>JavaScript</li>
  <li>Toastify</li>
- <li>APIs</li>
+ <li>APIs:</li>
+ <ul>
+  <li>1. Weather API: https://openweathermap.org/api</li>
+  <li>2. Api Ninjas: https://api-ninjas.com/api</li>
+ </ul>
 </ul>
 
 ## <code style="color : red">Installation</code>
