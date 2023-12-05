@@ -1,6 +1,7 @@
+import formatDate from "../utils/formatData";
+
 export const request = async (method, url, data) => {
-    const date = new Date();
-    const createdAt = date.toLocaleString().slice(0, 10);
+    const createdAt = formatDate(new Date());
 
     try {
         const user = localStorage.getItem('auth');

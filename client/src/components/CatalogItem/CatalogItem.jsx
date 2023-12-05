@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom";
-import noImageAvailable from "../../no-image-available/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg";
 import style from "../CatalogItem/CatalogItem.module.css";
+import noImageAvailable from "../../no-image-available/depositphotos_227725020-stock-illustration-image-available-icon-flat-vector.jpg";
 
-const CatalogItem = ({ moto }) => {
+import { Link } from "react-router-dom";
+
+
+const CatalogItem = ({
+    moto,
+}) => {
 
     return (
         <div className={style.allMotos}>
@@ -15,7 +19,6 @@ const CatalogItem = ({ moto }) => {
                     }
                 </div>
 
-
                 <div>
                     <h2>Brand: {moto.brand}</h2>
                     <h2>Model: {moto.model}</h2>
@@ -24,14 +27,11 @@ const CatalogItem = ({ moto }) => {
                     <h5>Available from: {moto.createdAt}</h5>
                 </div>
 
-
                 <div>
                     <Link to={`/catalog/${moto._id}`} className="details-button">
                         Details
                     </Link>
                 </div>
-
-
 
             </div>
         </div>
