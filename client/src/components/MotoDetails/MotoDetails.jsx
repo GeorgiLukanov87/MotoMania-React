@@ -19,8 +19,8 @@ const MotoDetails = ({
 
 }) => {
     const navigate = useNavigate();
-    const { motoId } = useParams();
     const { user } = useContext(AuthContext);
+    const { motoId } = useParams();
     const [toggle, setToggle] = useState(false)
 
     const [comment, setComment] = useState({
@@ -35,7 +35,7 @@ const MotoDetails = ({
         deleteMoto(motoId)
             .then(() => {
                 removeMotoFromState(motoId);
-                navigate('/catalog');
+                navigate('/');
                 toast.success('Moto deleted successfully.', {
                     position: "top-center",
                     autoClose: 3000,
@@ -108,7 +108,6 @@ const MotoDetails = ({
                     </div>
                 </div>
 
-
                 <div className="text">
                     <span>Summary:</span>
                     <p className={style.motoSummaryText}>
@@ -121,6 +120,7 @@ const MotoDetails = ({
                     <div className={style.shareLinkDiv}>
                         <ShareArticleLink moto={moto} />
                     </div>
+
                     <div className={style.shareLinkDiv}>
                         <button onClick={toggleOwnerContact}>Connect to Owner
                             <div>
@@ -132,7 +132,7 @@ const MotoDetails = ({
                                                 <br />
                                                 <span className={style.ownerSpan}> {moto?.auth.email}</span>
                                             </a>
-                                             | 
+                                            |
                                             <Link to={`/location/${moto?.cityLocation}`} className={style.locationButton}>
                                                 Location
                                             </Link>
@@ -144,8 +144,12 @@ const MotoDetails = ({
                         </button>
                     </div>
 
+                    <Link
+                        to={`/specs/${moto?.brand}:${moto?.model}`}
+                        className={style.ownerContactWrapper}>
+                        Highly-detailed technical data
+                    </Link>
 
-                    <Link to={`/specs/${moto?.brand}:${moto?.model}`} className={style.ownerContactWrapper}>Highly-detailed technical data</Link>
                 </div>
 
                 <div className="details-comments">
@@ -208,10 +212,15 @@ const MotoDetails = ({
                         />
                     </form>
 
-                    <button className="btn submit"><Link to={'/catalog'}>Back</Link></button>
+                    <button className="btn submit">
+                        <Link
+                            to={'/catalog'}>
+                            Back
+                        </Link>
+                    </button>
+
                 </article>
             }
-
         </section>
     );
 };

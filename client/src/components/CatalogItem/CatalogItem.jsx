@@ -28,7 +28,10 @@ const CatalogItem = ({
                 </div>
 
                 <div>
-                    <Link to={`/catalog/${moto._id}`} className="details-button">
+                    <Link
+                        to={`/catalog/${moto._id}`}
+                        className="details-button"
+                    >
                         Details
                     </Link>
                 </div>

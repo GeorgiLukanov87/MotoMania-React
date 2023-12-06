@@ -22,10 +22,13 @@ const AllMotos = ({
             <h5>Available from: {moto.createdAt}</h5>
 
             <div className="data-buttons">
-                <Link to={`/catalog/${moto._id}`} className="btn details-btn">
+                <Link
+                    to={`/catalog/${moto._id}`}
+                    className="btn details-btn">
                     Details
                 </Link>
             </div>
+
         </div>
     );
 };

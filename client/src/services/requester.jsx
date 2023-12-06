@@ -5,7 +5,6 @@ export const request = async (method, url, data) => {
 
     try {
         const user = localStorage.getItem('auth');
-        // const auth = JSON.parse(user || {});
         const auth = user ? JSON.parse(user) : {};
 
         let headers = {}
@@ -25,7 +24,6 @@ export const request = async (method, url, data) => {
                     ...headers,
                     'content-type': 'application/json'
                 },
-                // body: JSON.stringify(data) Before adding _id
                 body: JSON.stringify({ ...data, auth, createdAt })
             })
         }

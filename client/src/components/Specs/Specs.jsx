@@ -12,7 +12,7 @@ export default function Specs() {
 
     const [specs, setSpecs] = useState({});
     const [loading, setLoading] = useState(false);
-    
+
     const { brandmodel } = useParams();
 
     const make = brandmodel.split(':')[0]
@@ -65,7 +65,14 @@ export default function Specs() {
             </ul>
 
             <div className={style.buttonWrapper}>
-                <button className="btn submit"><Link to={'/catalog'}>Back to catalog</Link></button>
+
+                <button className="btn submit">
+                    <Link
+                        to={'/catalog'}>
+                        Back to catalog
+                    </Link>
+                </button>
+                
             </div>
         </div>
     );

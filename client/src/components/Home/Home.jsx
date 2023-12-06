@@ -27,7 +27,11 @@ const Home = ({
             </div>
 
             <div id="home-page">
-                {motos?.length > 0 && motos.map(m => <AllMotos key={m._id} moto={m} />)}
+                {motos?.length > 0 && motos.map(m =>
+                    <AllMotos
+                        key={m._id}
+                        moto={m}
+                    />)}
             </div>
         </section>
     );

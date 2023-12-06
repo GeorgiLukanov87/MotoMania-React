@@ -25,18 +25,18 @@ const Login = () => {
                     toast.error('Login or password don\'t match', {
                         position: "top-center",
                         autoClose: 3000,
-                        })
+                    })
                     return;
                 }
 
                 userLogin(authData);
                 console.log(authData)
                 navigate('/')
+
                 toast.success('Login succesfully', {
                     position: "top-center",
                     autoClose: 3000,
-                    })
-
+                })
             })
             .catch(err => console.log(err))
     }
@@ -56,11 +56,17 @@ const Login = () => {
 
 
                     <button className="btn submit" type="submit">Login</button>
+                    
                     <p className="field">
                         <span>
-                            If you don't have profile click<Link to={'/register'} >here</Link>
+                            If you don't have profile click
+                            <Link
+                                to={'/register'} >
+                                here
+                            </Link>
                         </span>
                     </p>
+
                 </div>
             </form>
         </section>

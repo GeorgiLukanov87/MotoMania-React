@@ -1,8 +1,7 @@
 import style from '../LocationSearch/LocationSearch.module.css';
 import pngImgPath from '../LocationSearch/map-local-search-ss-1920.jpg';
 
-import React, { useState } from 'react';
-
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
@@ -21,13 +20,13 @@ const WeatherComponent = () => {
         try {
             const response = await fetch(`${weather_url}${city}&appid=${api_key}`);
             const data = await response.json();
-            console.log(data)
+            // console.log(data)
 
             if (Object.keys(data).length <= 2) {
                 toast.error("City not found!", {
                     position: "top-center",
                     autoClose: 3000,
-                    })
+                })
                 setCity('')
                 return;
             }
@@ -58,7 +57,7 @@ const WeatherComponent = () => {
             toast.error("Enter city name!", {
                 position: "top-center",
                 autoClose: 3000,
-                })
+            })
             return;
         }
         fetchWeatherAndForecast();
@@ -78,8 +77,6 @@ const WeatherComponent = () => {
                 />
                 <button type="submit">Find Location</button>
             </form>
-
-
 
             {weatherData && (
                 <div className={style.weatherInfo}>
@@ -107,14 +104,12 @@ const WeatherComponent = () => {
                     </div>
 
                     <div className={style.weatherDataWrapper}>
-
                         <h2>Weather Information for {weatherData.city}</h2>
                         <p>Temperature:  <span>{weatherData.temperature}</span> °C</p>
                         <p>Description:  <span>{weatherData.description}</span></p>
                         <p>Wind Speed:  <span>{weatherData.wind}</span> m/s</p>
                         <p>Cloudiness:  <span>{weatherData.clouds}</span> % </p>
                         <img src={`http://openweathermap.org/img/w/${weatherData.icon}.png`} alt={weatherData.description} />
-
                     </div>
 
                 </div>
@@ -125,9 +120,8 @@ const WeatherComponent = () => {
                     <img src={pngImgPath} alt="noimgpng" />
                 </div>
             </div>
-            
-        </div>
 
+        </div>
     );
 };
 

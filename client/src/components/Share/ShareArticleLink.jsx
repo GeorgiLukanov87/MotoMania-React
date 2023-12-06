@@ -18,7 +18,7 @@ const ShareArticleLink = (props) => {
       })
 
       .catch((error) => {
-        toast.error('Failed to copy', {
+        toast.error(`Failed to copy: ${error}`, {
           position: "top-center",
           autoClose: 3000,
         })
@@ -27,7 +27,9 @@ const ShareArticleLink = (props) => {
 
   return (
     <div>
-      <button onClick={generateShareableLink}>Share This Offer</button>
+      <button onClick={generateShareableLink}>
+        Share This Offer
+      </button>
     </div>
   );
 };

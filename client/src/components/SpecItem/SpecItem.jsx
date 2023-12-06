@@ -9,7 +9,7 @@ export default function SpecItem(props) {
 
     return (
         <div className={style.specContainer}>
-            
+
             <ul className={style.specItemsWrapper}>
 
                 <li key={uniqid()}>

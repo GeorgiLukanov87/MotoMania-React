@@ -71,7 +71,7 @@ const CreateMoto = ({ addMotoHandler }) => {
                     toast.success(`Moto: ${formValues.brand}-added successfully.`, {
                         position: "top-center",
                         autoClose: 3000,
-                        });
+                    });
                 })
                 .catch((error) => {
                     console.error('Error adding moto:', error);
@@ -79,7 +79,7 @@ const CreateMoto = ({ addMotoHandler }) => {
                     toast.error('Error adding moto.', {
                         position: "top-center",
                         autoClose: 3000,
-                        });
+                    });
                 });
         }
     };
@@ -184,8 +184,12 @@ const CreateMoto = ({ addMotoHandler }) => {
                 </div>
 
                 <button className="btn submit">
-                    <Link to={'/'}>Back</Link>
+                    <Link
+                        to={'/'}>
+                        Back
+                    </Link>
                 </button>
+                
             </form>
         </section>
     );

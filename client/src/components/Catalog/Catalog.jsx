@@ -8,10 +8,11 @@ import CatalogItem from '../CatalogItem/CatalogItem';
 import { AuthContext } from '../../contexts/AuthContext';
 
 const Catalog = ({ motos }) => {
-  const itemsPerPage = 3;
+  const { user } = useContext(AuthContext);
+
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
-  const { user } = useContext(AuthContext);
+  const itemsPerPage = 3;
 
   const handleSearch = (term) => {
     setSearchTerm(term);
@@ -47,13 +48,15 @@ const Catalog = ({ motos }) => {
         <SearchBar onSearch={handleSearch} />
       </div>
 
-
       {paginatedMotos().length > 0 ? (
         <div>
-      <h1 className={styles.searchBarH1}>Available Motorcycles</h1>
+          <h1 className={styles.searchBarH1}>Available Motorcycles</h1>
 
           {paginatedMotos().map((moto) => (
-            <CatalogItem key={moto._id} moto={moto} />
+            <CatalogItem
+              key={moto._id}
+              moto={moto}
+            />
           ))}
         </div>
       ) : (

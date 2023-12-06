@@ -25,7 +25,7 @@ const Register = () => {
             toast.error('Passwords do NOT match!', {
                 position: "top-center",
                 autoClose: 3000,
-                });
+            });
             return;
         }
 

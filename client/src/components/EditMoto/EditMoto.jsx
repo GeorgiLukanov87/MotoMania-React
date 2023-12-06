@@ -135,7 +135,13 @@ export default function ({
                     <button className="btn submit" type="submit">Edit Offer</button>
                 </div>
 
-                <button className="btn submit"><Link to={'/'}>Back</Link></button>
+                <button className="btn submit">
+                    <Link
+                        to={'/'}>
+                        Back
+                    </Link>
+                </button>
+
             </form>
         </section>
     );
