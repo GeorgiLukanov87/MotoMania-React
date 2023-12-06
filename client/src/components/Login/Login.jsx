@@ -62,7 +62,7 @@ const Login = () => {
                             If you don't have profile click
                             <Link
                                 to={'/register'} >
-                                here
+                                <span> here</span>
                             </Link>
                         </span>
                     </p>

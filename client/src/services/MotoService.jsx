@@ -1,7 +1,7 @@
 import * as request from "./requester";
 
 const baseUrl = 'http://localhost:3030/data/motos';
-// const baseUrl = 'https://moto-mania1.onrender.com/data/motos';
+// const baseUrl = 'https://sell-moto-mania-server.onrender.com/data/motos';
 
 export const getAll = () => request.get(baseUrl);
 

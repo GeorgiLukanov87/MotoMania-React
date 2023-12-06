@@ -55,7 +55,11 @@ const Register = () => {
                     <button className="btn submit" type="submit">Register</button>
                     <p className="field">
                         <span>
-                            If you already have profile click<Link to={'/login'} >here</Link>
+                            If you already have profile click
+                            <Link
+                                to={'/login'} >
+                                <span> here</span>
+                            </Link>
                         </span>
                     </p>
                 </div>
