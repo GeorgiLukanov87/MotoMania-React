@@ -48,10 +48,9 @@ const Catalog = ({ motos }) => {
         <SearchBar onSearch={handleSearch} />
       </div>
 
-      {paginatedMotos().length > 0 ? (
-        <div>
+      {paginatedMotos().length > 0
+        ? <div>
           <h1 className={styles.searchBarH1}>Available Motorcycles</h1>
-
           {paginatedMotos().map((moto) => (
             <CatalogItem
               key={moto._id}
@@ -59,31 +58,32 @@ const Catalog = ({ motos }) => {
             />
           ))}
         </div>
-      ) : (
-        <h3 className="no-articles">No matching articles</h3>
-      )}
 
-      {totalPages > 1 && (
-        <div className="catalogPagination">
+        : <h3 className="no-articles">No matching articles</h3>
+      }
 
-          <button className={styles.paginationButton}
-            onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-          >
-            Previous
-          </button>
+      {totalPages > 1 &&
+        (
+          <div className="catalogPagination">
 
-          <span className={styles.pagesPagination}>{`Page ${currentPage} of ${totalPages}`}</span>
+            <button className={styles.paginationButton}
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              Previous
+            </button>
 
-          <button className={styles.paginationButton}
-            onClick={() => handlePageChange(currentPage + 1)}
-            disabled={currentPage === totalPages}
-          >
-            Next
-          </button>
+            <span className={styles.pagesPagination}>{`Page ${currentPage} of ${totalPages}`}</span>
 
-        </div>
-      )}
+            <button className={styles.paginationButton}
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            >
+              Next
+            </button>
+
+          </div>
+        )}
 
       {user.email && (
         <button className="btn submit">
