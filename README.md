@@ -11,7 +11,7 @@ With search and pagination features, error handling, and validation, this app en
 
 ## <code style="color : red">Deployed here:</code> 
 
-https://sell-moto-mania.netlify.app/
+https://moto-mania-sell.netlify.app/
 
 ## <code style="color : red">Video-Demo in YouTube:</code>
 
