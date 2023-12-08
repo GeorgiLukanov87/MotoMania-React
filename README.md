@@ -53,6 +53,10 @@ https://www.youtube.com/watch?v=e4k2uRcVSFA
  <ul>
   <li>cd ./server </li>
   <li>node ./server.js </li>
+  <li>Server listening on port 3030 </li>
+  <li>You can make requests to http://localhost:3030/</li>
+  <li>Admin panel located at http://localhost:3030/admin
+ </li>
   <li>Server Docs: https://github.com/softuni-practice-server/softuni-practice-server</li>
  </ul>
  </li>
@@ -67,6 +71,7 @@ https://www.youtube.com/watch?v=e4k2uRcVSFA
  <li>Start FE-client:
   <ul>
   <li>npm run dev</li>
+   <li>App starts at http://localhost:5173</li>
  </ul>
  </li>
 </ol>
