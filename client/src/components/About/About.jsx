@@ -52,6 +52,32 @@ export default function About() {
                         </p>
                     </div>
 
+                    <div className={style.aboutSections}>
+                        <h2>Short story about the best sport motorcycles from Japan</h2>
+                        <p>
+                            Once upon a time in the Land of the Rising Sun, there existed a realm where engineering prowess and a passion for speed converged into a phenomenon known as Japanese sport motorcycles.
+
+                            At the heart of this tale were the meticulous craftsmen and engineers of Japan's revered motorcycle manufacturers. Their workshops were temples of innovation, where precision engineering met an unwavering dedication to performance.
+
+                            The story began with the birth of iconic brands like Honda, Yamaha, Suzuki, and Kawasaki. These names became synonymous with cutting-edge technology and the pursuit of perfection in the realm of two-wheeled marvels.
+
+                            The year was 1969 when Honda unleashed the world-changing CB750 Four. It was a revelation—a machine that combined reliability, power, and affordability in a way never seen before. This milestone marked the dawn of the superbike era, forever altering the landscape of motorcycle design.
+
+                            Yamaha, not to be outdone, introduced the legendary Yamaha RD350, a two-stroke marvel that danced on the edge of exhilaration and danger, captivating riders with its ferocious power band.
+
+                            Suzuki, with its revolutionary GSX-R series, redefined sportbikes in the 1980s. These machines were a symphony of lightweight frames and powerful engines, setting the benchmark for agility and speed.
+
+                            Meanwhile, Kawasaki's Ninja lineage carved its path with a blend of raw power and futuristic design, earning a place in the hearts of adrenaline-seeking riders worldwide.
+
+                            As the years passed, these manufacturers engaged in an exhilarating race of innovation. They pushed boundaries, introducing advanced electronics, aerodynamics, and cutting-edge materials into their motorcycles.
+
+                            Each model released was not just a motorcycle; it was a statement—an embodiment of technological prowess and a tribute to the artistry of engineering.
+
+                            From the thunderous roar of the engines to the sleek lines cutting through the air, Japanese sport motorcycles became an embodiment of speed, precision, and the relentless pursuit of perfection.
+
+                            Their legacy continues to echo through time, inspiring generations of riders and enthusiasts, reminding them that within the gleaming frames and revving engines lies the spirit of a nation whose quest for excellence knows no bounds.
+                        </p>
+                    </div>
                 </div>
 
             </div>
