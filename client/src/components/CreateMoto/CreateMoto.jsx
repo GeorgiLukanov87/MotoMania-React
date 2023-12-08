@@ -9,6 +9,7 @@ import { addMoto } from '../../services/MotoService';
 const initialState = {
     brand: '',
     model: '',
+    year: '',
     cc: '',
     imageUrl: '',
     price: '',
@@ -36,6 +37,11 @@ const CreateMoto = ({ addMotoHandler }) => {
         if (!formValues.cityLocation.trim() || formValues.cityLocation.trim().length < 2 || formValues.cityLocation.trim().length > 25) {
             newErrors.cityLocation = 'City must be between 2 and 25 characters long!';
         }
+
+        if (!formValues.year.trim() || Number(formValues.year.trim()) < 1950 || Number(formValues.year.trim()) > 2023) {
+            newErrors.year = 'Year must be between 1950 and 2023!';
+        }
+
 
         if (!formValues.model.trim()) {
             newErrors.model = 'Model is required, at least 1 character!';
@@ -123,6 +129,20 @@ const CreateMoto = ({ addMotoHandler }) => {
                     />
                     {errors.cc && <p className="error">{errors.cc}</p>}
 
+
+                    <label htmlFor="cc">Year:</label>
+                    <input
+                        type="number"
+                        id="year"
+                        name="year"
+                        placeholder="Enter year..."
+                        value={formValues.year}
+                        onChange={changeHandler}
+                    />
+                    {errors.year && <p className="error">{errors.year}</p>}
+
+
+
                     <label htmlFor="hp">Horse Powers:</label>
                     <input
                         type="number"
@@ -189,7 +209,7 @@ const CreateMoto = ({ addMotoHandler }) => {
                         Back
                     </Link>
                 </button>
-                
+
             </form>
         </section>
     );
