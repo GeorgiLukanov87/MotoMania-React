@@ -100,8 +100,9 @@ function App() {
                                 <Route path='/logout' element={<Logout />} />
                                 <Route path="/create" element={<CreateMoto addMotoHandler={addMotoHandler} />} />
                                 <Route path="/edit/:motoId"
-                                    element={<EditMoto updateAppState={() => getAll().then((motoResult) => setMotos([...Object.values(motoResult)]
-                                        .sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))))} />} />
+                                    element={<EditMoto updateAppState={() => getAll().
+                                        then((motoResult) => setMotos([...Object.values(motoResult)]
+                                            .sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))))} />} />
 
                                 <Route path="/location/:cityName" element={<LocationSearch />} />
                                 <Route path="/location" element={<LocationSearch />} />
