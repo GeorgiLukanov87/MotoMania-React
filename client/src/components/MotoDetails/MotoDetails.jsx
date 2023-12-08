@@ -93,6 +93,7 @@ const MotoDetails = ({
                         <h3>Brand: {moto?.brand}</h3>
                         <h3>Model: {moto?.model}</h3>
                         <h3>cc: {moto?.cc}</h3>
+                        <h3>Year: {moto?.year}</h3>
                         {moto?.hp && <h3>Horse Power: {moto?.hp}</h3>}
                     </div>
                 </div>

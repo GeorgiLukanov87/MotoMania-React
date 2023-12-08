@@ -8,6 +8,7 @@ const initialState = {
     _id: "",
     brand: "",
     model: "",
+    year: "",
     cc: "",
     imageUrl: "",
     price: "",
@@ -71,6 +72,16 @@ export default function ({
                         name="model"
                         placeholder="Enter model..."
                         value={formValues.model}
+                        onChange={changeHandler}
+                    />
+
+                    <label htmlFor="cc">Year:</label>
+                    <input
+                        type="number"
+                        id="year"
+                        name="year"
+                        placeholder="Enter year..."
+                        value={formValues.year}
                         onChange={changeHandler}
                     />
 
