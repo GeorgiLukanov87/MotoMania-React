@@ -90,11 +90,11 @@ const MotoDetails = ({
                         }
                     </div>
                     <div className="moto-details-wrapper1">
-                        <h3>Brand: {moto?.brand}</h3>
-                        <h3>Model: {moto?.model}</h3>
-                        <h3>cc: {moto?.cc}</h3>
-                        <h3>Year: {moto?.year}</h3>
-                        {moto?.hp && <h3>Horse Power: {moto?.hp}</h3>}
+                        <h3><span className={style.h3Span}>Brand</span>: {moto?.brand}</h3>
+                        <h3><span className={style.h3Span}>Model</span>: {moto?.model}</h3>
+                        <h3><span className={style.h3Span}>cc</span>: {moto?.cc}</h3>
+                        <h3><span className={style.h3Span}>Year</span>: {moto?.year}</h3>
+                        {moto?.hp && <h3><span className={style.h3Span}>Horse Power</span>: {moto?.hp}</h3>}
                     </div>
                 </div>
 

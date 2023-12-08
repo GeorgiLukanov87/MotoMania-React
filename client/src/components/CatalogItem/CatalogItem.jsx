@@ -20,11 +20,11 @@ const CatalogItem = ({
                 </div>
 
                 <div>
-                    <h2>Brand: {moto.brand}</h2>
-                    <h2>Model: {moto.model}</h2>
-                    <h2>cc: {moto.cc}</h2>
-                    <h2>Price: {moto.price}$</h2>
-                    <h5>Available from: {moto.createdAt}</h5>
+                    <h2><span className={style.h2Span}>Brand</span>: {moto.brand}</h2>
+                    <h2><span className={style.h2Span}>Model</span>: {moto.model}</h2>
+                    <h2><span className={style.h2Span}>cc</span>: {moto.cc}</h2>
+                    <h2><span className={style.h2Span}>Price</span>: {moto.price}$</h2>
+                    <h5><span className={style.h2Span}>Available</span> from: {moto.createdAt}</h5>
                 </div>
 
                 <div>
