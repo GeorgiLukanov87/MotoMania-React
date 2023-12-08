@@ -129,7 +129,6 @@ const CreateMoto = ({ addMotoHandler }) => {
                     />
                     {errors.cc && <p className="error">{errors.cc}</p>}
 
-
                     <label htmlFor="cc">Year:</label>
                     <input
                         type="number"
@@ -140,8 +139,6 @@ const CreateMoto = ({ addMotoHandler }) => {
                         onChange={changeHandler}
                     />
                     {errors.year && <p className="error">{errors.year}</p>}
-
-
 
                     <label htmlFor="hp">Horse Powers:</label>
                     <input

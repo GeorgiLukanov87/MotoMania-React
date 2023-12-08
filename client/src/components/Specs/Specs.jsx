@@ -15,19 +15,20 @@ export default function Specs() {
 
     const { brandmodel } = useParams();
 
-    const make = brandmodel.split(':')[0]
-    const model = brandmodel.split(':')[1]
+    const make = brandmodel.split(':')[0];
+    const model = brandmodel.split(':')[1];
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`https://api.api-ninjas.com/v1/motorcycles?make=${make}&model=${model}`, {
-                    method: 'GET',
-                    headers: {
-                        'X-Api-Key': api_key,
-                        'Content-Type': 'application/json',
-                    }
-                });
+                const response = await fetch(`https://api.api-ninjas.com/v1/motorcycles?make=${make}&model=${model}`,
+                    {
+                        method: 'GET',
+                        headers: {
+                            'X-Api-Key': api_key,
+                            'Content-Type': 'application/json',
+                        }
+                    });
 
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -72,7 +73,7 @@ export default function Specs() {
                         Back to catalog
                     </Link>
                 </button>
-                
+
             </div>
         </div>
     );
