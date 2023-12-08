@@ -9,7 +9,7 @@ const Home = ({
 
     return (
         <section id="welcome-world">
-            <div className={style.welcomeMessage}>z
+            <div className={style.welcomeMessage}>
                 <h2>Sell your bike Here!</h2>
                 <h3>Moto-Mania</h3>
                 <br />
