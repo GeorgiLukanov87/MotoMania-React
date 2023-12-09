@@ -66,7 +66,6 @@ const WeatherComponent = () => {
     return (
         <div className={style.weatherContainer}>
 
-
             <form onSubmit={handleSubmit} className={style.formContainer}>
                 <input
                     type="text"
