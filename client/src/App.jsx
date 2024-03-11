@@ -28,7 +28,7 @@ function App() {
     const [motos, setMotos] = useState([]);
     const [auth, setAuth] = useLocalStorage('auth', {});
     const navigate = useNavigate();
-
+    
     useEffect(() => {
         getAll().then(motoResult => {
             if (motoResult.code == 404) {
